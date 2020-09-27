@@ -6,7 +6,6 @@ import QuestionItem from "./QuestionItem";
 import VoteItem from "./VoteItem";
 import GenericItem from "./GenericItem";
 import AnswersItem from "./AnswersItem";
-import LanguageToggle from "./LanguageToggle";
 
 
 class Content extends Component {
@@ -81,7 +80,6 @@ class Content extends Component {
 
                 <div id="secondary-col">
                     <h2>Side content</h2>
-                    <LanguageToggle />
                 </div>
             </div>
         );

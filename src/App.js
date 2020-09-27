@@ -1,13 +1,17 @@
 import React, {Component} from "react";
-import Nav from "./components/Nav";
-import Content from "./components/Content";
 import {connect} from 'react-redux';
+
+import Content from "./components/Content";
+import LanguageToggle from "./components/LanguageToggle";
+import Nav from "./components/Nav";
+
 
 class App extends Component {
     render() {
         return (
         <div>
             <Nav page={"home"}/>
+            <LanguageToggle />
             <Content />
         </div>
         );

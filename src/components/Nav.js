@@ -12,13 +12,13 @@ class Nav extends Component {
                     <div>
                         <div id="main-nav">
                             <NavItem id={"home"} current={this.props.page === "home"} navPath={"/"}
-                                     text={this.props.contentReducer.translation.home} />
+                                    text={this.props.contentReducer.translation.home} />
                             <NavItem id={"library"} current={this.props.page === "library"} navPath={"#"}
-                                     text={this.props.contentReducer.translation.library} />
+                                    text={this.props.contentReducer.translation.library} />
                             <NavItem id={"about"} current={this.props.page === "about"} navPath={"#"}
-                                     text={this.props.contentReducer.translation.about} />
+                                    text={this.props.contentReducer.translation.about} />
                             <NavItem id={"contact"} current={this.props.page === "contact"} navPath={"#"}
-                                     text={this.props.contentReducer.translation.contact} />
+                                    text={this.props.contentReducer.translation.contact} />
                         </div>
                     </div>
                 </nav>
