@@ -1,5 +1,8 @@
 $maxWidth: 60rem;
 
+$minRightMargin: 8rem;
+
+/*******> COLORS ********/
 $voteYesColor: #5eb5e0;
 $voteNoColor: #e0695e;
 $voteAbstainColor: #e0e0e0;
@@ -15,6 +18,7 @@ $standardYellow: #fffb88;
 $purple: #A454CC;
 $bright-blue: #BAE6FF;
 $brighter-blue: #BCE9FC;
+$deep-blue: #0600A8;
 $dark-black: #2C2C2C;
 $smoke-white: #f9f9f9;
 $yellow: #FFFB88;
@@ -24,23 +28,27 @@ $nav-bottom-bg: $brighter-blue;
 $active-text: $purple;
 
 $invalidTextBackground: $lightRed;
-
+/*******< COLORS ********/
+@font-face {
+    font-family: "Raleway-Regular";
+    src: url("../fonts/Raleway-Regular.ttf");
+}
 @font-face {
     font-family: Raleway;
     src: url("../fonts/Raleway-ExtraBold.ttf");
-  }
-  @font-face {
+}
+@font-face {
     font-family: "Raleway-Light";
     src: url("../fonts/Raleway-Light.ttf");
-  }
-  @font-face {
+}
+@font-face {
     font-family: "Raleway-Black";
     src: url("../fonts/Raleway-Black.ttf");
-  }
-  @font-face {
+}
+@font-face {
     font-family: Sniglet;
     src: url("../fonts/Sniglet-Regular.ttf");
-  }
+}
   body {
     min-height: 100vh;
     display: grid;
@@ -109,7 +117,7 @@ $invalidTextBackground: $lightRed;
   
     nav {
       font-family: Raleway, sans-serif;
-      margin: auto 2rem auto auto;
+      margin: auto $minRightMargin auto auto;
       display: grid;
       grid-template-rows: 2rem 1.5rem 1.5rem;
   
@@ -436,13 +444,26 @@ input[type="number"].invalid {
     justify-content: flex-end;
     gap: 1rem;
     margin-top: 1rem;
-    margin-right: 2rem;
+    margin-right: $minRightMargin;
 
     button.btn {
-        font-family: Raleway-light, Raleway, sans-serif;
+        font-family: "Raleway-Regular", "Raleway-Light", sans-serif;
         font-size: 1.2rem;
         border: none;
         width: 6.5rem;
+
+        background-color: $deep-blue;
+        color: white;
+    }
+
+    button.btn.select {
+        color: #0600A8;
+        background: none;
+        border-bottom: 0.3rem solid #0600A8;
+    }
+
+    button.btn:focus {
+        outline: none;
     }
 }
 
