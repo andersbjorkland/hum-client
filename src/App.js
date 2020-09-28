@@ -8,6 +8,13 @@ import Nav from "./components/Nav";
 
 class App extends Component {
     render() {
+        if (this.props.asyncReducer.isFetching) {
+            return (
+                <div>
+                    <Nav page={"home"}/>
+                </div>
+                );
+        } 
         return (
         <div>
             <Nav page={"home"}/>
