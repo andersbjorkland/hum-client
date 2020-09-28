@@ -134,14 +134,18 @@ $invalidTextBackground: $lightRed;
         flex-direction: row;
         justify-content: flex-end;
         padding-right: 1rem;
-        background: $smoke-white;
         width: fit-content;
         margin-left: auto;
+        border-bottom: $smoke-white solid 1rem;
   
       }
   
       #main-nav {
-        font-size: 1.5rem;
+        font-size: 2rem;
+
+        >div {
+            margin-bottom: -0.9rem;
+        }
       }
   
       div {
