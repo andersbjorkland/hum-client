@@ -1,3 +1,5 @@
+
+
 $maxWidth: 60rem;
 
 $minRightMargin: 8rem;
@@ -29,6 +31,11 @@ $active-text: $purple;
 
 $invalidTextBackground: $lightRed;
 /*******< COLORS ********/
+
+/*** > IMPORTS ***/
+@use '_loading.scss';
+/*** < IMPORTS ***/
+
 @font-face {
     font-family: "Raleway-Regular";
     src: url("../fonts/Raleway-Regular.ttf");

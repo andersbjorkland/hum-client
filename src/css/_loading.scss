@@ -1,0 +1,87 @@
+$bright-blue: #BAE6FF;
+
+.loading-indicator {
+    margin: 12rem auto;
+    height: 12rem;
+    width: 12rem;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .loading-inner {
+        position: absolute;
+        height: 9rem;
+        width: 7rem;
+        background-color: $bright-blue;
+        border-radius: 50%;
+    }
+
+    #li1 {
+        animation: rotate1 4000ms ease-out infinite;
+    }
+
+    #li2 {
+        transform: rotate(45deg);
+        height: 8rem;
+        animation: rotate1 4000ms 20ms ease-in infinite;
+    }
+
+    #li3 {
+        animation: rotate1 4000ms 400ms cubic-bezier(0.215, 0.610, 0.355, 1) infinite;
+    }
+
+    .indicator {
+        
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+    }
+
+    #ind1 {
+        width: 5.4rem;
+        height: 6rem;
+        animation: pulsate1 4000ms ease-in-out 20ms infinite;
+    }
+
+    #ind2 {
+        width: 5rem;
+        height: 4.7rem;
+        animation: pulsate2 4000ms ease-in-out 400ms infinite;
+    }
+}
+
+@keyframes fadeinout {
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes pulsate1 {
+    50% {
+        width: 8.4rem;
+        height: 9rem;
+        transform: rotate(180deg);
+    }
+}
+@keyframes pulsate2 {
+    50% {
+        width: 8.4rem;
+        height: 9rem;
+        transform: rotate(-180deg);
+    }
+}
+
+@keyframes rotate1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        width: 11.4rem;
+        height: 10.6rem;
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
