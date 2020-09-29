@@ -89,7 +89,7 @@ $invalidTextBackground: $lightRed;
     position: relative;
 
     #header-image-bg {
-        background-image: url(/static/media/header.96a407be.svg);
+        background-image: url('../images/header.svg');
         background-repeat: no-repeat;
         width: 100%;
         height: 18rem;
@@ -188,7 +188,7 @@ ul {
     flex-wrap: wrap;
     margin: 27px;
     margin-top: 27px;
-    margin-left: 27px;
+    margin-left: 8rem;
 
     font-family: 'Raleway-Light', sans-serif;
 
