@@ -13,7 +13,7 @@ class AnswerButton extends Component {
     answering(event) {
         this.props.answering(event, {
             questionId: this.props.questionObject.id,
-            value: this.props.text
+            value: this.props.answerIndex
         });
     }
 
@@ -21,8 +21,8 @@ class AnswerButton extends Component {
         let questionObject = this.props.questionObject;
         let symbol = "";
         let className;
-        if (questionObject.answer) {
-            if (questionObject.answer.toLowerCase() === this.props.text.toLowerCase()) {
+        if (null !== questionObject.answer) {
+            if (questionObject.answer === this.props.answerIndex) {
                 className = "answer-option select";
             } else {
                 className = "answer-option deselect";

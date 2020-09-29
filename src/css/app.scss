@@ -482,6 +482,7 @@ input[type="number"].invalid {
 
         background-color: $deep-blue;
         color: white;
+        z-index: 20;
     }
 
     button.btn.select {

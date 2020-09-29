@@ -23,9 +23,10 @@ class QuestionItem extends Component {
 
 
         let beeClass = this.props.beeClass ? this.props.beeClass : "";
-
+        
         if (this.props.questionObject.answerOptions.category === "nominal") {
-            answer = this.props.questionObject.answerOptions.values.map(option => <AnswerButton key={option + (index++)} questionObject={this.props.questionObject} text={option}/>)
+            let answerIndex = 0;
+            answer = this.props.questionObject.answerOptions.values.map(option => <AnswerButton key={option + (index++)} questionObject={this.props.questionObject} text={option} answerIndex={answerIndex++} />)
         } else if (this.props.questionObject.answerOptions.category === "ordinal") {
             answer = <AnswerOrdinal
                 questionObject={this.props.questionObject}
