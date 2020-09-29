@@ -7,6 +7,7 @@ class Nav extends Component {
     render() {
         return (
             <header>
+                <div id="header-image-bg"></div>
                 <Logo />
                 <nav>
                     <div>

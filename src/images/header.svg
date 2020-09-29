@@ -1,0 +1,1220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1919.839"
+   height="278.23801"
+   viewBox="0 0 1919.839 278.238"
+   version="1.1"
+   id="svg191"
+   sodipodi:docname="header.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <metadata
+     id="metadata195">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2736"
+     inkscape:window-height="1699"
+     id="namedview193"
+     showgrid="false"
+     inkscape:zoom="1.5622235"
+     inkscape:cx="1569.3907"
+     inkscape:cy="66.362906"
+     inkscape:window-x="-13"
+     inkscape:window-y="-13"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="header-image" />
+  <defs
+     id="defs23">
+    <linearGradient
+       id="linear-gradient"
+       x1="214.66254"
+       x2="214.66254"
+       y2="429.32504"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(4.472136,0.2236068)"
+       y1="0">
+      <stop
+         offset="0"
+         stop-color="#0f7212"
+         id="stop2" />
+      <stop
+         offset="0"
+         stop-color="#55a866"
+         id="stop4" />
+      <stop
+         offset="0.958"
+         stop-color="#43d17c"
+         id="stop6" />
+      <stop
+         offset="1"
+         stop-color="#76e4a6"
+         id="stop8" />
+    </linearGradient>
+    <linearGradient
+       id="linear-gradient-2"
+       x1="3019.1521"
+       x2="3019.1521"
+       y2="694.95026"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(2.1439487,0.46642907)"
+       y1="488.62814">
+      <stop
+         offset="0"
+         stop-color="#2c288e"
+         id="stop11" />
+      <stop
+         offset="1"
+         stop-color="#3b4ad6"
+         id="stop13" />
+    </linearGradient>
+    <linearGradient
+       id="linear-gradient-3"
+       x1="-4760.7759"
+       x2="-4760.7759"
+       y2="76.341339"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.2313119,0,0,0.8121419,6025,325)"
+       y1="0">
+      <stop
+         offset="0"
+         stop-color="#3a49d4"
+         id="stop16" />
+      <stop
+         offset="0.732"
+         stop-color="#7c84d4"
+         id="stop18" />
+      <stop
+         offset="1"
+         stop-color="#949ad4"
+         id="stop20" />
+    </linearGradient>
+  </defs>
+  <g
+     id="header-image"
+     transform="translate(25,-108.763)">
+    <g
+       id="header-background"
+       transform="translate(-24)">
+      <rect
+         id="grass"
+         width="1920"
+         height="96"
+         transform="translate(0,229)"
+         x="0"
+         y="0"
+         style="fill:url(#linear-gradient)" />
+      <g
+         id="River"
+         transform="translate(139.872,228.91)">
+        <path
+           id="Path_360"
+           data-name="Path 360"
+           d="m 6694.079,228 c 0,0 -43.613,-1.681 -55.99,9.517 -12.377,11.198 -41.256,-2.947 -60.706,3.536 -19.45,6.483 -10.609,22.985 -35.952,28.879 -25.343,5.894 -69.545,-10.609 -101.372,6.483 -31.827,17.092 -188.324,47.73 -188.324,47.73 h 92.944 c 0,0 76.951,-18.058 90.1,-26.106 13.149,-8.048 23.554,-13.962 28.858,-16.909 5.304,-2.947 22.985,-7.072 36.541,-4.715 13.556,2.357 43,2.006 53,-2.756 10,-4.762 11.429,-10.953 13.81,-15.874 a 35,35 0 0 1 10.4,-12.223 c 3.333,-2.222 8.791,-4.42 21.668,-2.857 12.877,1.563 29.05,2.812 33.175,2.222 4.125,-0.59 9.176,-2.792 11.271,-6.349 2.095,-3.557 12.223,-5.4 15.22,-6.366 2.997,-0.966 35.357,-4.212 35.357,-4.212 z"
+           transform="translate(-6250.872,-227.91)"
+           inkscape:connector-curvature="0"
+           style="fill:url(#linear-gradient-2)" />
+        <path
+           id="Path_361"
+           data-name="Path 361"
+           d="m 6505.074,273.9 c -9.389,2.146 -21.461,4.829 -26.021,8.048 -4.56,3.219 -12.072,6.17 -12.072,6.17"
+           transform="translate(-6422.975,-192.91)"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#4048e0;stroke-width:1;stroke-linecap:round" />
+        <path
+           id="Path_362"
+           data-name="Path 362"
+           d="m 6505.074,273.9 c -9.389,2.146 -21.461,4.829 -26.021,8.048 -4.56,3.219 -12.072,6.17 -12.072,6.17"
+           transform="translate(-6381.975,-195.91)"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#444ced;stroke-width:1;stroke-linecap:round" />
+      </g>
+    </g>
+    <g
+       id="header-house"
+       transform="translate(-24)">
+      <path
+         id="tree-shadow"
+         d="M 254.441,0.62 C 433.467,-4.436 459.919,1.214 508.882,15.809 557.845,30.404 394.966,31 254.441,31 113.916,31 0,24.2 0,15.809 0,7.418 75.416,5.676 254.441,0.62 Z"
+         transform="translate(1264.974,239.971)"
+         inkscape:connector-curvature="0"
+         style="opacity:0.31000001" />
+      <g
+         id="Parliament_w_shade"
+         data-name="Parliament w shade"
+         transform="translate(-294,-13)">
+        <g
+           id="Parliament"
+           transform="translate(608.495,-255.238)">
+          <rect
+             id="Rectangle_180"
+             data-name="Rectangle 180"
+             width="437"
+             height="32"
+             transform="translate(985.505,395.238)"
+             x="0"
+             y="0"
+             style="fill:#7a847b" />
+          <rect
+             id="Rectangle_169"
+             data-name="Rectangle 169"
+             width="437"
+             height="71"
+             transform="translate(985.505,441.238)"
+             x="0"
+             y="0"
+             style="fill:#cc9861" />
+          <rect
+             id="Rectangle_179"
+             data-name="Rectangle 179"
+             width="437"
+             height="33"
+             transform="translate(985.505,408.238)"
+             x="0"
+             y="0"
+             style="fill:#cdc4b5" />
+          <path
+             id="Union_6"
+             data-name="Union 6"
+             d="M 0,102.367 V 28.662 H 0.028 C 0.877,12.742 21.409,0 46.613,0 71.817,0 92.35,12.742 93.2,28.662 h 0.028 v 73.705 z"
+             transform="translate(1157.83,420.871)"
+             inkscape:connector-curvature="0"
+             style="fill:#fce9d6" />
+          <path
+             id="Subtraction_5"
+             data-name="Subtraction 5"
+             d="M 436.733,18.276 H 0 C 0.769,15.794 7.078,13.395 18.754,11.144 30.054,8.965 45.898,7.012 65.854,5.338 106.88,1.9 161.043,0 218.368,0 c 57.325,0 111.489,1.9 152.509,5.338 19.962,1.674 35.811,3.628 47.1,5.806 11.67,2.25 17.979,4.649 18.753,7.129 v 0 0 z"
+             transform="translate(986.076,377.001)"
+             inkscape:connector-curvature="0"
+             style="fill:#434343" />
+          <rect
+             id="Rectangle_178"
+             data-name="Rectangle 178"
+             width="437"
+             height="11"
+             transform="translate(985.505,512.238)"
+             x="0"
+             y="0"
+             style="fill:#9e9d9d" />
+          <rect
+             id="Rectangle_174"
+             data-name="Rectangle 174"
+             width="9"
+             height="96"
+             transform="translate(1135.505,427.238)"
+             x="0"
+             y="0"
+             style="fill:#e1d0bf" />
+          <rect
+             id="Rectangle_174-2"
+             data-name="Rectangle 174"
+             width="10"
+             height="96"
+             transform="translate(1263.505,427.238)"
+             x="0"
+             y="0"
+             style="fill:#e1d0bf" />
+          <g
+             id="Group_83"
+             data-name="Group 83"
+             transform="translate(1008.352,456.182)">
+            <rect
+               id="Rectangle_174-3"
+               data-name="Rectangle 174"
+               width="8"
+               height="56"
+               transform="translate(0.153,0.056)"
+               x="0"
+               y="0"
+               style="fill:#e1d0bf" />
+            <rect
+               id="Rectangle_174-4"
+               data-name="Rectangle 174"
+               width="9"
+               height="56"
+               transform="translate(25.153,0.056)"
+               x="0"
+               y="0"
+               style="fill:#e1d0bf" />
+            <rect
+               id="Rectangle_174-5"
+               data-name="Rectangle 174"
+               width="10"
+               height="56"
+               transform="translate(50.153,0.056)"
+               x="0"
+               y="0"
+               style="fill:#e1d0bf" />
+            <rect
+               id="Rectangle_174-6"
+               data-name="Rectangle 174"
+               width="10"
+               height="56"
+               transform="translate(76.153,0.056)"
+               x="0"
+               y="0"
+               style="fill:#e1d0bf" />
+            <rect
+               id="Rectangle_174-7"
+               data-name="Rectangle 174"
+               width="8"
+               height="56"
+               transform="translate(102.153,0.056)"
+               x="0"
+               y="0"
+               style="fill:#e1d0bf" />
+            <rect
+               id="Rectangle_174-8"
+               data-name="Rectangle 174"
+               width="9"
+               height="56"
+               transform="translate(153.153,0.056)"
+               x="0"
+               y="0"
+               style="fill:#e1d0bf" />
+            <rect
+               id="Rectangle_174-9"
+               data-name="Rectangle 174"
+               width="9"
+               height="56"
+               transform="translate(179.153,0.056)"
+               x="0"
+               y="0"
+               style="fill:#e1d0bf" />
+            <rect
+               id="Rectangle_174-10"
+               data-name="Rectangle 174"
+               width="8"
+               height="56"
+               transform="translate(205.153,0.056)"
+               x="0"
+               y="0"
+               style="fill:#e1d0bf" />
+            <rect
+               id="Rectangle_174-11"
+               data-name="Rectangle 174"
+               width="10"
+               height="56"
+               transform="translate(229.153,0.056)"
+               x="0"
+               y="0"
+               style="fill:#e1d0bf" />
+            <rect
+               id="Rectangle_174-12"
+               data-name="Rectangle 174"
+               width="9"
+               height="56"
+               transform="translate(281.153,0.056)"
+               x="0"
+               y="0"
+               style="fill:#e1d0bf" />
+            <rect
+               id="Rectangle_174-13"
+               data-name="Rectangle 174"
+               width="8"
+               height="56"
+               transform="translate(307.153,0.056)"
+               x="0"
+               y="0"
+               style="fill:#e1d0bf" />
+            <rect
+               id="Rectangle_174-14"
+               data-name="Rectangle 174"
+               width="9"
+               height="56"
+               transform="translate(332.153,0.056)"
+               x="0"
+               y="0"
+               style="fill:#e1d0bf" />
+            <rect
+               id="Rectangle_174-15"
+               data-name="Rectangle 174"
+               width="10"
+               height="56"
+               transform="translate(357.153,0.056)"
+               x="0"
+               y="0"
+               style="fill:#e1d0bf" />
+            <rect
+               id="Rectangle_174-16"
+               data-name="Rectangle 174"
+               width="10"
+               height="56"
+               transform="translate(383.153,0.056)"
+               x="0"
+               y="0"
+               style="fill:#e1d0bf" />
+          </g>
+          <circle
+             id="Ellipse_75"
+             data-name="Ellipse 75"
+             cx="5.5"
+             cy="5.5"
+             r="5.5"
+             transform="translate(1199.505,435.238)"
+             style="fill:#cdc4b5" />
+          <g
+             id="Group_81"
+             data-name="Group 81"
+             transform="translate(1137.742,407.949)">
+            <g
+               id="Group_85"
+               data-name="Group 85"
+               transform="translate(-0.237,0.289)">
+              <rect
+                 id="Rectangle_176"
+                 data-name="Rectangle 176"
+                 width="6"
+                 height="16"
+                 transform="translate(0,3)"
+                 x="0"
+                 y="0"
+                 style="fill:#707070" />
+              <rect
+                 id="Rectangle_177"
+                 data-name="Rectangle 177"
+                 width="4"
+                 height="6"
+                 transform="translate(1)"
+                 x="0"
+                 y="0"
+                 style="fill:#707070" />
+            </g>
+          </g>
+          <g
+             id="Group_82"
+             data-name="Group 82"
+             transform="translate(1265.988,407.949)">
+            <rect
+               id="Rectangle_176-2"
+               data-name="Rectangle 176"
+               width="6"
+               height="16"
+               transform="translate(-0.482,3.289)"
+               x="0"
+               y="0"
+               style="fill:#707070" />
+            <rect
+               id="Rectangle_177-2"
+               data-name="Rectangle 177"
+               width="4"
+               height="7"
+               transform="translate(0.518,0.289)"
+               x="0"
+               y="0"
+               style="fill:#707070" />
+          </g>
+        </g>
+        <g
+           id="Shade">
+          <path
+             id="Intersection_2"
+             data-name="Intersection 2"
+             d="M -5970,150 V 22 h 0.584 c 0.823,-2.469 7.126,-4.854 18.74,-7.093 11.3,-2.178 27.143,-4.132 47.1,-5.807 13.826,-1.16 29.142,-2.144 45.571,-2.939 V 139 v 0 11 z m 99,-11 z m -26,0 z m -25,0 z"
+             transform="translate(7564,118)"
+             inkscape:connector-curvature="0"
+             style="opacity:0.26000001" />
+          <path
+             id="Intersection_4"
+             data-name="Intersection 4"
+             d="M -5909,176 V 48 h 0.585 c 0.823,-2.469 7.126,-4.854 18.739,-7.093 11.024,-2.126 26.386,-4.038 45.676,-5.686 V 165 v 0 11 z m 48,-11 z"
+             transform="translate(7503,92)"
+             inkscape:connector-curvature="0"
+             style="opacity:0.26000001" />
+          <path
+             id="Intersection_7"
+             data-name="Intersection 7"
+             d="M -5930,182 V 54 h 0.586 c 0.822,-2.469 7.125,-4.854 18.739,-7.093 q 1.3,-0.25 2.676,-0.5 V 182 Z"
+             transform="translate(7524,86)"
+             inkscape:connector-curvature="0"
+             style="opacity:0.26000001" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="header-middleground4"
+       transform="translate(-24)">
+      <g
+         id="Tree"
+         transform="translate(23.527,157.374)">
+        <path
+           id="tree-shadow-2"
+           data-name="tree-shadow"
+           d="m 26.958,-0.495 c 18.967,-1.951 21.77,0.229 26.958,5.86 5.188,5.631 -12.069,5.86 -26.958,5.86 C 12.069,11.225 0,8.6 0,5.366 0,2.132 7.99,1.456 26.958,-0.495 Z"
+           transform="translate(-0.527,88.4)"
+           inkscape:connector-curvature="0"
+           style="opacity:0.31000001" />
+        <rect
+           id="Rectangle_142"
+           data-name="Rectangle 142"
+           width="9.9630003"
+           height="48.055"
+           transform="translate(21.913,46.883)"
+           x="0"
+           y="0"
+           style="fill:#a65e39" />
+        <path
+           id="Union_5"
+           data-name="Union 5"
+           d="M 18.285,4.641 C -0.92,1.326 -0.717,19.674 0.425,23.286 c 0.872,2.759 2.073,9.107 9.3,14.267 Q 9.71,37.863 9.71,38.176 c 0,8.663 8.465,15.686 18.909,15.686 10.444,0 18.909,-7.023 18.909,-15.686 a 13.615,13.615 0 0 0 -2.457,-7.738 c 6.023,-2.255 10.156,-6.9 10.156,-12.269 0,-6.253 -5.61,-11.529 -13.283,-13.184 A 16.387,16.387 0 0 0 29.948,0 16.462,16.462 0 0 0 18.285,4.641 Z"
+           transform="rotate(180,27.504,26.931)"
+           inkscape:connector-curvature="0"
+           style="fill:#66ba80" />
+      </g>
+      <g
+         id="Tree-2"
+         data-name="Tree"
+         transform="translate(318.527,128)">
+        <path
+           id="tree-shadow-3"
+           data-name="tree-shadow"
+           d="M 30.955,4.022 C 40.382,3.834 43.729,4.961 44.48,7.309 45.231,9.657 42.038,9.188 34.524,9.563 27.01,9.938 22.22,7.8 21.093,6.576 19.966,5.352 21.528,4.21 30.955,4.022 Z"
+           transform="translate(-0.527,104.483)"
+           inkscape:connector-curvature="0"
+           style="opacity:0.31000001" />
+        <rect
+           id="Rectangle_142-2"
+           data-name="Rectangle 142"
+           width="9.8000002"
+           height="56.917"
+           transform="translate(27.052,55.53)"
+           x="0"
+           y="0"
+           style="fill:#a65e39" />
+        <path
+           id="Union_5-2"
+           data-name="Union 5"
+           d="M 21.658,5.5 C -1.09,1.57 -0.849,23.3 0.5,27.58 c 1.033,3.268 2.455,10.787 11.015,16.9 q -0.017,0.368 -0.017,0.738 C 11.5,55.477 21.527,63.8 33.9,63.8 46.273,63.8 56.3,55.482 56.3,45.221 A 16.126,16.126 0 0 0 53.39,36.056 C 60.524,33.385 65.419,27.881 65.419,21.524 65.419,14.118 58.774,7.869 49.687,5.909 A 19.409,19.409 0 0 0 35.471,0 19.5,19.5 0 0 0 21.658,5.5 Z"
+           transform="rotate(180,32.625,31.898)"
+           inkscape:connector-curvature="0"
+           style="fill:#66ba80" />
+      </g>
+      <g
+         id="Tree-3"
+         data-name="Tree"
+         transform="matrix(0.92724792,0,0,1,1863.6657,159.516)">
+        <path
+           id="tree-shadow-4"
+           data-name="tree-shadow"
+           d="m 29.9,-0.418 c 21.035,-2.163 24.143,0.254 29.9,6.5 5.757,6.246 -13.385,6.5 -29.9,6.5 C 13.385,12.582 0,9.67 0,6.081 0,2.492 8.861,1.745 29.9,-0.418 Z"
+           transform="translate(-0.527,97.904)"
+           inkscape:connector-curvature="0"
+           style="opacity:0.31000001" />
+        <rect
+           id="Rectangle_142-3"
+           data-name="Rectangle 142"
+           width="11.048"
+           height="53.292"
+           transform="translate(24.359,51.993)"
+           x="0"
+           y="0"
+           style="fill:#b3653e" />
+        <path
+           id="Union_5-3"
+           data-name="Union 5"
+           d="M 20.278,5.146 C -1.02,1.47 -0.8,21.818 0.471,25.823 c 0.967,3.06 2.3,10.1 10.313,15.822 q -0.016,0.344 -0.016,0.691 c 0,9.607 9.388,17.4 20.97,17.4 11.582,0 20.97,-7.789 20.97,-17.4 a 15.1,15.1 0 0 0 -2.725,-8.581 c 6.68,-2.5 11.263,-7.654 11.263,-13.606 0,-6.934 -6.221,-12.786 -14.73,-14.621 A 18.173,18.173 0 0 0 33.212,0 18.257,18.257 0 0 0 20.278,5.146 Z"
+           transform="rotate(180,30.5305,29.866)"
+           inkscape:connector-curvature="0"
+           style="fill:#66ba80" />
+      </g>
+      <g
+         id="Tree-4"
+         data-name="Tree"
+         transform="translate(1745.932,67.575)">
+        <path
+           id="tree-shadow-5"
+           data-name="tree-shadow"
+           d="M 19.875,-0.6 C 33.859,-2.255 35.925,-0.405 39.75,4.374 43.575,9.153 30.85,9.348 19.875,9.348 8.9,9.348 0,7.12 0,4.373 0,1.626 5.891,1.055 19.875,-0.6 Z"
+           transform="translate(80.254,206.079)"
+           inkscape:connector-curvature="0"
+           style="opacity:0.31000001" />
+        <g
+           id="Tree-5"
+           data-name="Tree"
+           transform="translate(72.527,112.999)">
+          <rect
+             id="Rectangle_142-4"
+             data-name="Rectangle 142"
+             width="10.243"
+             height="49.404999"
+             transform="translate(23.782,47.598)"
+             x="0"
+             y="0"
+             style="fill:#b3653e" />
+          <line
+             id="Line_6"
+             data-name="Line 6"
+             y1="44.584999"
+             transform="translate(32.519,52.117)"
+             x1="0"
+             x2="0"
+             y2="0"
+             style="fill:none;stroke:#d49374;stroke-width:1;stroke-linecap:square" />
+          <path
+             id="Union_5-4"
+             data-name="Union 5"
+             d="M 18.8,50.6 C -0.946,54.013 -0.737,35.149 0.437,31.436 1.333,28.6 2.568,22.073 10,16.768 Q 9.985,16.449 9.985,16.127 C 9.982,7.221 18.686,0 29.423,0 40.16,0 48.863,7.221 48.863,16.127 a 14,14 0 0 1 -2.526,7.955 c 6.193,2.318 10.441,7.096 10.441,12.618 0,6.429 -5.768,11.853 -13.656,13.554 A 16.847,16.847 0 0 1 30.79,55.376 16.925,16.925 0 0 1 18.8,50.6 Z"
+             inkscape:connector-curvature="0"
+             style="fill:#6ac285" />
+          <g
+             id="Group_79"
+             data-name="Group 79"
+             transform="translate(23.782,21.148)">
+            <path
+               id="Path_355"
+               data-name="Path 355"
+               d="m 6134.416,152.909 c 4.6,-9.2 12.291,-8.39 12.291,-8.39"
+               transform="translate(-6131.755,-142.452)"
+               inkscape:connector-curvature="0"
+               style="fill:none;stroke:#40b866;stroke-width:1" />
+            <path
+               id="Path_357"
+               data-name="Path 357"
+               d="m 144,163.1 a 27.457,27.457 0 0 0 10.006,3.041"
+               transform="translate(-144,-163.1)"
+               inkscape:connector-curvature="0"
+               style="fill:none;stroke:#40b866;stroke-width:1" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       id="header-middleground3"
+       transform="translate(-24)">
+      <g
+         id="Tree-6"
+         data-name="Tree"
+         transform="translate(246,122.999)">
+        <path
+           id="tree-shadow-6"
+           data-name="tree-shadow"
+           d="M 40.326,-0.183 C 23.88,0.76 19.9,-1.117 9.936,8.288 c -9.964,9.405 8.871,8.471 30.39,8.471 21.519,0 38.965,-3.792 38.965,-8.471 0,-4.679 -22.519,-9.413 -38.965,-8.471 z"
+           transform="translate(0.981,127.242)"
+           inkscape:connector-curvature="0"
+           style="opacity:0.31000001" />
+        <rect
+           id="Rectangle_142-5"
+           data-name="Rectangle 142"
+           width="14.4"
+           height="69.459"
+           transform="translate(33.436,67.765)"
+           x="0"
+           y="0"
+           style="fill:#a65e39" />
+        <path
+           id="Union_5-5"
+           data-name="Union 5"
+           d="M 26.43,71.145 C -1.33,75.936 -1.036,49.416 0.614,44.2 c 1.26,-3.988 3,-13.163 13.442,-20.622 q -0.021,-0.449 -0.021,-0.9 C 14.035,10.151 26.271,0 41.366,0 56.461,0 68.7,10.151 68.7,22.673 a 19.679,19.679 0 0 1 -3.552,11.184 c 8.706,3.26 14.679,9.976 14.679,17.734 0,9.038 -8.109,16.664 -19.2,19.056 A 23.685,23.685 0 0 1 43.289,77.853 23.8,23.8 0 0 1 26.43,71.145 Z"
+           inkscape:connector-curvature="0"
+           style="fill:#5fad77" />
+      </g>
+      <g
+         id="Tree-7"
+         data-name="Tree"
+         transform="translate(351.324,6)">
+        <path
+           id="tree-shadow-7"
+           data-name="tree-shadow"
+           d="M 29.542,-0.4 C 50.328,-2.614 53.4,-0.14 59.084,6.25 64.768,12.64 45.857,12.9 29.542,12.9 13.227,12.9 0,9.923 0,6.25 0,2.577 8.756,1.813 29.542,-0.4 Z"
+           transform="translate(34.12,247.443)"
+           inkscape:connector-curvature="0"
+           style="opacity:0.31000001" />
+        <g
+           id="Tree-8"
+           data-name="Tree"
+           transform="translate(23.251,121)">
+          <path
+             id="Path_364"
+             data-name="Path 364"
+             d="M 0,0 H 13 V 63 H 0 Z"
+             transform="translate(34.424,71)"
+             inkscape:connector-curvature="0"
+             style="fill:#ba6941" />
+          <path
+             id="Union_5-6"
+             data-name="Union 5"
+             d="m 38.438,75.858 a 26.047,26.047 0 1 1 -20.976,-47.5 q -0.1,-1.143 -0.1,-2.314 A 26.043,26.043 0 0 1 69.3,23.33 c 9.733,1.233 17.211,8.584 17.211,17.468 0,6.889 -4.5,12.856 -11.054,15.763 a 13.632,13.632 0 0 1 0.926,4.925 c 0,9.828 -10.687,17.795 -23.871,17.795 A 29.531,29.531 0 0 1 38.438,75.858 Z"
+             inkscape:connector-curvature="0"
+             style="fill:#74d491" />
+          <path
+             id="Path_355-2"
+             data-name="Path 355"
+             d="m 6134.416,155.107 c 5.8,-11.6 15.5,-10.582 15.5,-10.582"
+             transform="translate(-6108.452,-140.321)"
+             inkscape:connector-curvature="0"
+             style="fill:none;stroke:#46ca70;stroke-width:1" />
+        </g>
+      </g>
+      <g
+         id="Thin_tree"
+         data-name="Thin tree"
+         transform="translate(94,-181.693)">
+        <rect
+           id="Rectangle_181"
+           data-name="Rectangle 181"
+           width="7"
+           height="77"
+           transform="translate(1294,393.693)"
+           x="0"
+           y="0"
+           style="fill:#c77046" />
+        <g
+           id="Group_84"
+           data-name="Group 84">
+          <ellipse
+             id="Ellipse_76"
+             data-name="Ellipse 76"
+             cx="18.5"
+             cy="32"
+             rx="18.5"
+             ry="32"
+             transform="translate(1280,377.693)"
+             style="fill:#97e37c" />
+          <ellipse
+             id="Ellipse_77"
+             data-name="Ellipse 77"
+             cx="15"
+             cy="31"
+             rx="15"
+             ry="31"
+             transform="translate(1283,354.693)"
+             style="fill:#97e37c" />
+          <ellipse
+             id="Ellipse_78"
+             data-name="Ellipse 78"
+             cx="11"
+             cy="24"
+             rx="11"
+             ry="24"
+             transform="translate(1287,332.693)"
+             style="fill:#97e37c" />
+        </g>
+      </g>
+      <g
+         id="Thin_tree-2"
+         data-name="Thin tree"
+         transform="translate(1609,149)">
+        <rect
+           id="Rectangle_181-2"
+           data-name="Rectangle 181"
+           width="7"
+           height="77"
+           transform="translate(16,61)"
+           x="0"
+           y="0"
+           style="fill:#c77046" />
+        <g
+           id="Group_84-2"
+           data-name="Group 84">
+          <path
+             id="Path_369"
+             data-name="Path 369"
+             d="M 15.377,0 C 5.159,0 -1.591,13.933 0.23,32 2.051,50.067 5.16,64 15.377,64 25.594,64 32.932,52.342 33.877,32 34.822,11.658 25.594,0 15.377,0 Z"
+             transform="translate(2,45)"
+             inkscape:connector-curvature="0"
+             style="fill:#97e37c" />
+          <path
+             id="Path_370"
+             data-name="Path 370"
+             d="M 15,0 C 23.284,0 27.827,7.978 27.827,25.1 27.827,42.222 23.284,50.133 15,50.133 6.716,50.133 -0.849,48.121 -0.849,31 -0.849,13.879 6.716,0 15,0 Z"
+             transform="translate(4,22)"
+             inkscape:connector-curvature="0"
+             style="fill:#97e37c" />
+          <path
+             id="Path_371"
+             data-name="Path 371"
+             d="m 11,0 c 6.075,0 7.82,10.235 8.73,18.6 C 20.64,26.965 17.075,44.1 11,44.1 4.925,44.1 0,34.225 0,22.048 0,9.871 4.925,0 11,0 Z"
+             transform="translate(8,3.904)"
+             inkscape:connector-curvature="0"
+             style="fill:#97e37c" />
+        </g>
+      </g>
+      <path
+         id="tree-shadow-8"
+         data-name="tree-shadow"
+         d="m 17.34,-0.575 c 12.2,-1.727 14,0.2 17.34,5.19 3.34,4.99 -7.763,5.19 -17.34,5.19 C 7.763,9.805 0,7.482 0,4.615 0,1.748 5.14,1.153 17.34,-0.575 Z"
+         transform="translate(1372.974,284.195)"
+         inkscape:connector-curvature="0"
+         style="opacity:0.31000001" />
+      <path
+         id="tree-shadow-9"
+         data-name="tree-shadow"
+         d="m 17.946,-0.575 c -9.007,0.145 -14,0.2 -17.34,5.19 -3.34,4.99 7.763,5.19 17.34,5.19 9.577,0 12.284,-2.323 12.284,-5.19 0,-2.867 -3.277,-5.335 -12.284,-5.19 z"
+         transform="translate(1612.974,284.195)"
+         inkscape:connector-curvature="0"
+         style="opacity:0.31000001" />
+    </g>
+    <g
+       id="header-middleground2"
+       transform="matrix(0.98732667,0.00194974,0,1,-24.316833,-1.8715963)">
+      <g
+         id="Tree-9"
+         data-name="Tree">
+        <path
+           id="tree-shadow-10"
+           data-name="tree-shadow"
+           d="M 32.987,-0.208 C 56.2,-2.956 59.626,0.114 65.974,8.046 72.322,15.978 51.2,16.3 32.987,16.3 14.774,16.3 0,12.605 0,8.046 0,3.487 9.777,2.539 32.987,-0.208 Z"
+           transform="translate(85.351,266.699)"
+           inkscape:connector-curvature="0"
+           style="opacity:0.31000001" />
+        <g
+           id="Tree-10"
+           data-name="Tree"
+           transform="translate(-32,-15)">
+          <rect
+             id="Rectangle_142-6"
+             data-name="Rectangle 142"
+             width="17"
+             height="82"
+             transform="translate(144,207)"
+             x="0"
+             y="0"
+             style="fill:#b3653e" />
+          <line
+             id="Line_6-2"
+             data-name="Line 6"
+             y1="74"
+             transform="translate(158.5,214.5)"
+             x1="0"
+             x2="0"
+             y2="0"
+             style="fill:none;stroke:#d49374;stroke-width:1;stroke-linecap:square" />
+          <path
+             id="Union_5-7"
+             data-name="Union 5"
+             d="m -5932.523,98.99 c -32.771,5.656 -32.425,-25.652 -30.477,-31.816 1.488,-4.708 3.537,-15.54 15.869,-24.345 q -0.025,-0.53 -0.025,-1.063 c 0,-14.782 14.445,-26.767 32.267,-26.767 17.822,0 32.266,11.984 32.266,26.767 a 23.232,23.232 0 0 1 -4.193,13.2 c 10.278,3.848 17.33,11.778 17.33,20.936 0,10.67 -9.573,19.673 -22.666,22.5 a 27.962,27.962 0 0 1 -20.469,8.507 28.091,28.091 0 0 1 -19.902,-7.919 z"
+             transform="translate(6068.252,113)"
+             inkscape:connector-curvature="0"
+             style="fill:#6ac285" />
+          <g
+             id="Group_79-2"
+             data-name="Group 79">
+            <path
+               id="Path_355-3"
+               data-name="Path 355"
+               d="m 6134.416,158.456 c 7.633,-15.266 20.4,-13.925 20.4,-13.925"
+               transform="translate(-5986,22)"
+               inkscape:connector-curvature="0"
+               style="fill:none;stroke:#40b866;stroke-width:1" />
+            <path
+               id="Path_357-2"
+               data-name="Path 357"
+               d="m 144,163.1 c 9.7,4.782 16.607,5.048 16.607,5.048"
+               inkscape:connector-curvature="0"
+               style="fill:none;stroke:#40b866;stroke-width:1" />
+          </g>
+        </g>
+      </g>
+      <g
+         id="Tree-11"
+         data-name="Tree"
+         transform="matrix(0.78791322,4.1351409e-4,0,1,0.81734554,114.34362)">
+        <path
+           id="tree-shadow-11"
+           data-name="tree-shadow"
+           d="M 46,0 C 78.366,-3.328 83.148,0.391 92,10 100.852,19.609 71.405,20 46,20 20.595,20 0,15.523 0,10 0,4.477 13.634,3.328 46,0 Z"
+           transform="translate(-0.527,150.001)"
+           inkscape:connector-curvature="0"
+           style="opacity:0.31000001" />
+        <rect
+           id="Rectangle_142-7"
+           data-name="Rectangle 142"
+           width="17"
+           height="82"
+           transform="translate(37.765,80.001)"
+           x="0"
+           y="0"
+           style="fill:#b3653e" />
+        <path
+           id="Union_5-8"
+           data-name="Union 5"
+           d="M 31.2,7.919 C -1.57,2.262 -1.224,33.571 0.725,39.734 c 1.488,4.708 3.537,15.54 15.869,24.345 q -0.025,0.53 -0.025,1.063 c 0,14.782 14.445,26.767 32.267,26.767 17.822,0 32.264,-11.984 32.264,-26.766 a 23.232,23.232 0 0 0 -4.193,-13.2 C 87.186,48.091 94.237,40.162 94.237,31 94.237,20.33 84.664,11.327 71.571,8.5 A 27.962,27.962 0 0 0 51.1,0 28.091,28.091 0 0 0 31.2,7.919 Z"
+           transform="rotate(180,47.1185,45.955)"
+           inkscape:connector-curvature="0"
+           style="fill:#66ba80" />
+      </g>
+      <g
+         id="Tree-12"
+         data-name="Tree"
+         transform="translate(1858.284,54.846)">
+        <path
+           id="tree-shadow-12"
+           data-name="tree-shadow"
+           d="M 23.69,-0.232 C 40.358,-2.915 42.821,0.084 47.38,7.831 51.939,15.578 36.774,15.893 23.69,15.893 10.606,15.893 0,12.283 0,7.831 0,3.379 7.022,2.452 23.69,-0.232 Z"
+           transform="translate(27.541,225.107)"
+           inkscape:connector-curvature="0"
+           style="opacity:0.31000001" />
+        <g
+           id="Tree-13"
+           data-name="Tree"
+           transform="translate(23.251,121)">
+          <rect
+             id="Rectangle_142-8"
+             data-name="Rectangle 142"
+             width="12.684"
+             height="66.109001"
+             transform="translate(23.913,45.829)"
+             x="0"
+             y="0"
+             style="fill:#ca7246" />
+          <path
+             id="Union_5-9"
+             data-name="Union 5"
+             d="m 28.125,63.484 a 17.124,17.124 0 0 1 -9.07,2.623 C 8.531,66.107 0,56.35 0,44.314 0,34.793 5.338,26.7 12.777,23.73 Q 12.704,22.773 12.703,21.793 C 12.7,9.757 21.234,0 31.758,0 41.611,0 49.718,8.555 50.71,19.524 a 14.79,14.79 0 0 1 4.506,27.811 12.867,12.867 0 0 1 0.678,4.122 c 0,8.225 -7.82,14.892 -17.466,14.892 A 19.472,19.472 0 0 1 28.125,63.484 Z"
+             inkscape:connector-curvature="0"
+             style="fill:#7ce39c" />
+          <path
+             id="Path_355-4"
+             data-name="Path 355"
+             d="m 6134.416,155.752 c 5.7,-12.308 15.221,-11.226 15.221,-11.226"
+             transform="translate(-6116.835,-140.066)"
+             inkscape:connector-curvature="0"
+             style="fill:none;stroke:#46ca70;stroke-width:1" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="header-middleground"
+       transform="translate(-24)">
+      <g
+         id="Tree-14"
+         data-name="Tree">
+        <path
+           id="tree-shadow-13"
+           data-name="tree-shadow"
+           d="M 46,0 C 78.366,-3.328 83.148,0.391 92,10 100.852,19.609 71.405,20 46,20 20.595,20 0,15.523 0,10 0,4.477 13.634,3.328 46,0 Z"
+           transform="translate(29,287)"
+           inkscape:connector-curvature="0"
+           style="opacity:0.31000001" />
+        <g
+           id="Tree-15"
+           data-name="Tree"
+           transform="translate(-75,8)">
+          <rect
+             id="Rectangle_142-9"
+             data-name="Rectangle 142"
+             width="17"
+             height="82"
+             transform="translate(144,207)"
+             x="0"
+             y="0"
+             style="fill:#ca7246" />
+          <path
+             id="Union_5-10"
+             data-name="Union 5"
+             d="m -5919.423,99.817 a 34.117,34.117 0 0 1 -16.311,4.124 34.266,34.266 0 0 1 -34.266,-34.267 34.281,34.281 0 0 1 22.977,-32.364 q -0.132,-1.5 -0.133,-3.045 A 34.266,34.266 0 0 1 -5912.89,0 a 34.271,34.271 0 0 1 34.083,30.7 c 12.807,1.623 22.646,11.3 22.646,22.985 0,9.064 -5.916,16.916 -14.544,20.742 a 17.938,17.938 0 0 1 1.219,6.481 c 0,12.932 -14.063,23.415 -31.41,23.415 a 38.861,38.861 0 0 1 -18.527,-4.506 z"
+             transform="translate(6068.252,113)"
+             inkscape:connector-curvature="0"
+             style="fill:#7ce39c" />
+          <path
+             id="Path_355-5"
+             data-name="Path 355"
+             d="m 6134.416,158.456 c 7.633,-15.266 20.4,-13.925 20.4,-13.925"
+             transform="translate(-6002,-26)"
+             inkscape:connector-curvature="0"
+             style="fill:none;stroke:#46ca70;stroke-width:1" />
+        </g>
+      </g>
+      <g
+         id="Beehive"
+         transform="translate(-124.042,151)">
+        <g
+           id="Group_80"
+           data-name="Group 80"
+           transform="matrix(-0.07,-0.998,0.998,-0.07,315.356,89.525)">
+          <path
+             id="Intersection_1"
+             data-name="Intersection 1"
+             d="M 1.621,16.183 C 0.543,14.652 -2.292,7.9 3.688,2.987 A 22.119,22.119 0 0 1 9.014,0.67 C 22.48,-3.39 40.839,12.227 43.306,14.4 30.39,20.32 21.439,22.23 15.239,22.23 5.331,22.23 2.446,17.354 1.621,16.183 Z"
+             transform="translate(5.138,11.89)"
+             inkscape:connector-curvature="0"
+             style="fill:#fffb88" />
+          <g
+             id="Group_35"
+             data-name="Group 35"
+             transform="matrix(0.891,-0.454,0.454,0.891,0,18.993)">
+            <text
+               id="Hum"
+               transform="translate(9.14,8.318)"
+               font-size="5"
+               font-weight="600"
+               letter-spacing="0.005em"
+               style="font-weight:600;font-size:5px;font-family:Bahnschrift;letter-spacing:0.005em;opacity:0;fill:#9d9cb5">
+              <tspan
+                 x="0"
+                 y="0"
+                 id="tspan144">Hum</tspan>
+            </text>
+            <path
+               id="black_stripe"
+               data-name="black stripe"
+               d="M 39.987,28.563 C 1.144,27.446 0.386,13.5 0.05,11.158 -0.286,8.816 0.664,-2.265 15.53,0.416 30.396,3.097 39.987,28.563 39.987,28.563 Z"
+               transform="translate(0,0.277)"
+               inkscape:connector-curvature="0"
+               style="fill:none" />
+            <path
+               id="yellow_stripe"
+               data-name="yellow stripe"
+               d="M 39.987,28.563 C 1.144,27.446 0.386,13.5 0.05,11.158 -0.286,8.816 0.664,-2.265 15.53,0.416 30.396,3.097 39.987,28.563 39.987,28.563 Z"
+               transform="translate(0.925,0.092)"
+               inkscape:connector-curvature="0"
+               style="fill:none" />
+            <path
+               id="black_stripe-2"
+               data-name="black stripe"
+               d="M 39.987,28.563 C 1.144,27.446 0.386,13.5 0.05,11.158 -0.286,8.816 0.664,-2.265 15.53,0.416 30.396,3.097 39.987,28.563 39.987,28.563 Z"
+               transform="translate(1.85)"
+               inkscape:connector-curvature="0"
+               style="fill:none" />
+          </g>
+        </g>
+        <text
+           id="Hum-2"
+           data-name="Hum"
+           transform="translate(322.042,67)"
+           font-size="11"
+           letter-spacing="0.035em"
+           style="font-size:11px;font-family:Sniglet-Regular, Sniglet;letter-spacing:0.035em;opacity:0;fill:#2b2b2b">
+          <tspan
+             x="0"
+             y="0"
+             id="tspan152">Hum</tspan>
+        </text>
+      </g>
+      <g
+         id="Tree-16"
+         data-name="Tree">
+        <path
+           id="tree-shadow-14"
+           data-name="tree-shadow"
+           d="M 32.987,-0.208 C 56.2,-2.956 59.626,0.114 65.974,8.046 72.322,15.978 51.2,16.3 32.987,16.3 14.774,16.3 0,12.605 0,8.046 0,3.487 9.777,2.539 32.987,-0.208 Z"
+           transform="translate(147.351,283.699)"
+           inkscape:connector-curvature="0"
+           style="opacity:0.31000001" />
+        <g
+           id="Tree-17"
+           data-name="Tree"
+           transform="translate(33,2)">
+          <rect
+             id="Rectangle_142-10"
+             data-name="Rectangle 142"
+             width="17"
+             height="82"
+             transform="translate(144,207)"
+             x="0"
+             y="0"
+             style="fill:#ca7246" />
+          <path
+             id="Union_5-11"
+             data-name="Union 5"
+             d="M 24.886,81.735 C 8.023,69.41 0,49.8 0,34.646 A 34.277,34.277 0 0 1 50.577,4.5 38.86,38.86 0 0 1 69.1,0 c 17.348,0 31.41,10.483 31.41,23.415 a 19.2,19.2 0 0 1 -4.762,12.4 21.5,21.5 0 0 1 6.088,14.822 c 0,7.556 -4.11,14.268 -10.475,18.509 q 0.012,0.453 0.012,0.908 a 34.272,34.272 0 0 1 -66.49,11.68 z"
+             transform="rotate(180,106.0455,108.6605)"
+             inkscape:connector-curvature="0"
+             style="fill:#76d995" />
+          <path
+             id="Path_355-6"
+             data-name="Path 355"
+             d="m 6134.416,158.456 c 7.633,-15.266 20.4,-13.925 20.4,-13.925"
+             transform="translate(-6001,-5)"
+             inkscape:connector-curvature="0"
+             style="fill:none;stroke:#46ca70;stroke-width:1" />
+        </g>
+      </g>
+      <g
+         id="Bees">
+        <line
+           id="Line_7"
+           data-name="Line 7"
+           x2="1"
+           transform="translate(230.5,220.5)"
+           x1="0"
+           y1="0"
+           y2="0"
+           style="fill:none;stroke:#707070;stroke-width:1" />
+        <line
+           id="Line_8"
+           data-name="Line 8"
+           x2="2"
+           transform="translate(225.5,223.5)"
+           x1="0"
+           y1="0"
+           y2="0"
+           style="fill:none;stroke:#707070;stroke-width:1" />
+        <line
+           id="Line_9"
+           data-name="Line 9"
+           x2="2"
+           transform="translate(226.5,217.5)"
+           x1="0"
+           y1="0"
+           y2="0"
+           style="fill:none;stroke:#707070;stroke-width:1" />
+      </g>
+    </g>
+    <g
+       id="header-foreground2"
+       transform="translate(-24)">
+      <g
+         id="Tree-18"
+         data-name="Tree"
+         transform="translate(295.634,-5.001)">
+        <path
+           id="tree-shadow-15"
+           data-name="tree-shadow"
+           d="M 48.721,0.071 C 83,-3.455 88.066,0.485 97.441,10.662 106.816,20.839 75.628,21.254 48.721,21.254 21.814,21.254 0,16.512 0,10.662 0,4.812 14.441,3.6 48.721,0.071 Z"
+           transform="translate(29.34,296.747)"
+           inkscape:connector-curvature="0"
+           style="opacity:0.31000001" />
+        <g
+           id="Tree-19"
+           data-name="Tree"
+           transform="translate(23.251,121)">
+          <rect
+             id="Rectangle_142-11"
+             data-name="Rectangle 142"
+             width="18"
+             height="86"
+             transform="translate(48.115,100.001)"
+             x="0"
+             y="0"
+             style="fill:#ca7246" />
+          <path
+             id="Union_5-12"
+             data-name="Union 5"
+             d="M 55.731,109.987 A 37.766,37.766 0 1 1 25.318,41.112 q -0.146,-1.657 -0.147,-3.355 a 37.759,37.759 0 0 1 75.313,-3.931 c 14.111,1.788 24.954,12.446 24.954,25.327 0,9.988 -6.519,18.639 -16.027,22.855 a 19.758,19.758 0 0 1 1.343,7.141 c 0,14.25 -15.5,25.8 -34.611,25.8 a 42.819,42.819 0 0 1 -20.412,-4.962 z"
+             transform="translate(-2.433,-4.459)"
+             inkscape:connector-curvature="0"
+             style="fill:#7ce39c" />
+          <path
+             id="Path_355-7"
+             data-name="Path 355"
+             d="m 6134.416,159.282 c 8.084,-16.169 21.605,-14.748 21.605,-14.748"
+             transform="translate(-6098.231,-138.675)"
+             inkscape:connector-curvature="0"
+             style="fill:none;stroke:#46ca70;stroke-width:1" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="header-foreground"
+       transform="translate(-24)">
+      <g
+         id="Tree-20"
+         data-name="Tree"
+         transform="translate(-43,50)">
+        <path
+           id="Subtraction_4"
+           data-name="Subtraction 4"
+           d="m -5929,49 h -21 V 0 h 21 z"
+           transform="translate(6105,226)"
+           inkscape:connector-curvature="0"
+           style="fill:#d97a4b" />
+        <path
+           id="Union_5-13"
+           data-name="Union 5"
+           d="m 15.377,96.995 c 0,-6.106 2.626,-11.757 7.086,-16.364 A 41.061,41.061 0 0 1 57.887,20.009 C 63.462,11.923 73.6,6.516 85.191,6.516 c 17.593,0 31.856,12.466 31.856,27.843 A 25.113,25.113 0 0 1 112.689,48.425 41.021,41.021 0 0 1 132.5,83.53 c 0,22.688 -24.837,39.637 -41.252,41.081 a 60.733,60.733 0 0 1 -8.407,0.054 c -2.675,-0.092 -6.171,-0.184 -11.807,-0.054 a 82.221,82.221 0 0 1 -9.67,-0.2 50.636,50.636 0 0 1 -8.177,0.658 C 32.307,125.067 15.377,112.5 15.377,96.995 Z"
+           transform="translate(98.251,113)"
+           inkscape:connector-curvature="0"
+           style="fill:#82eda3" />
+        <path
+           id="Path_355-8"
+           data-name="Path 355"
+           d="m 6134.415,161.231 a 35.243,35.243 0 0 1 30.941,-16.694"
+           transform="translate(-5976.034,16.094)"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#49d475;stroke-width:1" />
+      </g>
+      <g
+         id="Tree-21"
+         data-name="Tree"
+         transform="translate(426.324,62.612)">
+        <path
+           id="tree-shadow-16"
+           data-name="tree-shadow"
+           d="M 30.9,-0.48 C 52.639,-1.968 74.953,4.961 63.61,4.961 H 30.3 c -17.064,0 -17.846,0.046 -20.591,0 C 6.964,4.915 9.158,1.008 30.9,-0.48 Z"
+           transform="translate(28.618,256.338)"
+           inkscape:connector-curvature="0"
+           style="opacity:0.31000001" />
+        <g
+           id="Tree-22"
+           data-name="Tree"
+           transform="translate(23.251,121)">
+          <path
+             id="Path_364-2"
+             data-name="Path 364"
+             d="M 0,0 H 17.565 V 70.256 H 0 Z"
+             transform="translate(36.002,69.888)"
+             inkscape:connector-curvature="0"
+             style="fill:#c77046" />
+          <path
+             id="Union_5-14"
+             data-name="Union 5"
+             d="M 47.314,93.594 47.1,93.528 c -1.689,0.1 -3.485,0.151 -5.393,0.151 -19.131,0 -34.662,-5.607 -37.211,-14.272 -2.549,-8.156 2.72,-27.934 8.331,-33.835 3.619,-3.81 6.373,-6.514 9.794,-8.208 0,-0.177 0,-0.356 0,-0.534 C 22.617,19.25 38.125,5 57.256,5 73.96,5 87.9,15.863 91.172,30.32 c 13.135,1.212 22.8,9.685 19.994,23.328 -2.557,12.447 -6,16.431 -16.6,19.086 a 14.325,14.325 0 0 1 1.6,6.569 C 95.817,86.62 94,93 69.381,93.594 c -4.971,0.12 -10.661,0.705 -15.4,0.705 a 24.294,24.294 0 0 1 -6.667,-0.705 z"
+             transform="translate(-10.962,-10.88)"
+             inkscape:connector-curvature="0"
+             style="fill:#7ce39b" />
+          <path
+             id="Path_355-9"
+             data-name="Path 355"
+             d="m 6134.416,155.593 c 8.094,-12.134 21.632,-11.068 21.632,-11.068"
+             transform="rotate(21,3390.8882,-16384.633)"
+             inkscape:connector-curvature="0"
+             style="fill:none;stroke:#49d475;stroke-width:1" />
+        </g>
+      </g>
+      <g
+         id="Tree-23"
+         data-name="Tree"
+         transform="translate(1628.371,50)">
+        <path
+           id="Subtraction_4-2"
+           data-name="Subtraction 4"
+           d="m -5929,49 h -21 V 0 h 21 z"
+           transform="translate(6105,226)"
+           inkscape:connector-curvature="0"
+           style="fill:#d97a4b" />
+        <path
+           id="Union_5-15"
+           data-name="Union 5"
+           d="m 15.377,96.995 c 0,-6.106 2.626,-11.757 7.086,-16.364 A 41.061,41.061 0 0 1 57.887,20.009 C 63.462,11.923 73.6,6.516 85.191,6.516 c 17.593,0 31.856,12.466 31.856,27.843 A 25.113,25.113 0 0 1 112.689,48.425 41.021,41.021 0 0 1 132.5,83.53 c 0,22.688 -24.837,39.637 -41.252,41.081 a 60.733,60.733 0 0 1 -8.407,0.054 c -2.675,-0.092 -6.171,-0.184 -11.807,-0.054 a 82.221,82.221 0 0 1 -9.67,-0.2 50.636,50.636 0 0 1 -8.177,0.658 C 32.307,125.067 15.377,112.5 15.377,96.995 Z"
+           transform="translate(98.251,113)"
+           inkscape:connector-curvature="0"
+           style="fill:#82eda3" />
+        <path
+           id="Path_355-10"
+           data-name="Path 355"
+           d="m 6134.415,161.231 a 35.243,35.243 0 0 1 30.941,-16.694"
+           transform="translate(-5976.034,16.094)"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#49d475;stroke-width:1" />
+      </g>
+    </g>
+    <path
+       id="header-waterfall"
+       d="M 123.833,387 H 116 v -62 h 94 v 28.877 h -6.854 v 7.223 h -19.584 v 15.709 H 173.77 V 365.768 H 163 v 5.945 h -10.771 v 8.918 h -9.791 v -14.014 h -8.812 v 15.713 h -9.792 V 387 Z"
+       inkscape:connector-curvature="0"
+       style="fill:url(#linear-gradient-3)" />
+  </g>
+</svg>
