@@ -135,13 +135,42 @@ function contentReducer(state = initialState, action) {
                 language: language,
                 translation: translation,
                 theme: toggleThemeByLanguage(language, state),
-                questions: transformQuestions(language, state.raw.questions),
+                questions: switchLanguageForQuestions(language, state),
                 policy: togglePolicyByLanguage(language, state),
                 institution: toggleInstitutionByLanguage(language, state)
             });
         default:
             return state;
     }
+}
+
+function switchLanguageForQuestions(language, state) {
+    let rawQuestions = state.raw.questions;
+    let questionsData = rawQuestions.filter(question => question.language.name.toLowerCase() === language.toLowerCase() );
+    let transformedQuestions =  questionsData.map(question => transformQuestion(question));
+
+    if (language !== "english") {
+        transformedQuestions.forEach(question => {
+            rawQuestions.forEach(raw => {
+                raw.translations.forEach(translation => {
+                    if (translation.id === question.id) {
+                        question.id = raw.id;
+                    }
+                });
+            });
+        });
+        
+    } 
+    transformedQuestions.forEach(question => {
+        state.questions.forEach(prior => {
+            if (question.id === prior.id) {
+                question.answer = prior.answer;
+                question.answerOptions.isClicked = prior.answerOptions.isClicked;
+            }
+        });
+    });
+
+    return transformedQuestions;
 }
 
 function transformQuestions(language, questionsArray){

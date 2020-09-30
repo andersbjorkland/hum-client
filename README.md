@@ -4,6 +4,11 @@ This is a React Redux app.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+## Dev/Prod setup
+In .env the route to the target image folder is located. Update this with correct information once going into prod.
+
+
 ## Available Scripts
 
 In the project directory, you can run:
