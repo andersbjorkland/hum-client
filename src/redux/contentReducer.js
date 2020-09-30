@@ -117,7 +117,6 @@ function contentReducer(state = initialState, action) {
         case UPDATE_CONTENT:
             let updateData = {...action.payload.data};
             let humData = updateData['hydra:member'][0];
-            console.log(humData);
 
             return Object.assign({}, state, {
                 questions: transformQuestions(state.language, humData.questions),
