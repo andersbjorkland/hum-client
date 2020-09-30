@@ -165,6 +165,7 @@ function switchLanguageForQuestions(language, state) {
         state.questions.forEach(prior => {
             if (question.id === prior.id) {
                 question.answer = prior.answer;
+                question.answerOptions.isClicked = prior.answerOptions.isClicked;
             }
         });
     });
