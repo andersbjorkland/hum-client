@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 
+import LoadingIndicator from './utility/LoadingIndicator';
 import {postAnswer} from '../redux/actions';
 import bee from '../images/small-bee@2x.png';
 
@@ -49,6 +50,18 @@ class AnswersItem extends Component {
             );
         }
 
+        if (this.props.asyncReducer.isPosting && !this.props.asyncReducer.failedSending) {
+            return (
+                <form className="content-item center-align relative results sent">
+                    <div className="item-header center">
+                        <h2 className="bold">{this.props.contentReducer.translation.sending}</h2>
+                    </div>
+                    {bees}
+                    <LoadingIndicator color={'yellow'} size={'small'} />
+                </form>
+            );
+        }
+
         if (this.props.asyncReducer.sentAnswers) {
             return (
                 <form className="content-item center-align relative results sent">
@@ -56,9 +69,7 @@ class AnswersItem extends Component {
                         <h2 className="bold">{heading}</h2>
                     </div>
                     {bees}
-                    <p>{this.props.contentReducer.translation.answersContent}</p>
-                    {hiddenInputs}
-                    <p className="answer-option" >{this.props.contentReducer.translation.answersSent}</p>
+                    <p className="answer-option success" >{this.props.contentReducer.translation.answersSent}</p>
                 </form>
             );
         }

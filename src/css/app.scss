@@ -241,12 +241,25 @@ ul {
     margin-right: 0.5rem;
 }
 
+form {
+    min-height: 15rem;
+}
+form.center-align {
+    justify-content: center;
+}
+
 .answer-option {
     width: 6rem;
     min-width: max-content;
     margin-right: 1rem;
     font-size: 1rem;
     background-color: $softYellow;
+}
+
+.answer-option.success {
+    font-size: 2.5rem;
+    margin-top: 1.5rem;
+    background-color: unset;
 }
 
 .answer-option:hover {

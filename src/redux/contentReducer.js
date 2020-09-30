@@ -17,7 +17,8 @@ const translationSwedish = {
     answersContent: "Vill du dela dina svar med oss? När det är dags för nästa Hum så presenterar vi resultaten. Om du inte vill dela dina svar med oss så behöver du helt enkelt inte göra någonting.",
     answersButton: "Låter intressant. Dela svaren!",
     invalidInput: "Fel värde",
-    answersSent: "Dina svar har skickats!"
+    answersSent: "Dina svar har skickats!",
+    sending: "Skickar..."
 
 };
 
@@ -38,7 +39,8 @@ const translationEnglish = {
     answersContent: "Would you like to submit these answers to us? By the release of the next Hum we will also share how people generally has answered. You don't have to do anything if you don't want to share them.",
     answersButton: "I'm intrigued, share them!",
     invalidInput: "Invalid input",
-    answersSent: "Successfully sent your answers!"
+    answersSent: "Successfully sent your answers!",
+    sending: "Sending..."
 
 }
 

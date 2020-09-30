@@ -2,9 +2,19 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 
 class LoadingIndicator extends Component {
+
     render() {
+        let classNameEnhance = '';
+        if (undefined !== this.props.color ) {
+            classNameEnhance += ' ' + this.props.color;
+        }
+
+        if (undefined !== this.props.size ) {
+            classNameEnhance += ' ' + this.props.size;
+        }
+
         return (
-            <div className="loading-indicator">
+            <div className={"loading-indicator" + classNameEnhance}>
                 <div id="li1" className="loading-inner"></div>
                 <div id="li2" className="loading-inner"></div>
                 <div id="ind1" className="indicator"></div>
