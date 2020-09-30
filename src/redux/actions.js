@@ -12,6 +12,9 @@ export const REQUEST_HUM = "REQUEST_HUM";
 export const FAILED_REQUEST = "FAILED_REQUEST";
 export const UPDATE_CONTENT = "UPDATE_CONTENT";
 export const SWITCH_LANGUAGE = "SWITCH_LANGUAGE";
+export const POST_ANSWER = "POST_ANSWER";
+export const POST_ANSWER_RESOLVED = "POST_ANSWER_RESOLVED";
+export const POST_ANSWER_FAILED = "POST_ANSWER_FAILED";
 
 
 // Actions should have a basic structure like this, optionally with some payload for "someData":
@@ -43,6 +46,13 @@ export const answerUninvalid = (componentId) => ({
         componentId: componentId
     }
 })
+
+export const postAnswer = answer => {
+    console.log(answer);
+    return {
+        type: POST_ANSWER
+    }
+}
 
 export const getHum = () => {
 

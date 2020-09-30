@@ -1,6 +1,6 @@
-import {FAILED_REQUEST, REQUEST_HUM, RESOLVED_HUM} from "./actions";
+import {FAILED_REQUEST, POST_ANSWER, REQUEST_HUM, RESOLVED_HUM} from "./actions";
 
-function asyncReducer(state = {isFetching: false}, action) {
+function asyncReducer(state = {isFetching: false, isPosting: false}, action) {
 
     switch (action.type) {
         case REQUEST_HUM:
@@ -17,6 +17,10 @@ function asyncReducer(state = {isFetching: false}, action) {
             console.log("Unsuccessful request.");
             return Object.assign({}, state, {
                 isFetching: false
+            });
+        case POST_ANSWER:
+            return Object.assign({}, state, {
+                isPosting: true
             });
         default:
             return state;
