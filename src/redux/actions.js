@@ -47,10 +47,59 @@ export const answerUninvalid = (componentId) => ({
     }
 })
 
-export const postAnswer = answer => {
+export const postAnswer = (answer, humId) => {
     console.log(answer);
+    
+    return function (dispatch) {
+        dispatch(postRequestAnswer());
+
+        let axiosArray = [];
+
+        
+        
+        answer.answers.forEach(element => {
+            let answer = Object.values(element)[0];
+            answer = typeof answer === 'number' ? answer.toString() : answer;
+            
+            let newPromise = axios({
+                method: 'post',
+                url: 'https://localhost:8000/api/client_answers',
+                data: {
+                    hum: humId.toString(),
+                    idHash: "test",
+                    question: Object.keys(element)[0],
+                    answer: answer
+                }
+            });
+
+            axiosArray.push(newPromise);
+            
+        });
+
+        axios.all(axiosArray).then(axios.spread((...responses) => {
+            dispatch(postResolvedPostAnswer());
+        })).catch(errors => {
+            console.log(errors);
+            dispatch(postFailedPostAnswer());
+        })
+    }
+}
+
+export const postRequestAnswer = () => {
     return {
         type: POST_ANSWER
+    }
+}
+
+export const postResolvedPostAnswer = () => {
+    return {
+        type: POST_ANSWER_RESOLVED
+    }
+}
+
+export const postFailedPostAnswer = () => {
+    return {
+        type: POST_ANSWER_FAILED
     }
 }
 

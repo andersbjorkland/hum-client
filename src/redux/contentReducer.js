@@ -16,7 +16,8 @@ const translationSwedish = {
     answersHeading: `Du har svarat på [] fråga`,
     answersContent: "Vill du dela dina svar med oss? När det är dags för nästa Hum så presenterar vi resultaten. Om du inte vill dela dina svar med oss så behöver du helt enkelt inte göra någonting.",
     answersButton: "Låter intressant. Dela svaren!",
-    invalidInput: "Fel värde"
+    invalidInput: "Fel värde",
+    answersSent: "Dina svar har skickats!"
 
 };
 
@@ -36,13 +37,16 @@ const translationEnglish = {
     answersHeading: `You've answered [] question`,
     answersContent: "Would you like to submit these answers to us? By the release of the next Hum we will also share how people generally has answered. You don't have to do anything if you don't want to share them.",
     answersButton: "I'm intrigued, share them!",
-    invalidInput: "Invalid input"
+    invalidInput: "Invalid input",
+    answersSent: "Successfully sent your answers!"
+
 }
 
 const initialState = {
     imageFolder: "/uploads/images/",
     language: "english",
     translation: {...translationEnglish},
+    humId: '',
     questions: [],
     invalidInput: [],
     numOfAnswers: 0,
@@ -117,8 +121,10 @@ function contentReducer(state = initialState, action) {
         case UPDATE_CONTENT:
             let updateData = {...action.payload.data};
             let humData = updateData['hydra:member'][0];
+            console.log(humData);
 
             return Object.assign({}, state, {
+                humId: humData['@id'],
                 questions: transformQuestions(state.language, humData.questions),
                 policy: transformPolicy(humData.policy),
                 vote: transformVote(humData.policy.vote),
@@ -152,8 +158,8 @@ function switchLanguageForQuestions(language, state) {
         transformedQuestions.forEach(question => {
             rawQuestions.forEach(raw => {
                 raw.translations.forEach(translation => {
-                    if (translation.id === question.id) {
-                        question.id = raw.id;
+                    if (translation['@id'] === question.id) {
+                        question.id = raw['@id'];
                     }
                 });
             });
@@ -269,7 +275,7 @@ function transformQuestion(question) {
             values = ["0", "0"];
     }
     return {
-        id: question['id'],
+        id: question['@id'],
         category: category,
         content: question['text'],
         answerOptions: {

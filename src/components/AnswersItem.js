@@ -15,7 +15,8 @@ class AnswersItem extends Component {
 
     sendAnswer(event) {
         event.preventDefault();
-        this.props.postAnswer(this.answers);
+        let humId = this.props.contentReducer.humId
+        this.props.postAnswer(this.answers, humId);
     }
 
     render() {
@@ -48,6 +49,20 @@ class AnswersItem extends Component {
             );
         }
 
+        if (this.props.asyncReducer.sentAnswers) {
+            return (
+                <form className="content-item center-align relative results sent">
+                    <div className="item-header center">
+                        <h2 className="bold">{heading}</h2>
+                    </div>
+                    {bees}
+                    <p>{this.props.contentReducer.translation.answersContent}</p>
+                    {hiddenInputs}
+                    <p className="answer-option" >{this.props.contentReducer.translation.answersSent}</p>
+                </form>
+            );
+        }
+
         return (
             <form onSubmit={this.sendAnswer} id={this.props.id ? this.props.id : ""} className="content-item center-align relative results" method="post">
                 <div className="item-header center">
@@ -69,7 +84,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    postAnswer: (answer) => dispatch(postAnswer(answer))
+    postAnswer: (answer, humId) => dispatch(postAnswer(answer, humId))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(AnswersItem);

@@ -303,6 +303,33 @@ ul {
     transform: rotate(20deg);
 }
 
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: baseline;
+
+    p {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    .answer-chevron {
+        font-weight: bold;
+        font-size: 3rem;;
+        color: $voteYesColor;
+    }
+}
+
+
+
+.question-item.sent {
+
+    button {
+        border-color: #636363;
+        color: #636363;
+    }
+}
 .question-item {
     position: relative;
     margin-top: 5rem;
@@ -464,6 +491,7 @@ input[type="number"].invalid {
 .cursive {
     font-style: italic;
 }
+
 
 
 .language-container {
