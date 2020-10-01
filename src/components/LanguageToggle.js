@@ -18,7 +18,7 @@ class LanguageToggle extends Component {
 
     render() {
         return (
-          <div className={"flex-row language-container"}>
+          <div className={"flex-row language-container " + this.props.className}>
               <button 
                 className={this.props.contentReducer.language === "svenska" ? "btn select":"btn"} 
                 onClick={this.toggleSwedish} >Svenska</button>

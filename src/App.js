@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import {connect} from 'react-redux';
 
 import Content from "./components/Content";
-import LanguageToggle from "./components/LanguageToggle";
 import Nav from "./components/Nav";
 import LoadingIndicator from "./components/utility/LoadingIndicator";
 
@@ -20,7 +19,7 @@ class App extends Component {
         return (
         <div>
             <Nav page={"home"}/>
-            <LanguageToggle />
+            
             <Content />
         </div>
         );

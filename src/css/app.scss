@@ -6,6 +6,7 @@ $headerInitialHeight: 20rem;
 
 $minRightMargin: 8rem;
 $minLeftMargin: 8rem;
+$marginTop: 10rem;
 
 /*******> COLORS ********/
 $voteYesColor: #5eb5e0;
@@ -80,6 +81,24 @@ $invalidTextBackground: $lightRed;
   body {
     margin: 0;
   }
+
+  .header-container {
+      position: sticky;
+      top: 0;
+      z-index: 25;
+  }
+
+  header.small {
+      min-height: $marginTop;
+    #header-image-bg {
+        transition: 250ms;
+        opacity: 0;
+    }
+
+    .language-container {
+        //bottom: -4rem;
+    }
+  }
   
   header {
     background-image: linear-gradient($nav-top-bg, $nav-bottom-bg);
@@ -87,15 +106,18 @@ $invalidTextBackground: $lightRed;
     display: flex;
     flex-direction: row;
     position: relative;
+    transition: 1s;
+    z-index: 25;
 
     #header-image-bg {
         background-image: url('../images/header.svg');
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
-        height: 18rem;
-        bottom: -4rem;
+        min-height: 12rem;
+        bottom: 0;
         position: absolute;
+        transition: 500ms;
     }
   
     #logo {
@@ -103,7 +125,9 @@ $invalidTextBackground: $lightRed;
       flex-direction: column;
       z-index: 10;
       margin-left: $minLeftMargin;
+
       a {
+        margin-top: 1rem;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -506,15 +530,35 @@ input[type="number"].invalid {
     font-style: italic;
 }
 
+.language-container.small {
+    top: -3.2rem;
+    background-color: rgba($color: #bbe7fe, $alpha: 0);
 
+    button.btn {
+        background-color: #f9f9f9;
+        font-weight: bold;
+        color: #2c2c2c;
+    }
+
+    button.btn.select {
+        background: none;
+        border-bottom: 0.3rem solid #f9f9f9;
+        color: #2c2c2c;
+    }
+}
 
 .language-container {
+    position: relative;
+    top: 0;
+    z-index: 30;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     gap: 1rem;
-    margin-top: 1rem;
-    margin-right: $minRightMargin;
+    padding-right: $minRightMargin;
+    padding-top: 1rem;
+    background-color: rgba($color: #fff, $alpha: 1.0);
+    transition: 500ms;
 
     button.btn {
         font-family: "Raleway-Regular", "Raleway-Light", sans-serif;
@@ -525,6 +569,8 @@ input[type="number"].invalid {
         background-color: $deep-blue;
         color: white;
         z-index: 20;
+
+        transition: 250ms;
     }
 
     button.btn.select {
