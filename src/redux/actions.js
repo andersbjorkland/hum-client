@@ -12,6 +12,10 @@ export const REQUEST_HUM = "REQUEST_HUM";
 export const FAILED_REQUEST = "FAILED_REQUEST";
 export const UPDATE_CONTENT = "UPDATE_CONTENT";
 export const SWITCH_LANGUAGE = "SWITCH_LANGUAGE";
+export const RESOLVED_NEWS = "RESOLVED_NEWS";
+export const REQUEST_NEWS = "REQUEST_NEWS";
+export const FAILED_NEWS = "FAILED_NEWS";
+export const UPDATE_NEWS = "UPDATE_NEWS";
 export const POST_ANSWER = "POST_ANSWER";
 export const POST_ANSWER_RESOLVED = "POST_ANSWER_RESOLVED";
 export const POST_ANSWER_FAILED = "POST_ANSWER_FAILED";
@@ -48,8 +52,7 @@ export const answerUninvalid = (componentId) => ({
 })
 
 export const postAnswer = (answer, humId) => {
-    console.log(answer);
-    
+
     return function (dispatch) {
         dispatch(postRequestAnswer());
 
@@ -100,6 +103,49 @@ export const postResolvedPostAnswer = () => {
 export const postFailedPostAnswer = () => {
     return {
         type: POST_ANSWER_FAILED
+    }
+}
+
+export const getNews = () => {
+
+    return function (dispatch) {
+        dispatch(requestNews());
+        return axios.get('https://localhost:8000/api/blog_posts?page=1')
+            .then(response => {
+                dispatch(resolvedGetNews());
+                dispatch(updateNews(response.data));
+            })
+            .catch(function (error) {
+                dispatch(failedNewsRequest());
+                console.log(error);
+            });
+
+    }
+}
+export const requestNews = () => {
+    return {
+        type: REQUEST_NEWS
+    }
+}
+
+export const failedNewsRequest = () => {
+    return {
+        type: FAILED_NEWS
+    }
+}
+
+export const resolvedGetNews = () => {
+    return {
+        type: RESOLVED_NEWS,
+    }
+}
+
+export const updateNews = (data) => {
+    return {
+        type: UPDATE_NEWS,
+        payload: {
+            data: data
+        }
     }
 }
 

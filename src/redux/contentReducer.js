@@ -1,4 +1,4 @@
-import {ANSWERING, INVALID, SWITCH_LANGUAGE, UNINVALIDATE, UPDATE_CONTENT} from "./actions";
+import {ANSWERING, INVALID, SWITCH_LANGUAGE, UNINVALIDATE, UPDATE_CONTENT } from "./actions";
 
 const translationSwedish = {
     home: 'Hem',

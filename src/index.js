@@ -6,10 +6,11 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import store from './redux/store';
-import {getHum} from './redux/actions';
+import {getHum, getNews} from './redux/actions';
 
 
 store.dispatch(getHum());
+store.dispatch(getNews());
 
 ReactDOM.render(
   <Provider store={store}>

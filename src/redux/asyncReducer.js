@@ -1,10 +1,21 @@
-import {FAILED_REQUEST, POST_ANSWER, POST_ANSWER_RESOLVED, POST_ANSWER_FAILED, REQUEST_HUM, RESOLVED_HUM} from "./actions";
+import {
+    FAILED_REQUEST, 
+    POST_ANSWER, 
+    POST_ANSWER_RESOLVED, 
+    POST_ANSWER_FAILED, 
+    REQUEST_HUM, 
+    RESOLVED_HUM,
+    REQUEST_NEWS,
+    FAILED_NEWS,
+    RESOLVED_NEWS
+} from "./actions";
 
 function asyncReducer(state = {
     isFetching: false, 
     isPosting: false,
     sentAnswers: false,
-    failedSending: false
+    failedSending: false,
+    isFetchingNews: false,
 }, action) {
 
     switch (action.type) {
@@ -22,6 +33,21 @@ function asyncReducer(state = {
             console.log("Unsuccessful request.");
             return Object.assign({}, state, {
                 isFetching: false
+            });
+        case REQUEST_NEWS:
+            console.log("Getting news...");
+            return Object.assign({}, state, {
+                isFetchingNews: true
+            });
+        case RESOLVED_NEWS:
+            console.log("Successfully got news.");
+            return Object.assign({}, state, {
+                isFetchingNews: false
+            });
+        case FAILED_NEWS:
+            console.log("Unsuccessful request for news.");
+            return Object.assign({}, state, {
+                isFetchingNews: false
             });
         case POST_ANSWER:
             console.log("Posting answer.");
