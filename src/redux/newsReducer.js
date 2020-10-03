@@ -2,6 +2,7 @@ import {SWITCH_LANGUAGE, UPDATE_NEWS} from "./actions";
 
 
 const initialState = {
+    language: "english",
     imageFolder: "/uploads/images/",
     news: [],
     raw: []
@@ -14,7 +15,9 @@ function newsReducer(state = initialState, action) {
         case UPDATE_NEWS:
             console.log(action.payload.data);
             let raw = { ...action.payload.data };
-            raw['hydra:member'].forEach(element => newsItems.push(transformNews(element)));
+            raw['hydra:member'].forEach(element =>
+                element.language.name.toLowerCase() === state.language.toLowerCase() ?
+                    newsItems.push(transformNews(element)) :'');
             return Object.assign({}, state, {
                 raw: raw,
                 news: newsItems
