@@ -208,11 +208,10 @@ ul {
 }
 }
 #content {
-    display: flex;
-    flex-direction: initial;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: minmax(12rem, 62rem) minmax(8rem, 20rem);
+    column-gap: 3rem;
     margin: 27px;
-    margin-top: 27px;
     margin-left: 8rem;
 
     font-family: 'Raleway-Light', sans-serif;
@@ -630,4 +629,18 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+  #content {
+    grid-template-columns: 1fr;
+
+    #secondary-col {
+      grid-row: 1;
+      height: 12rem;
+      overflow-y: auto;
+    }
   }
+
+
+}
