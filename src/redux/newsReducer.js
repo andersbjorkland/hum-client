@@ -9,27 +9,36 @@ const initialState = {
 };
 
 function newsReducer(state = initialState, action) {
-    let newsItems = [];
+    let raw = {};
+    let language;
     switch (action.type) {
 
         case UPDATE_NEWS:
-            console.log(action.payload.data);
-            let raw = { ...action.payload.data };
-            raw['hydra:member'].forEach(element =>
-                element.language.name.toLowerCase() === state.language.toLowerCase() ?
-                    newsItems.push(transformNews(element)) :'');
+            raw = { ...action.payload.data };
+
             return Object.assign({}, state, {
                 raw: raw,
-                news: newsItems
+                news: filterRawNewsByLanguage(raw, state.language)
             });
         case SWITCH_LANGUAGE:
-            let language = action.payload.language.toLowerCase();
-            console.log("newsReducer is also listening: " + language);
+            language = action.payload.language.toLowerCase();
+            raw = state.raw;
 
-            return state;
+            return Object.assign({}, state, {
+                language: language,
+                news: filterRawNewsByLanguage(raw, language)
+            });
         default:
             return state;
     }
+}
+
+function filterRawNewsByLanguage(raw, language) {
+    let newsItemsArray = [];
+    raw['hydra:member'].forEach(element =>
+        element.language.name.toLowerCase() === language.toLowerCase() ?
+            newsItemsArray.push(transformNews(element)) :'');
+    return newsItemsArray;
 }
 
 function transformNews(rawNews) {
