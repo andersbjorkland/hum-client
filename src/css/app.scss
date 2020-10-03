@@ -447,7 +447,6 @@ form.center-align {
 input[type="number"] {
     background-color: $softerYellow;
     width: 100%;
-    height: 2rem;
     font-size: 1.3rem;
     text-align: center;
     height: 1rem;
@@ -582,6 +581,21 @@ input[type="number"].invalid {
         outline: none;
     }
 }
+
+.news-list {
+  height: 15rem;
+  .news-item {
+    h3 {
+      font-size: 0.8rem;
+      margin-bottom: 0;
+    }
+    p {
+      font-size: 0.7rem;
+      margin: 0;
+    }
+  }
+}
+
 
 .diagram-container {
     margin-left: -3rem;
