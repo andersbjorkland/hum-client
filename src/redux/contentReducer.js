@@ -64,6 +64,7 @@ const initialState = {
         header: "",
         content: ""
     },
+    arguments: [],
     vote: {
         yes: 0,
         no: 0,
@@ -75,7 +76,8 @@ const initialState = {
         content: "",
         source: ""
     },
-    raw: []
+    raw: [],
+    rawPolicy: {}
 };
 
 function contentReducer(state = initialState, action) {
@@ -124,6 +126,8 @@ function contentReducer(state = initialState, action) {
             let updateData = {...action.payload.data};
             let humData = updateData['hydra:member'][0];
             console.log(humData);
+            let entities = flattenArguments([], humData.policy.argument);
+            console.log(entities);
 
             return Object.assign({}, state, {
                 humId: humData['@id'],
@@ -132,23 +136,42 @@ function contentReducer(state = initialState, action) {
                 vote: transformVote(humData.policy.vote),
                 institution: transformInstitution(humData.institution),
                 theme: transformTheme(humData.policy.policyTheme),
+                arguments: entities,
                 raw: humData
             });
         case SWITCH_LANGUAGE:
             let language = action.payload.language.toLowerCase();
             let translation = language === 'english' ? translationEnglish : translationSwedish;
-
+            let policy = togglePolicyByLanguage(language, state);
             return Object.assign({}, state, {
                 language: language,
                 translation: translation,
                 theme: toggleThemeByLanguage(language, state),
                 questions: switchLanguageForQuestions(language, state),
-                policy: togglePolicyByLanguage(language, state),
+                policy: policy,
+                arguments: flattenArguments([], policy.argument),
                 institution: toggleInstitutionByLanguage(language, state)
             });
         default:
             return state;
     }
+}
+
+function flattenArguments(entities, rawParentArgument) {
+      if (rawParentArgument.child) {
+
+          return flattenArguments([...entities, transformArgument(rawParentArgument)], rawParentArgument.child)
+      } else {
+          entities.push(transformArgument(rawParentArgument))
+          return entities;
+      }
+}
+
+function transformArgument(rawArgument) {
+    return {
+        side: rawArgument.side,
+        text: rawArgument.text,
+    };
 }
 
 function switchLanguageForQuestions(language, state) {
@@ -243,7 +266,8 @@ function transformPolicy(policy) {
     return {
         title: policy.title,
         content: policy.text,
-        source: policy.source
+        source: policy.source,
+        argument: policy.argument
     }
 }
 
