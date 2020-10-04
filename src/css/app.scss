@@ -586,6 +586,7 @@ input[type="number"].invalid {
 
 .news-list {
   height: 15rem;
+  overflow-y: auto;
   .news-item {
     h3 {
       font-size: 0.8rem;
