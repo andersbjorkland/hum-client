@@ -7,6 +7,7 @@ import VoteItem from "./VoteItem";
 import GenericItem from "./GenericItem";
 import AnswersItem from "./AnswersItem";
 import NewsList from "./NewsList";
+import ArgumentsList from "./ArgumentsList";
 
 
 class Content extends Component {
@@ -82,6 +83,7 @@ class Content extends Component {
                 <div id="secondary-col">
                     <h2>Side content</h2>
                     <NewsList />
+                    <ArgumentsList />
                 </div>
             </div>
         );

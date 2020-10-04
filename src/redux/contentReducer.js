@@ -18,7 +18,8 @@ const translationSwedish = {
     answersButton: "Låter intressant. Dela svaren!",
     invalidInput: "Fel värde",
     answersSent: "Dina svar har skickats!",
-    sending: "Skickar..."
+    sending: "Skickar...",
+    prosCons: "För och emot"
 
 };
 
@@ -40,7 +41,8 @@ const translationEnglish = {
     answersButton: "I'm intrigued, share them!",
     invalidInput: "Invalid input",
     answersSent: "Successfully sent your answers!",
-    sending: "Sending..."
+    sending: "Sending...",
+    prosCons: "Pros and cons"
 
 }
 
