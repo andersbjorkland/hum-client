@@ -189,11 +189,8 @@ $invalidTextBackground: $lightRed;
 
         >div {
             margin-bottom: -0.9rem;
+            margin-left: 2rem;
         }
-      }
-  
-      div {
-        margin-left: 2rem;
       }
   
       a {
@@ -412,15 +409,16 @@ form.center-align {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 3.5rem;
+
 
     .card {
         position: absolute;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 7rem;
-        height: 8rem;
-        font-size: 6rem;
+        width: 2em;
+        height: 2.8em;
         font-family: Raleway, "Raleway-Light", sans-serif;
         border-style: solid;
         border-color: #707070;
@@ -577,6 +575,7 @@ input[type="number"].invalid {
         color: #0600A8;
         background: none;
         border-bottom: 0.3rem solid #0600A8;
+        padding-top: 0.3rem;
     }
 
     button.btn:focus {
@@ -706,6 +705,20 @@ footer {
       }
     }
   }
+
+  .result-summary {
+    margin: 0;
+  }
+
+  .content-item {
+    .answer-option.success {
+      min-width: fit-content;
+      line-height: 2rem;
+      &p {
+
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -733,5 +746,32 @@ footer {
       width: 5.5rem;
     }
   }
+}
 
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 11px;
+  }
+
+  header, header.small {
+    flex-direction: column;
+    min-height: 8rem;
+
+    #logo {
+      margin: 0 0 0 4rem;
+    }
+
+    nav {
+      margin: 0;
+      justify-content: center;
+    }
+  }
+
+  .language-container, .language-container.small  {
+    top: -8rem;
+  }
+
+  .vote-sign {
+    display: none;
+  }
 }
