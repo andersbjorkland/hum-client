@@ -91,7 +91,8 @@ $invalidTextBackground: $lightRed;
   header.small {
       min-height: $marginTop;
     #header-image-bg {
-        transition: 250ms;
+        min-height: 10%;
+        transition: 500ms;
         opacity: 0;
     }
 
@@ -106,7 +107,7 @@ $invalidTextBackground: $lightRed;
     display: flex;
     flex-direction: row;
     position: relative;
-    transition: 1s;
+    transition: 500ms;
     z-index: 25;
 
     #header-image-bg {
@@ -114,10 +115,11 @@ $invalidTextBackground: $lightRed;
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
-        min-height: 10rem;
+        min-height: 50%;
         bottom: 0;
         position: absolute;
-        transition: 500ms;
+        transition: 1000ms;
+        opacity: 0.7;
     }
   
     #logo {
