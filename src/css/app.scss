@@ -125,6 +125,8 @@ $invalidTextBackground: $lightRed;
       flex-direction: column;
       z-index: 10;
       margin-left: $minLeftMargin;
+      width: 8rem;
+      transition: 1s;
 
       a {
         margin-top: 1rem;
@@ -539,7 +541,7 @@ input[type="number"].invalid {
     }
 
     button.btn.select {
-        background: none;
+        background: rgb(222 244 254);;
         border-bottom: 0.3rem solid #f9f9f9;
         color: #2c2c2c;
     }
@@ -655,6 +657,80 @@ footer {
       overflow-y: auto;
     }
   }
+}
 
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 13px;
+  }
+  header {
+    min-height: 10rem;
+
+    #logo {
+      img {
+        width: 7rem;
+      }
+      #logo-text-container {
+        display: none;
+      }
+    }
+
+    nav {
+      display: flex;
+    }
+  }
+  #header-image-bg  {
+    display: none;
+  }
+
+    .language-container {
+    top: -3.2rem;
+    background-color: rgba(187, 231, 254, 0);
+
+    button.btn {
+      background-color: #f9f9f9;
+      font-weight: bold;
+      color: #2c2c2c;
+
+      &.select {
+        background: rgb(222 244 254);
+        border-bottom: 0.3rem solid #f9f9f9;
+        color: #2c2c2c;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 12px;
+  }
+
+  header {
+
+    #logo {
+      justify-content: center;
+      a{
+        margin: 0;
+      }
+      img {
+        width: 5rem;
+      }
+    }
+
+  }
+  .language-container {
+
+    button.btn {
+      font-size: 1rem;
+      width: 5.5rem;
+    }
+  }
 
 }
