@@ -4,8 +4,8 @@ $maxWidth: 60rem;
 $headerHeight: 12rem;
 $headerInitialHeight: 15rem;
 
-$minRightMargin: 8rem;
-$minLeftMargin: 8rem;
+$minRightMargin: 4rem;
+$minLeftMargin: 4rem;
 $marginTop: 10rem;
 
 /*******> COLORS ********/
@@ -211,8 +211,8 @@ ul {
     display: grid;
     grid-template-columns: minmax(12rem, 62rem) minmax(8rem, 20rem);
     column-gap: 3rem;
-    margin: 27px;
-    margin-left: 8rem;
+    margin-left: $minLeftMargin;
+    margin-right: $minRightMargin;
 
     font-family: 'Raleway-Light', sans-serif;
 
