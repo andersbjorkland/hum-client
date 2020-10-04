@@ -81,7 +81,6 @@ class Content extends Component {
                 </div>
 
                 <div id="secondary-col">
-                    <h2>Side content</h2>
                     <NewsList />
                     <ArgumentsList />
                 </div>

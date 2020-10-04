@@ -23,8 +23,11 @@ class NewsList extends Component {
         let newsItems = this.props.newsReducer.news;
         let newsItemsElements = newsItems.map((element, index=0) => <TextListItem key={index++} title={element.title} summary={element.text.substr(0, 100)}/>)
         return (
-            <div className={"news-list"}>
-                {newsItemsElements}
+            <div>
+                <h2>News</h2>
+                <div className={"news-list"}>
+                    {newsItemsElements}
+                </div>
             </div>
         );
 
