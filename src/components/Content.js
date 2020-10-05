@@ -53,37 +53,32 @@ class Content extends Component {
         let questionsIndex = 0;
         return (
             <div id="content">
-                <div id="main-col">
+                <NewsList />
+                <GenericItem
+                    id={"theme-content"}
+                    className={"mt-0 main-content"}
+                    heading={this.props.contentReducer.theme.header}
+                    headingLevel={1}
+                    subheading={this.props.contentReducer.translation.humSubheading}
+                    content={ this.props.contentReducer.theme.content }
+                    image={ this.props.contentReducer.theme.symbol }
+                />
+                {questions[questionsIndex] ? questions[questionsIndex++] : ""}
+                <VoteItem />
+                <ArgumentsList />
+                {questions[questionsIndex] ? questions[questionsIndex++] : ""}
+                {questions[questionsIndex] ? questions[questionsIndex++] : ""}
+                <GenericItem
+                    id={"institution-content"}
+                    className={"main-content"}
+                    heading={this.props.contentReducer.institution.header}
+                    subheading={this.props.contentReducer.translation.institutionSubheading}
+                    content={ this.props.contentReducer.institution.content }
+                />
+                {questions[questionsIndex] ? questions[questionsIndex++] : ""}
+                {questions[questionsIndex] ? questions[questionsIndex++] : ""}
 
-                    <GenericItem
-                        id={"theme-content"}
-                        className={"mt-0"}
-                        heading={this.props.contentReducer.theme.header}
-                        headingLevel={1}
-                        subheading={this.props.contentReducer.translation.humSubheading}
-                        content={ this.props.contentReducer.theme.content }
-                        image={ this.props.contentReducer.theme.symbol }
-                    />
-                    {questions[questionsIndex] ? questions[questionsIndex++] : ""}
-                    <VoteItem />
-                    {questions[questionsIndex] ? questions[questionsIndex++] : ""}
-                    <GenericItem
-                        id={"institution-content"}
-                        heading={this.props.contentReducer.institution.header}
-                        subheading={this.props.contentReducer.translation.institutionSubheading}
-                        content={ this.props.contentReducer.institution.content }
-                    />
-                    {questions[questionsIndex] ? questions[questionsIndex++] : ""}
-                    {questions[questionsIndex] ? questions[questionsIndex++] : ""}
-                    {questions[questionsIndex] ? questions[questionsIndex++] : ""}
-
-                    {this.props.contentReducer.numOfAnswers > 0 ? <AnswersItem /> : ""}
-                </div>
-
-                <div id="secondary-col">
-                    <NewsList />
-                    <ArgumentsList />
-                </div>
+                {this.props.contentReducer.numOfAnswers > 0 ? <AnswersItem /> : ""}
             </div>
         );
     }

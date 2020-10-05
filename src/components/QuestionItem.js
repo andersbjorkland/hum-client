@@ -56,7 +56,7 @@ class QuestionItem extends Component {
 
         
         return (
-            <div className={className}>
+            <div className={className + " main-content"}>
                 <img className={"question-bee " + beeClass} src={bee} alt="A small bumblebee"/>
                 <div className="cards-container">
                     { cards }

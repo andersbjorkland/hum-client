@@ -7,7 +7,7 @@ class ArgumentsList extends Component {
             let argumentItems = this.props.contentReducer.arguments;
             let newsItemsElements = argumentItems.map((element, index=0) => <ArgumentItem key={index++} index={index} text={element.text}/>)
             return (
-                <div className={"argument-list"}>
+                <div className={"argument-list side-content"}>
                     <h2>Policy: <span className={"thin"}>{this.props.contentReducer.policy.title}</span></h2>
                     <h3 className={"thin"}>{this.props.contentReducer.translation.prosCons}</h3>
                     {newsItemsElements}

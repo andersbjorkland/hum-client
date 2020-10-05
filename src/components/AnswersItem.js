@@ -52,7 +52,7 @@ class AnswersItem extends Component {
 
         if (this.props.asyncReducer.isPosting && !this.props.asyncReducer.failedSending) {
             return (
-                <form className="content-item center-align relative results sent">
+                <form className="content-item center-align relative results sent main-content">
                     <div className="item-header center">
                         <h2 className="bold">{this.props.contentReducer.translation.sending}</h2>
                     </div>
@@ -64,7 +64,7 @@ class AnswersItem extends Component {
 
         if (this.props.asyncReducer.sentAnswers) {
             return (
-                <form className="content-item center-align relative results sent">
+                <form className="content-item center-align relative results sent main-content">
                     <div className="item-header center">
                         <h2 className="bold">{heading}</h2>
                     </div>
@@ -75,7 +75,7 @@ class AnswersItem extends Component {
         }
 
         return (
-            <form onSubmit={this.sendAnswer} id={this.props.id ? this.props.id : ""} className="content-item center-align relative results" method="post">
+            <form onSubmit={this.sendAnswer} id={this.props.id ? this.props.id : ""} className="content-item center-align relative results main-content" method="post">
                 <div className="item-header center">
                     <h2 className="bold">{heading}</h2>
                 </div>
