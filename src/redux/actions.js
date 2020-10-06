@@ -153,7 +153,7 @@ export const updateNews = (data) => {
 
 export const openNews = (news) => {
     return {
-        type: UPDATE_NEWS,
+        type: OPEN_NEWS,
         payload: {
             news: news
         }

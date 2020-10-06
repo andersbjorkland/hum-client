@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
+import {openNews} from "../redux/actions";
 
 class TextListItem extends Component {
 
@@ -15,7 +16,7 @@ class TextListItem extends Component {
     }
 
     viewNews() {
-        console.log(this.props.news);
+        this.props.viewNews(this.props.news);
     }
 
 
@@ -36,4 +37,8 @@ const mapStateToProps = state => ({
     ...state
 });
 
-export default connect(mapStateToProps)(TextListItem);
+const mapDispatchToProps = dispatch => ({
+    viewNews: newsItem => dispatch(openNews(newsItem))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(TextListItem);

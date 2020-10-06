@@ -9,8 +9,9 @@ class NewsView extends Component {
     }
 
     fillHtmlTags() {
-        let sanitized = this.props.news.text;
-        let blogImages = this.props.news.blogImages;
+        let newsItem = this.props.newsReducer.newsItem;
+        let sanitized = newsItem.text;
+        let blogImages = newsItem.blogImages;
         blogImages.sort((a, b) => {
            if (a.ordering < b.ordering) {
                return -1;
@@ -21,30 +22,53 @@ class NewsView extends Component {
            return 0;
         });
 
-        let search = /(\|\d+\|)/g;
+        let search = /(\|\d+\|)/;
+        let searchGlobal = /(\|\d+\|)/g;
+
         let index = 0;
-        while (sanitized.includes(search)) {
-            sanitized.replace(search,
-                <img src={this.props.newsReducer.imageFolder + blogImages[index].image.fileName} alt={blogImages[index].image.alt} />);
+        let i;
+        let newsContent = [];
+        while (true) {
+            i = search.exec(sanitized);
+            if (null === i) {
+                break;
+            }
+            console.log(i);
+            if (i.index > 0) {
+                newsContent.push(<p>{sanitized.substring(0, i.index)}</p>);
+            }
+
+
+            newsContent.push(<img src={process.env.REACT_APP_IMAGE_TARGET + blogImages[index].image.fileName} alt={blogImages[index].image.alt} />)
+
+            sanitized = sanitized.substring(i.index + i[0].length);
+
             index++;
-            if (index >= blogImages.length()) {
+            if (index >= blogImages.length) {
                 break;
             }
         }
 
         // Remove any leftover markups (|#|)
-        sanitized.replaceAll(search, '');
-
-        return sanitized;
+        sanitized.replaceAll(searchGlobal, '');
+        newsContent.push(<p>{sanitized}</p>);
+        return newsContent;
     }
 
 
     render() {
+        let newsItem = this.props.newsReducer.newsItem;
+        if (null === newsItem || !this.props.newsReducer.showNewsItem) {
+            return null;
+        }
+
+        let content = this.fillHtmlTags();
+        console.log(content);
         return (
             <div id={"news-view"} className={"main-content modal"}>
-                <h2>{this.props.news.title}</h2>
-                <div className={"news-list"}>
-                    {this.fillHtmlTags}
+                <h2>{newsItem.title}</h2>
+                <div className={"news-content"}>
+                    {content}
                 </div>
             </div>
         );

@@ -1,9 +1,11 @@
-import {SWITCH_LANGUAGE, UPDATE_NEWS} from "./actions";
+import {CLOSE_NEWS, OPEN_NEWS, SWITCH_LANGUAGE, UPDATE_NEWS} from "./actions";
 
 
 const initialState = {
     language: "english",
     imageFolder: "/uploads/images/",
+    showNewsItem: false,
+    newsItem: {},
     news: [],
     raw: []
 };
@@ -31,6 +33,16 @@ function newsReducer(state = initialState, action) {
             return Object.assign({}, state, {
                 language: language,
                 news: filterRawNewsByLanguage(raw, language)
+            });
+        case OPEN_NEWS:
+            return Object.assign({}, state, {
+                showNewsItem: true,
+                newsItem: action.payload.news
+            });
+        case CLOSE_NEWS:
+            return Object.assign({}, state, {
+                showNewsItem: false,
+                newsItem: {}
             });
         default:
             return state;

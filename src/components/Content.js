@@ -8,6 +8,7 @@ import GenericItem from "./GenericItem";
 import AnswersItem from "./AnswersItem";
 import NewsList from "./NewsList";
 import ArgumentsList from "./ArgumentsList";
+import NewsView from "./NewsView";
 
 
 class Content extends Component {
@@ -54,6 +55,7 @@ class Content extends Component {
         return (
             <div id="content">
                 <NewsList />
+                <NewsView />
                 <GenericItem
                     id={"theme-content"}
                     className={"mt-0 main-content"}
