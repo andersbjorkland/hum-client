@@ -194,11 +194,12 @@ export const updateContent = (data) => {
     }
 }
 
-export const switchLanguage = language => {
+export const switchLanguage = (language, isFetching) => {
     return {
         type: SWITCH_LANGUAGE,
         payload: {
-            language: language
+            language: language,
+            isFetching: isFetching
         }
     }
 }

@@ -129,7 +129,6 @@ function contentReducer(state = initialState, action) {
             let humData = updateData['hydra:member'][0];
             console.log(humData);
             let entities = flattenArguments([], humData.policy.argument);
-            console.log(entities);
 
             return Object.assign({}, state, {
                 humId: humData['@id'],
@@ -144,6 +143,12 @@ function contentReducer(state = initialState, action) {
         case SWITCH_LANGUAGE:
             let language = action.payload.language.toLowerCase();
             let translation = language === 'english' ? translationEnglish : translationSwedish;
+            if (action.payload.isFetching) {
+                return Object.assign({}, state, {
+                    language: language,
+                    translation: translation
+                });
+            }
             let policy = togglePolicyByLanguage(language, state);
             return Object.assign({}, state, {
                 language: language,
@@ -154,6 +159,7 @@ function contentReducer(state = initialState, action) {
                 arguments: flattenArguments([], policy.argument),
                 institution: toggleInstitutionByLanguage(language, state)
             });
+
         default:
             return state;
     }

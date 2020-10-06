@@ -10,10 +10,12 @@ class LanguageToggle extends Component {
     }
 
     toggleSwedish() {
-        this.props.toggle("svenska");
+        let isFetching = this.props.asyncReducer.isFetching || this.props.asyncReducer.isFetchingNews;
+        this.props.toggle("svenska", isFetching);
     }
     toggleEnglish() {
-        this.props.toggle("english");
+        let isFetching = this.props.asyncReducer.isFetching || this.props.asyncReducer.isFetchingNews;
+        this.props.toggle("english", isFetching);
     }
 
     render() {
@@ -31,7 +33,7 @@ class LanguageToggle extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-    toggle: language => dispatch(switchLanguage(language))
+    toggle: (language, isFetching) => dispatch(switchLanguage(language, isFetching))
 })
 
 const mapStateToProps = state => ({

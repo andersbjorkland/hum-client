@@ -5,7 +5,6 @@ class ArgumentItem extends Component {
 
     render() {
         let classSide = this.props.index % 2 === 0 ? "left" : "right";
-        console.log(this.props.index);
         return (
             <div className={"argument-item speech-bubble " + classSide}>
                 <div className={"argument-item speech-bubble-inner"}>

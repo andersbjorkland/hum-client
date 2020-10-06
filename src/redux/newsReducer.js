@@ -22,6 +22,11 @@ function newsReducer(state = initialState, action) {
             });
         case SWITCH_LANGUAGE:
             language = action.payload.language.toLowerCase();
+            if (action.payload.isFetching){
+                return Object.assign({}, state, {
+                    language: language
+                });
+            }
             raw = state.raw;
 
             return Object.assign({}, state, {
