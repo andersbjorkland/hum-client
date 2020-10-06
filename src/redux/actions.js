@@ -16,6 +16,8 @@ export const RESOLVED_NEWS = "RESOLVED_NEWS";
 export const REQUEST_NEWS = "REQUEST_NEWS";
 export const FAILED_NEWS = "FAILED_NEWS";
 export const UPDATE_NEWS = "UPDATE_NEWS";
+export const OPEN_NEWS = "OPEN_NEWS";
+export const CLOSE_NEWS = "CLOSE_NEWS";
 export const POST_ANSWER = "POST_ANSWER";
 export const POST_ANSWER_RESOLVED = "POST_ANSWER_RESOLVED";
 export const POST_ANSWER_FAILED = "POST_ANSWER_FAILED";
@@ -146,6 +148,21 @@ export const updateNews = (data) => {
         payload: {
             data: data
         }
+    }
+}
+
+export const openNews = (news) => {
+    return {
+        type: UPDATE_NEWS,
+        payload: {
+            news: news
+        }
+    }
+}
+
+export const closeNews = () => {
+    return {
+        type: CLOSE_NEWS,
     }
 }
 

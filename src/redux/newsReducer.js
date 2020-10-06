@@ -15,7 +15,6 @@ function newsReducer(state = initialState, action) {
 
         case UPDATE_NEWS:
             raw = { ...action.payload.data };
-
             return Object.assign({}, state, {
                 raw: raw,
                 news: filterRawNewsByLanguage(raw, state.language)
@@ -50,6 +49,7 @@ function transformNews(rawNews) {
     return {
         title: rawNews.title,
         text: rawNews.text,
+        blogImages: rawNews.blogImages
     }
 }
 

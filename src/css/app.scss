@@ -592,8 +592,16 @@ input[type="number"].invalid {
   height: 15rem;
   overflow-y: auto;
   .news-item {
+    padding: 0.4rem;
+    margin-bottom: 0.5rem;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $softerYellow;
+    }
     h3 {
       font-size: 0.8rem;
+      margin-top: 0;
       margin-bottom: 0;
     }
     p {

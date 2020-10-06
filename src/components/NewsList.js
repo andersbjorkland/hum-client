@@ -18,10 +18,9 @@ class NewsList extends Component {
         return sanitized;
     }
 
-
     render() {
         let newsItems = this.props.newsReducer.news;
-        let newsItemsElements = newsItems.map((element, index=0) => <TextListItem key={index++} title={element.title} summary={element.text.substr(0, 100)}/>)
+        let newsItemsElements = newsItems.map((element, index=0) => <TextListItem key={index++} news={element} title={element.title} summary={element.text.substr(0, 100)}/>)
         return (
             <div id={"news-list-container"} className={"side-content"}>
                 <h2>News</h2>
