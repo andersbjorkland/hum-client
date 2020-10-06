@@ -30,10 +30,9 @@ class NewsView extends Component {
         let newsContent = [];
         while (true) {
             i = search.exec(sanitized);
-            if (null === i) {
+            if (null === i || blogImages.length === 0) {
                 break;
             }
-            console.log(i);
             if (i.index > 0) {
                 newsContent.push(<p>{sanitized.substring(0, i.index)}</p>);
             }
