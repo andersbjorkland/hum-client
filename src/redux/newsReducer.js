@@ -24,35 +24,40 @@ function newsReducer(state = initialState, action) {
             });
         case SWITCH_LANGUAGE:
             language = action.payload.language.toLowerCase();
+
             if (action.payload.isFetching){
                 return Object.assign({}, state, {
                     language: language
                 });
             }
 
+            raw = state.raw;
+
             let filteredNews = null;
             if (state.showNewsItem) {
-                if (state.newsItemObject.blogPosts.length > 0) {
-                    for (const newsElement of state.newsItemObject.blogPosts) {
+                let rawNewsItem = state.news.filter(element => element["id"] === state.newsItem.id);
+
+                if (rawNewsItem.length > 0 && rawNewsItem[0].raw.blogPosts.length > 0) {
+                    for (const newsElement of rawNewsItem[0].raw.blogPosts) {
                         if (newsElement.language.name.toLowerCase() === language) {
                             filteredNews = transformNews(newsElement);
                             break;
                         }
                     }
                 }else if (null !== state.newsItem.parent) {
-                    console.log(state.newsItem.parent)
-                    let parent = state.raw["hydra:member"].filter(element => element["@id"] === state.newsItem.parent);
-                    if (null !== parent) {
-                        parent = parent[0];
-                        filteredNews = transformNews(parent);
+                    if (typeof state.newsItem.parent === "string") {
+                        let parent = state.raw["hydra:member"].filter(element => element["@id"] === state.newsItem.parent);
+                        if (parent.length > 0) {
+                            parent = parent[0];
+                            filteredNews = transformNews(parent);
+                        }
+                    } else if (typeof state.newsItem.parent === "object") {
+                        filteredNews = transformNews(state.newsItem.parent);
                     }
                 }
             }
 
             filteredNews = null === filteredNews ? state.newsItem : filteredNews;
-
-            raw = state.raw;
-            console.log(state);
 
             return Object.assign({}, state, {
                 language: language,

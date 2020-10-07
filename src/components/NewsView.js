@@ -31,17 +31,18 @@ class NewsView extends Component {
         let index = 0;
         let i;
         let newsContent = [];
+        let key = 0;
         while (true) {
             i = search.exec(sanitized);
             if (null === i || blogImages.length === 0) {
                 break;
             }
             if (i.index > 0) {
-                newsContent.push(<p>{sanitized.substring(0, i.index)}</p>);
+                newsContent.push(<p key={key++}>{sanitized.substring(0, i.index)}</p>);
             }
 
 
-            newsContent.push(<img src={process.env.REACT_APP_IMAGE_TARGET + blogImages[index].image.fileName} alt={blogImages[index].image.alt} />)
+            newsContent.push(<img key={key++} src={process.env.REACT_APP_IMAGE_TARGET + blogImages[index].image.fileName} alt={blogImages[index].image.alt} />)
 
             sanitized = sanitized.substring(i.index + i[0].length);
 
@@ -53,7 +54,7 @@ class NewsView extends Component {
 
         // Remove any leftover markups (|#|)
         sanitized.replaceAll(searchGlobal, '');
-        newsContent.push(<p>{sanitized}</p>);
+        newsContent.push(<p key={key++}>{sanitized}</p>);
         return newsContent;
     }
 
