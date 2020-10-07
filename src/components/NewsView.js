@@ -13,15 +13,17 @@ class NewsView extends Component {
         let newsItem = this.props.newsReducer.newsItem;
         let sanitized = newsItem.text;
         let blogImages = newsItem.blogImages;
-        blogImages.sort((a, b) => {
-           if (a.ordering < b.ordering) {
-               return -1;
-           }
-           if (a.ordering > b.ordering) {
-               return 1;
-           }
-           return 0;
-        });
+        if (undefined !== blogImages && null !== blogImages) {
+            blogImages.sort((a, b) => {
+                if (a.ordering < b.ordering) {
+                    return -1;
+                }
+                if (a.ordering > b.ordering) {
+                    return 1;
+                }
+                return 0;
+            });
+        }
 
         let search = /(\|\d+\|)/;
         let searchGlobal = /(\|\d+\|)/g;
@@ -63,7 +65,6 @@ class NewsView extends Component {
         }
 
         let content = this.fillHtmlTags();
-        console.log(content);
         return (
             <div id={"news-view"} className={"main-content modal"}>
                 <div className={"flex-row"}>
