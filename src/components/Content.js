@@ -52,6 +52,16 @@ class Content extends Component {
             );
         })
         let questionsIndex = 0;
+
+        let showNewsItem = this.props.newsReducer.showNewsItem;
+        if (showNewsItem) {
+            return (
+                <div id={"content"}>
+                    <NewsList />
+                    <NewsView />
+                </div>
+            );
+        }
         return (
             <div id="content">
                 <NewsList />

@@ -22,6 +22,7 @@ $softYellow: #fdfcd5;
 $standardYellow: #fffb88;
 
 $purple: #A454CC;
+$off-blue: #b0daf1;
 $bright-blue: #BAE6FF;
 $brighter-blue: #BCE9FC;
 $deep-blue: #0600A8;
@@ -644,7 +645,7 @@ button {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
 }
 
 footer {
@@ -661,6 +662,40 @@ footer {
 .thin {
   font-family: 'Raleway-Light', sans-serif;
   font-weight: 100;
+}
+
+#news-view {
+  grid-row: 1;
+  z-index: 20;
+  background-color: white;
+  box-shadow: 0 3px 8px #cecece;
+  padding: 1rem;
+
+}
+
+.close {
+  align-self: flex-start;
+  margin-left: auto;
+
+  >svg {
+    transition: 400ms;
+  }
+
+  >svg:hover {
+    transform: scale(1.1);
+    circle {
+      fill: $brighter-blue;
+    }
+  }
+
+  >svg:active {
+    circle {
+      fill: $off-blue;
+    }
+    rect {
+      fill: $lightGrey;
+    }
+  }
 }
 
 // Speech bubble from http://projects.verou.me/bubbly/
