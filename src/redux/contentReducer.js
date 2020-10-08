@@ -19,7 +19,32 @@ const translationSwedish = {
     invalidInput: "Fel värde",
     answersSent: "Dina svar har skickats!",
     sending: "Skickar...",
-    prosCons: "För och emot"
+    prosCons: "För och emot",
+    news: {
+        header: "Nyheter"
+    },
+    election: {
+        header: "Valkalender",
+        subtitle: "När är nästa nationella val?",
+        imgAlt: {
+            EU: "EU:s flagga",
+            SE: "Sveriges flagga"
+        }
+    },
+    month: {
+        jan: "januari",
+        feb: "februari",
+        mar: "mars",
+        apr: "april",
+        may: "may",
+        jun: "juni",
+        jul: "juli",
+        aug: "augusti",
+        sep: "september",
+        oct: "oktober",
+        nov: "november",
+        dev: "december"
+    }
 
 };
 
@@ -42,7 +67,32 @@ const translationEnglish = {
     invalidInput: "Invalid input",
     answersSent: "Successfully sent your answers!",
     sending: "Sending...",
-    prosCons: "Pros and cons"
+    prosCons: "Pros and cons",
+    news: {
+        header: "News"
+    },
+    election: {
+        header: "Election Calendar",
+        subtitle: "When is our next nation wide election?",
+        imgAlt: {
+            EU: "EU's flag",
+            SE: "Sweden's flag"
+        }
+    },
+    month: {
+        jan: "January",
+        feb: "February",
+        mar: "March",
+        apr: "April",
+        may: "May",
+        jun: "June",
+        jul: "July",
+        aug: "August",
+        sep: "September",
+        oct: "October",
+        nov: "November",
+        dev: "December"
+    }
 
 }
 

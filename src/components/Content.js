@@ -9,6 +9,7 @@ import AnswersItem from "./AnswersItem";
 import NewsList from "./NewsList";
 import ArgumentsList from "./ArgumentsList";
 import NewsView from "./NewsView";
+import ElectionSchedule from "./ElectionSchedule";
 
 
 class Content extends Component {
@@ -65,6 +66,7 @@ class Content extends Component {
         return (
             <div id="content">
                 <NewsList />
+                <ElectionSchedule />
                 <NewsView />
                 <GenericItem
                     id={"theme-content"}

@@ -200,7 +200,7 @@ $invalidTextBackground: $lightRed;
   }
 
   #news-list-container {
-    grid-row: 1/3;
+    grid-row: 2/3;
   }
 .news-list {
   ul {
@@ -211,7 +211,7 @@ $invalidTextBackground: $lightRed;
 .argument-list {
   margin: 4rem auto;
   max-width: 30rem;
-  grid-row: 3;
+  grid-row: 3/5;
 
   h2, h3 {
     margin: 0;
@@ -662,6 +662,9 @@ footer {
 
 }
 
+h3.thin {
+  font-size: 1rem;
+}
 .thin {
   font-family: 'Raleway-Light', sans-serif;
   font-weight: 100;
@@ -797,6 +800,34 @@ footer {
   grid-row: 1;
 }
 
+#election-schedule {
+  grid-row: 1;
+  h3 {
+    margin-top: 0;
+  }
+
+  .flex-row {
+    gap: 2rem;
+
+    .info-container {
+      p {
+        font-size: 1rem;
+      }
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+
+      img {
+        height: 3rem;
+      }
+    }
+  }
+
+
+
+
+}
+
 @media screen and (max-width: 800px) {
   #content {
     grid-template-columns: 1fr;
@@ -816,16 +847,29 @@ footer {
 }
 
 @media screen and (max-width: 1000px) {
-  html {
-    font-size: 13px;
-  }
   #content {
     grid-template-columns: auto;
 
     #news-list-container {
+      place-self: flex-start;
       grid-row: 1;
       margin-bottom: 4rem;
+      width: 45%;
+
+      .news-list {
+        height: 15rem;
+      }
     }
+
+    #election-schedule {
+      justify-self: flex-end;
+      width: 45%;
+
+      .flex-row {
+        flex-direction: column;
+      }
+    }
+
     #theme-content {
       grid-row: 2;
     }
@@ -890,7 +934,7 @@ footer {
 
 @media screen and (max-width: 800px) {
   html {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   header {
@@ -917,7 +961,7 @@ footer {
 
 @media screen and (max-width: 600px) {
   html {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   header, header.small {
@@ -929,9 +973,64 @@ footer {
     }
 
     nav {
-      margin: 0;
-      justify-content: center;
+      margin: 0 2rem 0 0;
+      justify-content: flex-end;
+
+      #main-nav {
+        gap: 1rem;
+        div {
+          margin-left: 0;
+        }
+      }
     }
+  }
+
+  #content {
+    #election-schedule {
+      width: 100%;
+      h3 {
+        display: none;
+      }
+      .flex-row {
+        margin-top: 0.5rem;
+        flex-direction: row;
+      }
+    }
+
+    #news-list-container {
+      grid-row: 2;
+      width: 95%;
+      place-self: center;
+    }
+    #theme-content {
+      grid-row: 3;
+    }
+
+    #argument-list {
+      width: 80%;
+    }
+
+    .diagram-container {
+      width: 16rem;
+      .center-artefact {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .range-container {
+    width: 90%;
+  }
+
+  .question-item {
+    padding: 0.5rem;
+    .cards-container {
+      display: none;
+    }
+    .question-content {
+      margin: 1.6rem 0.5rem;
+    }
+
   }
 
   .language-container, .language-container.small  {
@@ -940,5 +1039,9 @@ footer {
 
   .vote-sign {
     display: none;
+  }
+
+  form.results {
+    padding: 3rem 2rem;
   }
 }
