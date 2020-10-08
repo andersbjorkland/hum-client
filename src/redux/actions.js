@@ -21,6 +21,7 @@ export const CLOSE_NEWS = "CLOSE_NEWS";
 export const POST_ANSWER = "POST_ANSWER";
 export const POST_ANSWER_RESOLVED = "POST_ANSWER_RESOLVED";
 export const POST_ANSWER_FAILED = "POST_ANSWER_FAILED";
+export const UPDATE_PAGE = "UPDATE_PAGE";
 
 
 // Actions should have a basic structure like this, optionally with some payload for "someData":
@@ -51,7 +52,7 @@ export const answerUninvalid = (componentId) => ({
     payload: {
         componentId: componentId
     }
-})
+});
 
 export const postAnswer = (answer, humId) => {
 
@@ -213,6 +214,15 @@ export const switchLanguage = (language, isFetching) => {
         payload: {
             language: language,
             isFetching: isFetching
+        }
+    }
+}
+
+export const updatePage = (page) => {
+    return {
+        type: UPDATE_PAGE,
+        payload: {
+            page: page
         }
     }
 }

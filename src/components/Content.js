@@ -10,9 +10,14 @@ import NewsList from "./NewsList";
 import ArgumentsList from "./ArgumentsList";
 import NewsView from "./NewsView";
 import ElectionSchedule from "./ElectionSchedule";
+import {updatePage} from "../redux/actions";
 
 
 class Content extends Component {
+
+    componentDidMount() {
+        this.props.updatePage("/");
+    }
 
     render() {
         let i = 0;
@@ -102,4 +107,8 @@ const mapStateToProps = state => ({
     ...state
 });
 
-export default connect(mapStateToProps)(Content);
+const mapDispatchToProps = dispatch => ({
+    updatePage: page => dispatch(updatePage(page))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Content);

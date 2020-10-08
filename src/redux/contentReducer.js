@@ -1,4 +1,4 @@
-import {ANSWERING, INVALID, SWITCH_LANGUAGE, UNINVALIDATE, UPDATE_CONTENT } from "./actions";
+import {ANSWERING, INVALID, SWITCH_LANGUAGE, UNINVALIDATE, UPDATE_CONTENT, UPDATE_PAGE} from "./actions";
 
 const translationSwedish = {
     home: 'Hem',
@@ -97,6 +97,7 @@ const translationEnglish = {
 }
 
 const initialState = {
+    page: "/",
     imageFolder: "/uploads/images/",
     language: "english",
     translation: {...translationEnglish},
@@ -209,7 +210,10 @@ function contentReducer(state = initialState, action) {
                 arguments: flattenArguments([], policy.argument),
                 institution: toggleInstitutionByLanguage(language, state)
             });
-
+        case UPDATE_PAGE:
+            return Object.assign({}, state, {
+                page: action.payload.page
+            });
         default:
             return state;
     }

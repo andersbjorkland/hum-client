@@ -75,7 +75,7 @@ $invalidTextBackground: $lightRed;
     display: block;
   }
   
-  .active a {
+  a.active, a>span.active {
     color: $active-text;
   }
   
@@ -174,6 +174,7 @@ $invalidTextBackground: $lightRed;
   
       #main-nav, #sub-nav, #sub-sub-nav {
         display: flex;
+        gap: 1rem;
         flex-direction: row;
         justify-content: flex-end;
         padding-right: 1rem;
@@ -186,9 +187,9 @@ $invalidTextBackground: $lightRed;
       #main-nav {
         font-size: 2rem;
 
-        >div {
-            margin-bottom: -0.9rem;
-            margin-left: 2rem;
+        >a {
+          position: relative;
+          bottom: -0.9rem;
         }
       }
   
@@ -220,6 +221,17 @@ $invalidTextBackground: $lightRed;
     margin-bottom: 0.5rem;
   }
 }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-left: $minLeftMargin;
+  margin-right: $minRightMargin;
+  max-width: 60rem;
+
+  font-family: 'Raleway-Light', sans-serif;
+}
+
 #content {
     display: grid;
     grid-template-columns: minmax(12rem, 62rem) minmax(8rem, 20rem);
@@ -977,7 +989,6 @@ h3.thin {
       justify-content: flex-end;
 
       #main-nav {
-        gap: 1rem;
         div {
           margin-left: 0;
         }
