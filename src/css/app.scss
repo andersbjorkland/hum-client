@@ -564,7 +564,7 @@ input[type="number"].invalid {
     margin-left: auto;
     padding: 0.5rem 4rem 0.5rem 8rem;
     width: 12rem;
-    background-color: rgba($color: #fff, $alpha: 1.0);
+    background-color: rgba($color: #fff, $alpha: 0.8);
     transition: 10ms;
 
     button.btn {

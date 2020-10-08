@@ -59,9 +59,6 @@ export const postAnswer = (answer, humId) => {
         dispatch(postRequestAnswer());
 
         let axiosArray = [];
-
-        
-        
         answer.answers.forEach(element => {
             let answer = Object.values(element)[0];
             answer = typeof answer === 'number' ? answer.toString() : answer;
@@ -76,7 +73,6 @@ export const postAnswer = (answer, humId) => {
                     answer: answer
                 }
             });
-
             axiosArray.push(newPromise);
             
         });
