@@ -1001,6 +1001,17 @@ h3.thin {
       grid-row: 2;
       width: 95%;
       place-self: center;
+
+      .news-list {
+        .news-item {
+          h3 {
+            font-size: 1rem;
+          }
+          p {
+            font-size: 0.9rem;
+          }
+        }
+      }
     }
     #theme-content {
       grid-row: 3;
