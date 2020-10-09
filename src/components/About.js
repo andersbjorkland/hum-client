@@ -1,20 +1,22 @@
 import React, {Component} from "react";
 import {connect} from 'react-redux';
 import {updatePage} from "../redux/actions";
+import ContactForm from "./ContactForm";
 
 
 class About extends Component {
-     componentDidMount() {
-         this.props.updatePage("about");
-     }
+    constructor(props) {
+        super(props);
+        this.props.updatePage("about");
+    }
 
     render() {
-        console.log("About rendering...");
         return (
             <div id="about" className="content">
                 <h1>About</h1>
                 <h2>The purpose of Hum</h2>
-                <p><em>Hum</em> is a place to get the gist of policies and political processes.
+                <p>
+                    <em>Hum</em> is a place to get the gist of policies and political processes.
                     You may think politics is really interesting or you might not think about it at all.
                     But no matter your level of interest, politics still affects your life.
                 </p>
@@ -28,11 +30,8 @@ class About extends Component {
                     here in Sweden. We introduce a theme that the content is geared towards, as well as questions
                     for self-reflection.
                 </p>
-                <p>
-                    If you like to a subject or have any suggestions for improvements, get in touch. Anders Björkland
-                    is the project manager for Hum and can be reached at
-                    <a href={"mailto:anders@hum.nu"}>anders@hum.nu</a>.
-                </p>
+
+                <ContactForm />
             </div>
         );
     }

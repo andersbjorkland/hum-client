@@ -65,10 +65,6 @@ class App extends Component {
                                     <Link to="/about">
                                         <span className={ page === "about" ? "active" : ""}>{translation.about}</span>
                                     </Link>
-                                    <Link to="/about">
-                                        <span className={ page === "contact" ? "active" : ""}>{translation.contact}</span>
-                                    </Link>
-
                                 </div>
                             </div>
                         </nav>
