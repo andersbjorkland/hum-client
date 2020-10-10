@@ -21,6 +21,9 @@ export const CLOSE_NEWS = "CLOSE_NEWS";
 export const POST_ANSWER = "POST_ANSWER";
 export const POST_ANSWER_RESOLVED = "POST_ANSWER_RESOLVED";
 export const POST_ANSWER_FAILED = "POST_ANSWER_FAILED";
+export const POST_MESSAGE = "POST_MESSAGE";
+export const POST_MESSAGE_RESOLVED = "POST_MESSAGE_RESOLVED";
+export const POST_MESSAGE_FAILED = "POST_MESSAGE_FAILED";
 export const UPDATE_PAGE = "UPDATE_PAGE";
 
 
@@ -54,6 +57,48 @@ export const answerUninvalid = (componentId) => ({
     }
 });
 
+export const postMessage = (message) => {
+
+    return function (dispatch) {
+        dispatch(postRequestMessage());
+
+        axios({
+            method: 'post',
+            url: process.env.REACT_APP_TARGET + '/contact',
+            data: {
+                email: message.email,
+                name: message.name,
+                message: message.text
+            }
+        })
+            .then(response => {
+                console.log(response);
+                dispatch(postMessageResolved());
+            })
+            .catch(error => {
+                console.error(error);
+                dispatch(postMessageFailed());
+            });
+    }
+}
+
+export const postRequestMessage = () => {
+    return {
+        type: POST_MESSAGE
+    }
+}
+export const postMessageResolved = () => {
+    return {
+        type: POST_MESSAGE_RESOLVED
+    }
+}
+
+export const postMessageFailed = () => {
+    return {
+        type: POST_MESSAGE_FAILED
+    }
+}
+
 export const postAnswer = (answer, humId) => {
 
     return function (dispatch) {
@@ -66,7 +111,7 @@ export const postAnswer = (answer, humId) => {
             
             let newPromise = axios({
                 method: 'post',
-                url: 'https://localhost:8000/api/client_answers',
+                url: process.env.REACT_APP_TARGET + '/api/client_answers',
                 data: {
                     hum: humId.toString(),
                     idHash: "test",
@@ -109,7 +154,7 @@ export const getNews = () => {
 
     return function (dispatch) {
         dispatch(requestNews());
-        return axios.get('https://localhost:8000/api/blog_posts?page=1')
+        return axios.get(process.env.REACT_APP_TARGET + '/api/blog_posts?page=1')
             .then(response => {
                 dispatch(resolvedGetNews());
                 dispatch(updateNews(response.data));
@@ -167,7 +212,7 @@ export const getHum = () => {
 
     return function (dispatch) {
         dispatch(requestHum());
-        return axios.get('https://localhost:8000/api/hums?page=1')
+        return axios.get(process.env.REACT_APP_TARGET + '/api/hums?page=1')
             .then(response => {
                 dispatch(resolvedGetHum());
                 dispatch(updateContent(response.data));

@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 
+import {postMessage} from "../redux/actions";
+
 class ContactForm extends Component {
 
     constructor(props) {
@@ -30,6 +32,11 @@ class ContactForm extends Component {
     handleSubmit(event) {
         event.preventDefault();
         console.log(this.state);
+        this.props.send({
+            email: this.state.email,
+            name: this.state.name,
+            text: this.state.message
+        });
     }
 
     render() {
@@ -66,4 +73,7 @@ const mapStateToProps = state => ({
     ...state
 });
 
-export default connect(mapStateToProps)(ContactForm);
+const mapDispatchToProps = dispatch => ({
+    send: (message) => dispatch(postMessage(message))
+})
+export default connect(mapStateToProps, mapDispatchToProps)(ContactForm);

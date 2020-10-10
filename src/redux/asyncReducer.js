@@ -1,13 +1,13 @@
 import {
-    FAILED_REQUEST, 
-    POST_ANSWER, 
-    POST_ANSWER_RESOLVED, 
-    POST_ANSWER_FAILED, 
-    REQUEST_HUM, 
+    FAILED_REQUEST,
+    POST_ANSWER,
+    POST_ANSWER_RESOLVED,
+    POST_ANSWER_FAILED,
+    REQUEST_HUM,
     RESOLVED_HUM,
     REQUEST_NEWS,
     FAILED_NEWS,
-    RESOLVED_NEWS
+    RESOLVED_NEWS, POST_MESSAGE, POST_MESSAGE_RESOLVED, POST_MESSAGE_FAILED
 } from "./actions";
 
 function asyncReducer(state = {
@@ -16,6 +16,9 @@ function asyncReducer(state = {
     sentAnswers: false,
     failedSending: false,
     isFetchingNews: false,
+    isPostingMessage: false,
+    postingMessageFailed: false,
+    postingMessageResolved: false,
 }, action) {
 
     switch (action.type) {
@@ -66,7 +69,25 @@ function asyncReducer(state = {
                 isPosting: false,
                 sentAnswers: false,
                 failedSending: true
-            });    
+            });
+        case POST_MESSAGE:
+            console.log("Posting message");
+            return Object.assign({}, state, {
+                isPostingMessage: true
+            });
+        case POST_MESSAGE_RESOLVED:
+            console.log("Posting message finished successfully.");
+            return Object.assign({}, state, {
+                isPostingMessage: false,
+                postingMessageResolved: true
+            });
+        case POST_MESSAGE_FAILED:
+            console.log("Posting message failed. Try again later.");
+            return Object.assign({}, state, {
+                isPostingMessage: false,
+                postingMessageResolved: false,
+                postingMessageFailed: true
+            });
         default:
             return state;
     }
