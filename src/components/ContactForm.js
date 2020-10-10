@@ -35,26 +35,26 @@ class ContactForm extends Component {
     render() {
        return (
             <form className="contact shadow" onSubmit={this.handleSubmit}>
-                <h2>Contact</h2>
+                <h2>{this.props.contentReducer.translation.contact.heading}</h2>
                 <p>
-                    If you like to a subject or have any suggestions for improvements, get in touch!
+                    {this.props.contentReducer.translation.contact.text}
                 </p>
 
                 <label htmlFor="name-field">
-                    Name
+                    {this.props.contentReducer.translation.contact.form.name}
                 </label>
                 <input id="name-field" type={"text"} value={this.state.name} onChange={this.handleChangeOnName} required />
                 <label htmlFor="message-field">
-                    Message
+                    {this.props.contentReducer.translation.contact.form.message}
                 </label>
                 <textarea id="message-field" value={this.state.message} onChange={this.handleChangeOnMessage} required />
                 <label htmlFor="email-field">
-                    Email
+                    {this.props.contentReducer.translation.contact.form.email}
                 </label>
                 <input id="email-field" type={"email"} value={this.state.email} onChange={this.handleChangeOnEmail} required />
 
 
-                <button type="submit">Submit</button>
+                <button type="submit">{this.props.contentReducer.translation.contact.form.submit}</button>
             </form>
         );
 

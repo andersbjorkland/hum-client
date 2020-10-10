@@ -12,6 +12,7 @@ import LoadingIndicator from "./components/utility/LoadingIndicator";
 import Logo from "./components/Logo";
 import LanguageToggle from "./components/LanguageToggle";
 import About from "./components/About";
+import Om from "./components/Om";
 
 
 class App extends Component {
@@ -59,10 +60,10 @@ class App extends Component {
                                     <Link to="/">
                                         <span className={ page === "/" ? "active" : ""}>{translation.home}</span>
                                     </Link>
-                                    <Link to="/about">
+                                    <Link to={"/" + translation.library.toLowerCase()}>
                                         <span className={ page === "library" ? "active" : ""}>{translation.library}</span>
                                     </Link>
-                                    <Link to="/about">
+                                    <Link to={"/" + translation.about.toLowerCase()}>
                                         <span className={ page === "about" ? "active" : ""}>{translation.about}</span>
                                     </Link>
                                 </div>
@@ -76,6 +77,9 @@ class App extends Component {
                 <Switch>
                     <Route path="/about">
                         <About />
+                    </Route>
+                    <Route path="/om">
+                        <Om />
                     </Route>
                     <Route path="/">
                         {this.props.asyncReducer.isFetching ? <LoadingIndicator /> : <Content />}

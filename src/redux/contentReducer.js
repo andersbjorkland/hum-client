@@ -4,7 +4,6 @@ const translationSwedish = {
     home: 'Hem',
     library: 'Arkiv',
     about: 'Om',
-    contact: 'Kontakt',
     yes: 'Ja',
     no: 'Nej',
     abstain: 'Avstår',
@@ -44,6 +43,16 @@ const translationSwedish = {
         oct: "oktober",
         nov: "november",
         dev: "december"
+    },
+    contact: {
+        heading: "Kontakt",
+        text: "Om du har förslag, funderingar eller bara vill hälsa, ta kontakt med oss!",
+        form: {
+            name: "Namn",
+            message: "Meddelande",
+            email: "Epost",
+            submit: "Skicka"
+        }
     }
 
 };
@@ -52,7 +61,6 @@ const translationEnglish = {
     home: 'Home',
     library: 'Library',
     about: 'About',
-    contact: 'Contact',
     yes: 'Yes',
     no: 'No',
     abstain: 'Abstain',
@@ -92,6 +100,16 @@ const translationEnglish = {
         oct: "October",
         nov: "November",
         dev: "December"
+    },
+    contact: {
+        heading: "Contact",
+        text: "If you have any suggestions for improvements or just want to send us your regards, get in touch!",
+        form: {
+            name: "Name",
+            message: "Message",
+            email: "Email",
+            submit: "Submit"
+        }
     }
 
 }

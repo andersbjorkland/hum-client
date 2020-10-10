@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {connect} from 'react-redux';
 import {updatePage} from "../redux/actions";
 import ContactForm from "./ContactForm";
+import Om from "./Om";
 
 
 class About extends Component {
@@ -11,6 +12,9 @@ class About extends Component {
     }
 
     render() {
+        if (this.props.contentReducer.language === "svenska") {
+            return <Om />;
+        }
         return (
             <div id="about" className="content">
                 <h1>About</h1>
