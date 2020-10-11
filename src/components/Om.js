@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import {connect} from 'react-redux';
 import {updatePage} from "../redux/actions";
-import ContactForm from "./ContactForm";
 import About from "./About";
 
 
@@ -17,8 +16,8 @@ class Om extends Component {
         }
         return (
             <div id="about" className="content">
-                <h1>Om</h1>
-                <h2>Målet med Hum</h2>
+                <h1>Om Hum</h1>
+                <h2>Ökad delaktighet och insyn</h2>
                 <p>
                     <em>Hum</em> är en hemsida där vem som helst ska kunna få ett hum om politiken
                     och de politiska processerna. Du kanske redan är insatt i hur ett förslag blir till en lag. Eller så
@@ -36,7 +35,12 @@ class Om extends Component {
                     är den!
                 </p>
 
-                <ContactForm />
+                <h2>Medverka</h2>
+                <p>
+                    Om du är politiskt intresserad och kan förklara politiska processer och policies på ett enkelt
+                    sätt så är du välkommen att <a href="/kontakt">kontakta oss</a>.
+
+                </p>
             </div>
         );
     }

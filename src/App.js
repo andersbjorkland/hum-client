@@ -13,6 +13,8 @@ import Logo from "./components/Logo";
 import LanguageToggle from "./components/LanguageToggle";
 import About from "./components/About";
 import Om from "./components/Om";
+import Footer from "./components/Footer";
+import Contact from "./components/Contact";
 
 
 class App extends Component {
@@ -50,7 +52,7 @@ class App extends Component {
         <div>
             <Router>
                 <div className="header-container">
-                    <header className={this.state.headerClass} ref={this.headerRef}>
+                    <header className={this.props.contentReducer.page === "/" ? this.state.headerClass : "small"} ref={this.headerRef}>
                         <div id="header-image-bg"></div>
                         <Logo />
 
@@ -60,8 +62,8 @@ class App extends Component {
                                     <Link to="/">
                                         <span className={ page === "/" ? "active" : ""}>{translation.home}</span>
                                     </Link>
-                                    <Link to={"/" + translation.library.toLowerCase()}>
-                                        <span className={ page === "library" ? "active" : ""}>{translation.library}</span>
+                                    <Link to={"/" + translation.contact.heading.toLowerCase()}>
+                                        <span className={ page === "contact" ? "active" : ""}>{translation.contact.heading}</span>
                                     </Link>
                                     <Link to={"/" + translation.about.toLowerCase()}>
                                         <span className={ page === "about" ? "active" : ""}>{translation.about}</span>
@@ -81,11 +83,18 @@ class App extends Component {
                     <Route path="/om">
                         <Om />
                     </Route>
+                    <Route path="/contact">
+                        <Contact lang="en"/>
+                    </Route>
+                    <Route path="/kontakt">
+                        <Contact lang="sv" />
+                    </Route>
                     <Route path="/">
                         {this.props.asyncReducer.isFetching ? <LoadingIndicator /> : <Content />}
                     </Route>
 
                 </Switch>
+                <Footer />
             </Router>
         </div>
         );

@@ -61,6 +61,10 @@ $invalidTextBackground: $lightRed;
     font-family: Sniglet;
     src: url("../fonts/Sniglet-Regular.ttf");
 }
+@font-face {
+  font-family: "MarckScript";
+  src: url("../fonts/MarckScript-Regular.ttf");
+}
   body {
     min-height: 100vh;
     display: grid;
@@ -230,6 +234,10 @@ $invalidTextBackground: $lightRed;
   max-width: 60rem;
 
   font-family: 'Raleway-Light', sans-serif;
+
+  >h2 {
+    margin-bottom: 0;
+  }
 }
 
 #content {
@@ -702,14 +710,29 @@ img {
 }
 
 footer {
-    background-image: linear-gradient($nav-top-bg, $nav-bottom-bg);
-    padding-left: 27px;
-    min-height: 10rem;
-    display: flex;
-    align-items: center;
+  padding-left: 27px;
+  min-height: 8rem;
+  display: flex;
+  background-color: $nav-bottom-bg;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: auto;
 
-    font-family: 'Raleway-Light', sans-serif;
+  font-family: 'Raleway-Light', sans-serif;
+  padding-bottom: 3rem;
 
+  a {
+    font-family: "MarckScript", "Calibri Light", serif;
+    font-size: 1.3rem;
+    color: $deep-blue;
+  }
+}
+
+#root>div {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h3.thin {
