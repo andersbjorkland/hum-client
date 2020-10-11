@@ -2,10 +2,11 @@
 
 $maxWidth: 60rem;
 $headerHeight: 12rem;
-$headerInitialHeight: 20rem;
+$headerInitialHeight: 15rem;
 
-$minRightMargin: 8rem;
-$minLeftMargin: 8rem;
+$minRightMargin: 4rem;
+$minLeftMargin: 4rem;
+$marginTop: 10rem;
 
 /*******> COLORS ********/
 $voteYesColor: #5eb5e0;
@@ -21,6 +22,7 @@ $softYellow: #fdfcd5;
 $standardYellow: #fffb88;
 
 $purple: #A454CC;
+$off-blue: #b0daf1;
 $bright-blue: #BAE6FF;
 $brighter-blue: #BCE9FC;
 $deep-blue: #0600A8;
@@ -59,6 +61,10 @@ $invalidTextBackground: $lightRed;
     font-family: Sniglet;
     src: url("../fonts/Sniglet-Regular.ttf");
 }
+@font-face {
+  font-family: "MarckScript";
+  src: url("../fonts/MarckScript-Regular.ttf");
+}
   body {
     min-height: 100vh;
     display: grid;
@@ -73,12 +79,27 @@ $invalidTextBackground: $lightRed;
     display: block;
   }
   
-  .active a {
+  a.active, a>span.active {
     color: $active-text;
   }
   
   body {
     margin: 0;
+  }
+
+  .header-container {
+      position: sticky;
+      top: 0;
+      z-index: 25;
+  }
+
+  header.small {
+      min-height: $marginTop;
+    #header-image-bg {
+        min-height: 10%;
+        transition: 500ms;
+        opacity: 0;
+    }
   }
   
   header {
@@ -87,14 +108,19 @@ $invalidTextBackground: $lightRed;
     display: flex;
     flex-direction: row;
     position: relative;
+    transition: 500ms;
+    z-index: 25;
 
     #header-image-bg {
         background-image: url('../images/header.svg');
         background-repeat: no-repeat;
+        background-size: cover;
         width: 100%;
-        height: 18rem;
-        bottom: -5rem;
+        min-height: 50%;
+        bottom: 0;
         position: absolute;
+        transition: 1000ms;
+        opacity: 0.7;
     }
   
     #logo {
@@ -102,7 +128,11 @@ $invalidTextBackground: $lightRed;
       flex-direction: column;
       z-index: 10;
       margin-left: $minLeftMargin;
+      width: 8rem;
+      transition: 1s;
+
       a {
+        margin-top: 1rem;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -148,6 +178,7 @@ $invalidTextBackground: $lightRed;
   
       #main-nav, #sub-nav, #sub-sub-nav {
         display: flex;
+        gap: 1rem;
         flex-direction: row;
         justify-content: flex-end;
         padding-right: 1rem;
@@ -160,13 +191,10 @@ $invalidTextBackground: $lightRed;
       #main-nav {
         font-size: 2rem;
 
-        >div {
-            margin-bottom: -0.9rem;
+        >a {
+          position: relative;
+          bottom: -0.9rem;
         }
-      }
-  
-      div {
-        margin-left: 2rem;
       }
   
       a {
@@ -176,33 +204,126 @@ $invalidTextBackground: $lightRed;
     }
   }
 
+  #news-list-container {
+    grid-row: 2/3;
+  }
 .news-list {
-ul {
-    list-style: none;
-    padding: 0;
+  ul {
+      list-style: none;
+      padding: 0;
+  }
 }
+.argument-list {
+  margin: 4rem auto;
+  max-width: 30rem;
+  grid-row: 3/5;
+
+  h2, h3 {
+    margin: 0;
+  }
+  h3 {
+    margin-bottom: 0.5rem;
+  }
 }
-#content {
-    display: flex;
-    flex-direction: initial;
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-left: $minLeftMargin;
+  margin-right: $minRightMargin;
+  max-width: 60rem;
+
+  font-family: 'Raleway-Light', sans-serif;
+
+  >h2 {
+    margin-bottom: 0;
+  }
+}
+
+.signup {
+  margin: 4rem 0 8rem 0;
+  padding-bottom: 2.5rem;
+  font-size: 1.2rem;
+  min-height: 18rem;
+  display: flex;
+  flex-direction: column;
+
+  >.form-header {
+    padding: 2rem;
+    background-color: $dark-black;
+    color: $standardYellow;
+  }
+
+  .flex-row.posting {
+    margin-top: 3rem;
+    align-self: center;
+  }
+
+  .bg-yellow {
+    padding: 0.1rem 0.2rem 0.1rem 1rem;
+    background: $standardYellow;
+    color: $dark-black;
+    margin-right: 0.2rem;
+  }
+
+  h2 {
+    margin: 0;
+    font-family: "Raleway-Black", sans-serif;
+    font-size: 2.3rem;
+  }
+
+  p, label {
+    margin: 2rem;
+  }
+
+  p {
+    line-height: 1.8rem;
+  }
+
+  p.success {
+    align-self: center;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  label {
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+
+  button {
+    font-size: 1.2rem;
+  }
+  .flex-row {
+    margin: 0 2rem 2rem 2rem;
+    align-items: center;
     flex-wrap: wrap;
-    margin: 27px;
-    margin-top: 27px;
-    margin-left: 8rem;
+
+    input, button {
+      height: 2.5rem;
+    }
+    input {
+      width: 80%;
+      min-width: 15rem;
+    }
+  }
+}
+
+#content {
+    display: grid;
+    grid-template-columns: minmax(12rem, 62rem) minmax(8rem, 20rem);
+    column-gap: 5rem;
+    margin-left: $minLeftMargin;
+    margin-right: $minRightMargin;
 
     font-family: 'Raleway-Light', sans-serif;
 
-    >div {
-        padding: 1rem;
-    }
 }
 .content-item.mt-0 {
     margin-top: 0;
 }
 .content-item {
     max-width: $maxWidth;
-    margin-top: 8rem;
-    margin-bottom: 8rem;
 
     .item-header {
         display: grid;
@@ -241,12 +362,25 @@ ul {
     margin-right: 0.5rem;
 }
 
+form {
+    min-height: 15rem;
+}
+form.center-align {
+    justify-content: center;
+}
+
 .answer-option {
     width: 6rem;
     min-width: max-content;
     margin-right: 1rem;
     font-size: 1rem;
     background-color: $softYellow;
+}
+
+.answer-option.success {
+    font-size: 2.5rem;
+    margin-top: 1.5rem;
+    background-color: unset;
 }
 
 .answer-option:hover {
@@ -303,6 +437,33 @@ ul {
     transform: rotate(20deg);
 }
 
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: baseline;
+
+    p {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    .answer-chevron {
+        font-weight: bold;
+        font-size: 3rem;;
+        color: $voteYesColor;
+    }
+}
+
+
+
+.question-item.sent {
+
+    button {
+        border-color: #636363;
+        color: #636363;
+    }
+}
 .question-item {
     position: relative;
     margin-top: 5rem;
@@ -341,20 +502,21 @@ ul {
 
 .cards-container {
     position: relative;
-    min-width: 15rem;
-    min-height: 15rem;
+    min-width: 3.5em;
+    min-height: 3.5em;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 3.5rem;
+
 
     .card {
         position: absolute;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 7rem;
-        height: 8rem;
-        font-size: 6rem;
+        width: 1.5em;
+        height: 2em;
         font-family: Raleway, "Raleway-Light", sans-serif;
         border-style: solid;
         border-color: #707070;
@@ -383,7 +545,6 @@ ul {
 input[type="number"] {
     background-color: $softerYellow;
     width: 100%;
-    height: 2rem;
     font-size: 1.3rem;
     text-align: center;
     height: 1rem;
@@ -465,14 +626,36 @@ input[type="number"].invalid {
     font-style: italic;
 }
 
+.language-container.small {
+    top: -3.2rem;
+    background-color: rgba($color: #bbe7fe, $alpha: 0);
+
+    button.btn {
+        background-color: #f9f9f9;
+        font-weight: bold;
+        color: #2c2c2c;
+    }
+
+    button.btn.select {
+        background: rgb(222 244 254);;
+        border-bottom: 0.3rem solid #f9f9f9;
+        color: #2c2c2c;
+    }
+}
 
 .language-container {
+    position: relative;
+    top: 0;
+    z-index: 30;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     gap: 1rem;
-    margin-top: 1rem;
-    margin-right: $minRightMargin;
+    margin-left: auto;
+    padding: 0.5rem 4rem 0.5rem 8rem;
+    width: 12rem;
+    background-color: rgba($color: #fff, $alpha: 0.8);
+    transition: 10ms;
 
     button.btn {
         font-family: "Raleway-Regular", "Raleway-Light", sans-serif;
@@ -483,18 +666,45 @@ input[type="number"].invalid {
         background-color: $deep-blue;
         color: white;
         z-index: 20;
+
+        transition: 250ms;
     }
 
     button.btn.select {
         color: #0600A8;
         background: none;
         border-bottom: 0.3rem solid #0600A8;
+        padding-top: 0.3rem;
     }
 
     button.btn:focus {
         outline: none;
     }
 }
+
+.news-list {
+  height: 25rem;
+  overflow-y: auto;
+  .news-item {
+    padding: 0.4rem;
+    margin-bottom: 0.5rem;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $softerYellow;
+    }
+    h3 {
+      font-size: 0.8rem;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    p {
+      font-size: 0.7rem;
+      margin: 0;
+    }
+  }
+}
+
 
 .diagram-container {
     margin-left: -3rem;
@@ -519,7 +729,7 @@ button.deselect {
 
 button {
     font-family: Raleway, sans-serif;
-    width: 10rem;
+    min-width: 10rem;
     height: 2rem;
     background-color: $yellow;
     color: $dark-black;
@@ -527,19 +737,464 @@ button {
     border-radius: 3px;
 }
 
+.contact {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem 2rem 2rem;
+  max-width: 50rem;
+  width: 80%;
+
+  h2 {
+    margin-bottom: 0;
+  }
+  p {
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  label {
+    width: 12rem;
+    margin-bottom: 0.5rem;
+  }
+  input, textarea {
+    margin-bottom: 1.5rem;
+  }
+
+  textarea {
+    height: 8rem;
+  }
+
+  button {
+    align-self: flex-end;
+  }
+}
+
+.shadow {
+  box-shadow: 0 3px 8px #cecece;
+}
+
+img {
+  max-width: 100%;
+}
+
 footer {
-    background-image: linear-gradient($nav-top-bg, $nav-bottom-bg);
-    padding-left: 27px;
-    min-height: 10rem;
-    display: flex;
-    align-items: center;
+  padding-left: 27px;
+  min-height: 6rem;
+  display: flex;
+  background-color: $nav-bottom-bg;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: auto;
 
-    font-family: 'Raleway-Light', sans-serif;
+  font-family: 'Raleway-Light', sans-serif;
+  padding-bottom: 2rem;
 
+  a {
+    font-family: "MarckScript", "Calibri Light", serif;
+    font-size: 1.3rem;
+    color: $deep-blue;
+  }
+}
+
+#root>div {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h3.thin {
+  font-size: 1rem;
+}
+.thin {
+  font-family: 'Raleway-Light', sans-serif;
+  font-weight: 100;
+}
+
+#news-view {
+  grid-row: 1/3;
+  z-index: 20;
+  background-color: white;
+  box-shadow: 0 3px 8px #cecece;
+  padding: 1rem;
+
+}
+
+.close {
+  align-self: flex-start;
+  margin-left: auto;
+
+  >svg {
+    transition: 400ms;
+  }
+
+  >svg:hover {
+    transform: scale(1.1);
+    circle {
+      fill: $brighter-blue;
+    }
+  }
+
+  >svg:active {
+    circle {
+      fill: $off-blue;
+    }
+    rect {
+      fill: $lightGrey;
+    }
+  }
+}
+
+// Speech bubble from http://projects.verou.me/bubbly/
+// defaults to the right
+.speech-bubble {
+  position: relative;
+  background: #e6e5f6;
+  border-radius: .4em;
+  margin-bottom: 0.5rem;
+  padding: 0.15rem;
+}
+.speech-bubble.left {
+  .speech-bubble-inner:after {
+    left:0;
+    border-right-color: white;
+    border-left: 0;
+    margin-left: -1.75em;
+  }
+}
+.speech-bubble.right {
+  .speech-bubble-inner:after {
+    right: 0;
+    border-left-color: white;
+    border-right: 0;
+    margin-right: -1.75em;
+  }
+}
+
+.speech-bubble.left:after {
+  left:0;
+  border-right-color: #e6e5f6;
+  border-left: 0;
+  margin-left: -1.9em;
+
+}
+.speech-bubble.right:after {
+  right: 0;
+  border-left-color: #e6e5f6;
+  border-right: 0;
+  margin-right: -1.9em;
+}
+
+.speech-bubble:after {
+  content: '';
+  position: absolute;
+  bottom: 1rem;
+  width: 0;
+  height: 0;
+  border: 2.75em solid transparent;
+  border-bottom: 0;
+  margin-top: -0.875em;
+
+}
+.speech-bubble-inner {
+  position: relative;
+  background: white;
+  border-radius: .4em;
+  padding: 0.5rem;
+  z-index: 10;
+
+  p {
+    margin: 0;
+    line-height: 1.5em;
+  }
+}
+
+.speech-bubble-inner:after {
+  content: '';
+  position: absolute;
+  bottom: 1rem;
+  width: 0;
+  height: 0;
+  border: 1.75em solid transparent;
+  border-bottom: 0;
+  margin-top: -0.875em;
+}
+
+.main-content {
+  grid-column: 1;
+}
+
+.side-content {
+  grid-column: 2;
+  h2 {
+    margin-bottom: 0;
+  }
 }
 
 .center-align {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#theme-content {
+  grid-row: 1;
+}
+
+#election-schedule {
+  grid-row: 1;
+  h3 {
+    margin-top: 0;
   }
+
+  .flex-row {
+    gap: 2rem;
+
+    .info-container {
+      p {
+        font-size: 1rem;
+      }
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+
+      img {
+        height: 3rem;
+      }
+    }
+  }
+
+
+
+
+}
+
+@media screen and (max-width: 800px) {
+  #content {
+    grid-template-columns: 1fr;
+
+    #secondary-col {
+      grid-row: 1;
+      height: 12rem;
+      overflow-y: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #content {
+    grid-template-columns: auto;
+
+    #news-list-container {
+      place-self: flex-start;
+      grid-row: 1;
+      margin-bottom: 4rem;
+      width: 45%;
+
+      .news-list {
+        height: 15rem;
+      }
+
+    }
+
+    #election-schedule {
+      justify-self: flex-end;
+      width: 45%;
+
+      .flex-row {
+        flex-direction: column;
+      }
+    }
+
+    #theme-content {
+      grid-row: 2;
+    }
+    .side-content {
+      grid-column: 1;
+    }
+    .argument-list {
+      grid-row: auto;
+    }
+  }
+  header {
+    min-height: 10rem;
+
+    #logo {
+      img {
+        width: 7rem;
+      }
+      #logo-text-container {
+        display: none;
+      }
+    }
+
+    nav {
+      display: flex;
+    }
+  }
+  #header-image-bg  {
+    display: none;
+  }
+
+    .language-container {
+    top: -3.2rem;
+    background-color: rgba(187, 231, 254, 0);
+
+    button.btn {
+      background-color: #f9f9f9;
+      font-weight: bold;
+      color: #2c2c2c;
+
+      &.select {
+        background: rgb(222 244 254);
+        border-bottom: 0.3rem solid #f9f9f9;
+        color: #2c2c2c;
+      }
+    }
+  }
+
+  .result-summary {
+    margin: 0;
+  }
+
+  .content-item {
+    .answer-option.success {
+      min-width: fit-content;
+      line-height: 2rem;
+      &p {
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 13px;
+  }
+
+  header {
+
+    #logo {
+      justify-content: center;
+      a{
+        margin: 0;
+      }
+      img {
+        width: 5rem;
+      }
+    }
+
+  }
+  .language-container {
+
+    button.btn {
+      font-size: 1rem;
+      width: 5.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+
+  header, header.small {
+    flex-direction: column;
+    min-height: 8rem;
+
+    #logo {
+      margin: 0 0 0 4rem;
+    }
+
+    nav {
+      margin: 0 2rem 0 0;
+      justify-content: flex-end;
+
+      #main-nav {
+        div {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  #content {
+    #election-schedule {
+      width: 100%;
+      h3 {
+        display: none;
+      }
+      .flex-row {
+        margin-top: 0.5rem;
+        flex-direction: row;
+      }
+    }
+
+    #news-list-container {
+      grid-row: 2;
+      width: 95%;
+      place-self: center;
+
+      .news-list {
+        .news-item {
+          h3 {
+            font-size: 1rem;
+          }
+          p {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+    #theme-content {
+      grid-row: 3;
+    }
+
+    #argument-list {
+      width: 80%;
+    }
+
+    .diagram-container {
+      width: 16rem;
+      .center-artefact {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .range-container {
+    width: 90%;
+  }
+
+  .question-item {
+    padding: 0.5rem;
+    .cards-container {
+      display: none;
+    }
+    .question-content {
+      margin: 1.6rem 0.5rem;
+    }
+
+  }
+
+  .language-container, .language-container.small  {
+    top: -8rem;
+  }
+
+  .vote-sign {
+    display: none;
+  }
+
+  form.results {
+    padding: 3rem 2rem;
+  }
+}

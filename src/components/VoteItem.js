@@ -16,7 +16,7 @@ class VoteItem extends Component {
                 <a href={this.props.contentReducer.policy.source} target="_blank" rel="noopener noreferrer">{this.props.contentReducer.policy.source}</a></p>
             : "";
         return (
-            <div className="vote-item content-item">
+            <div className="vote-item content-item main-content">
                 <div className="item-header">
                     <h2>{this.props.contentReducer.policy.title}</h2>
                     <p className="sub-heading">{this.props.contentReducer.translation.policySubheading}</p>

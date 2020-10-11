@@ -8,8 +8,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="1919.839"
-   height="278.23801"
-   viewBox="0 0 1919.839 278.238"
+   height="216"
+   viewBox="0 0 1919.839 215.99999"
    version="1.1"
    id="svg191"
    sodipodi:docname="header.svg"
@@ -39,9 +39,9 @@
      inkscape:window-height="1699"
      id="namedview193"
      showgrid="false"
-     inkscape:zoom="1.5622235"
-     inkscape:cx="1569.3907"
-     inkscape:cy="66.362906"
+     inkscape:zoom="3.124447"
+     inkscape:cx="1656.0295"
+     inkscape:cy="26.436815"
      inkscape:window-x="-13"
      inkscape:window-y="-13"
      inkscape:window-maximized="1"
@@ -114,10 +114,10 @@
   </defs>
   <g
      id="header-image"
-     transform="translate(25,-108.763)">
+     transform="translate(25,-171.001)">
     <g
        id="header-background"
-       transform="translate(-24)">
+       transform="matrix(1.0002904,0,0,1,-25.199858,62)">
       <rect
          id="grass"
          width="1920"
@@ -154,7 +154,7 @@
     </g>
     <g
        id="header-house"
-       transform="translate(-24)">
+       transform="matrix(1.0007071,0,0,1,-26,62)">
       <path
          id="tree-shadow"
          d="M 254.441,0.62 C 433.467,-4.436 459.919,1.214 508.882,15.809 557.845,30.404 394.966,31 254.441,31 113.916,31 0,24.2 0,15.809 0,7.418 75.416,5.676 254.441,0.62 Z"
@@ -455,7 +455,7 @@
     </g>
     <g
        id="header-middleground4"
-       transform="translate(-24)">
+       transform="matrix(1.0007071,0,0,1,-26,62)">
       <g
          id="Tree"
          transform="translate(23.527,157.374)">
@@ -602,7 +602,7 @@
     </g>
     <g
        id="header-middleground3"
-       transform="translate(-24)">
+       transform="matrix(1.0007071,0,0,1,-26,62)">
       <g
          id="Tree-6"
          data-name="Tree"
@@ -768,7 +768,7 @@
     </g>
     <g
        id="header-middleground2"
-       transform="matrix(0.98732667,0.00194974,0,1,-24.316833,-1.8715963)">
+       transform="matrix(0.98720182,0.00194974,0,1,-24.716443,60.128404)">
       <g
          id="Tree-9"
          data-name="Tree">
@@ -897,7 +897,7 @@
     </g>
     <g
        id="header-middleground"
-       transform="translate(-24)">
+       transform="matrix(1.0007071,0,0,1,-26,62)">
       <g
          id="Tree-14"
          data-name="Tree">
@@ -1075,7 +1075,7 @@
     </g>
     <g
        id="header-foreground2"
-       transform="translate(-24)">
+       transform="matrix(1.0007071,0,0,1,-26,62)">
       <g
          id="Tree-18"
          data-name="Tree"
@@ -1119,7 +1119,7 @@
     </g>
     <g
        id="header-foreground"
-       transform="translate(-24)">
+       transform="matrix(1.0007071,0,0,1,-26,62)">
       <g
          id="Tree-20"
          data-name="Tree"
@@ -1211,10 +1211,5 @@
            style="fill:none;stroke:#49d475;stroke-width:1" />
       </g>
     </g>
-    <path
-       id="header-waterfall"
-       d="M 123.833,387 H 116 v -62 h 94 v 28.877 h -6.854 v 7.223 h -19.584 v 15.709 H 173.77 V 365.768 H 163 v 5.945 h -10.771 v 8.918 h -9.791 v -14.014 h -8.812 v 15.713 h -9.792 V 387 Z"
-       inkscape:connector-curvature="0"
-       style="fill:url(#linear-gradient-3)" />
   </g>
 </svg>

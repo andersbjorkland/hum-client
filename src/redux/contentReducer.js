@@ -1,10 +1,9 @@
-import {ANSWERING, INVALID, SWITCH_LANGUAGE, UNINVALIDATE, UPDATE_CONTENT} from "./actions";
+import {ANSWERING, INVALID, SWITCH_LANGUAGE, UNINVALIDATE, UPDATE_CONTENT, UPDATE_PAGE} from "./actions";
 
 const translationSwedish = {
     home: 'Hem',
     library: 'Arkiv',
     about: 'Om',
-    contact: 'Kontakt',
     yes: 'Ja',
     no: 'Nej',
     abstain: 'Avstår',
@@ -16,7 +15,67 @@ const translationSwedish = {
     answersHeading: `Du har svarat på [] fråga`,
     answersContent: "Vill du dela dina svar med oss? När det är dags för nästa Hum så presenterar vi resultaten. Om du inte vill dela dina svar med oss så behöver du helt enkelt inte göra någonting.",
     answersButton: "Låter intressant. Dela svaren!",
-    invalidInput: "Fel värde"
+    invalidInput: "Fel värde",
+    answersSent: "Dina svar har skickats!",
+    sending: "Skickar...",
+    prosCons: "För och emot",
+    news: {
+        header: "Nyheter"
+    },
+    election: {
+        header: "Valkalender",
+        subtitle: "När är nästa nationella val?",
+        imgAlt: {
+            EU: "EU:s flagga",
+            SE: "Sveriges flagga"
+        }
+    },
+    month: {
+        jan: "januari",
+        feb: "februari",
+        mar: "mars",
+        apr: "april",
+        may: "may",
+        jun: "juni",
+        jul: "juli",
+        aug: "augusti",
+        sep: "september",
+        oct: "oktober",
+        nov: "november",
+        dev: "december"
+    },
+    contact: {
+        heading: "Kontakt",
+        text: "Om du har förslag, funderingar eller bara vill hälsa, ta kontakt med oss!",
+        form: {
+            name: "Namn",
+            message: "Meddelande",
+            email: "Epost",
+            submit: "Skicka"
+        },
+        posting: {
+            success: "Meddelande har skickats!",
+            fail: "Meddelandet kunde inte skickas. Försök igen senare.",
+            sending: "Skickar..."
+        }
+    },
+    signup: {
+        heading1: "Bli",
+        heading2: "uppdaterad",
+        text: {
+            part1: "Detta var allt Hum för denna gången. Du kanske vill få reda på när det kommer nya Hum? " +
+                "Registrera dig för vårat ",
+            part2: "nyhetsbrev ",
+            part3: "och håll dig uppdaterad!"
+        },
+        email: "Epost",
+        submit: "Uppdatera mig!",
+        posting: {
+            success: "Du har registrerarat dig för nyhetsbrevet!",
+            fail: "Något gick fel. Försök igen senare.",
+            sending: "Registrerar..."
+        }
+    }
 
 };
 
@@ -24,7 +83,6 @@ const translationEnglish = {
     home: 'Home',
     library: 'Library',
     about: 'About',
-    contact: 'Contact',
     yes: 'Yes',
     no: 'No',
     abstain: 'Abstain',
@@ -36,13 +94,75 @@ const translationEnglish = {
     answersHeading: `You've answered [] question`,
     answersContent: "Would you like to submit these answers to us? By the release of the next Hum we will also share how people generally has answered. You don't have to do anything if you don't want to share them.",
     answersButton: "I'm intrigued, share them!",
-    invalidInput: "Invalid input"
+    invalidInput: "Invalid input",
+    answersSent: "Successfully sent your answers!",
+    sending: "Sending...",
+    prosCons: "Pros and cons",
+    news: {
+        header: "News"
+    },
+    election: {
+        header: "Election Calendar",
+        subtitle: "When is our next nation wide election?",
+        imgAlt: {
+            EU: "EU's flag",
+            SE: "Sweden's flag"
+        }
+    },
+    month: {
+        jan: "January",
+        feb: "February",
+        mar: "March",
+        apr: "April",
+        may: "May",
+        jun: "June",
+        jul: "July",
+        aug: "August",
+        sep: "September",
+        oct: "October",
+        nov: "November",
+        dev: "December"
+    },
+    contact: {
+        heading: "Contact",
+        text: "If you have any suggestions for improvements or just want to send us your regards, get in touch!",
+        form: {
+            name: "Name",
+            message: "Message",
+            email: "Email",
+            submit: "Submit"
+        },
+        posting: {
+            success: "Message successfully sent!",
+            fail: "Message could not be sent. Try again later.",
+            sending: "Sending..."
+        }
+    },
+    signup: {
+        heading1: "Get",
+        heading2: "updated",
+        text: {
+            part1: "This was all of the Hums for now. Maybe you'd like to get updates whenever there's a new Hum flying? Sign up to our ",
+            part2: "newsletter ",
+            part3: "and stay in the loop!"
+        },
+        email: "Email",
+        submit: "Get news",
+        posting: {
+            success: "You have successfully signed up for the newsletter!",
+            fail: "Something went wrong with signing up, try  again later.",
+            sending: "Signing up..."
+        }
+    }
+
 }
 
 const initialState = {
+    page: "/",
     imageFolder: "/uploads/images/",
     language: "english",
     translation: {...translationEnglish},
+    humId: '',
     questions: [],
     invalidInput: [],
     numOfAnswers: 0,
@@ -58,6 +178,7 @@ const initialState = {
         header: "",
         content: ""
     },
+    arguments: [],
     vote: {
         yes: 0,
         no: 0,
@@ -69,7 +190,8 @@ const initialState = {
         content: "",
         source: ""
     },
-    raw: []
+    raw: [],
+    rawPolicy: {}
 };
 
 function contentReducer(state = initialState, action) {
@@ -118,30 +240,61 @@ function contentReducer(state = initialState, action) {
             let updateData = {...action.payload.data};
             let humData = updateData['hydra:member'][0];
             console.log(humData);
+            let entities = flattenArguments([], humData.policy.argument);
 
             return Object.assign({}, state, {
+                humId: humData['@id'],
                 questions: transformQuestions(state.language, humData.questions),
                 policy: transformPolicy(humData.policy),
                 vote: transformVote(humData.policy.vote),
                 institution: transformInstitution(humData.institution),
                 theme: transformTheme(humData.policy.policyTheme),
+                arguments: entities,
                 raw: humData
             });
         case SWITCH_LANGUAGE:
             let language = action.payload.language.toLowerCase();
             let translation = language === 'english' ? translationEnglish : translationSwedish;
-
+            if (action.payload.isFetching) {
+                return Object.assign({}, state, {
+                    language: language,
+                    translation: translation
+                });
+            }
+            let policy = togglePolicyByLanguage(language, state);
             return Object.assign({}, state, {
                 language: language,
                 translation: translation,
                 theme: toggleThemeByLanguage(language, state),
                 questions: switchLanguageForQuestions(language, state),
-                policy: togglePolicyByLanguage(language, state),
+                policy: policy,
+                arguments: flattenArguments([], policy.argument),
                 institution: toggleInstitutionByLanguage(language, state)
+            });
+        case UPDATE_PAGE:
+            return Object.assign({}, state, {
+                page: action.payload.page
             });
         default:
             return state;
     }
+}
+
+function flattenArguments(entities, rawParentArgument) {
+      if (rawParentArgument.child) {
+
+          return flattenArguments([...entities, transformArgument(rawParentArgument)], rawParentArgument.child)
+      } else {
+          entities.push(transformArgument(rawParentArgument))
+          return entities;
+      }
+}
+
+function transformArgument(rawArgument) {
+    return {
+        side: rawArgument.side,
+        text: rawArgument.text,
+    };
 }
 
 function switchLanguageForQuestions(language, state) {
@@ -153,8 +306,8 @@ function switchLanguageForQuestions(language, state) {
         transformedQuestions.forEach(question => {
             rawQuestions.forEach(raw => {
                 raw.translations.forEach(translation => {
-                    if (translation.id === question.id) {
-                        question.id = raw.id;
+                    if (translation['@id'] === question.id) {
+                        question.id = raw['@id'];
                     }
                 });
             });
@@ -236,7 +389,8 @@ function transformPolicy(policy) {
     return {
         title: policy.title,
         content: policy.text,
-        source: policy.source
+        source: policy.source,
+        argument: policy.argument
     }
 }
 
@@ -270,7 +424,7 @@ function transformQuestion(question) {
             values = ["0", "0"];
     }
     return {
-        id: question['id'],
+        id: question['@id'],
         category: category,
         content: question['text'],
         answerOptions: {

@@ -11,10 +11,14 @@ class AnswerButton extends Component {
     }
 
     answering(event) {
-        this.props.answering(event, {
-            questionId: this.props.questionObject.id,
-            value: this.props.answerIndex
-        });
+        if (this.props.asyncReducer.sentAnswers) {
+            event.preventDefault();
+        } else {
+            this.props.answering(event, {
+                questionId: this.props.questionObject.id,
+                value: this.props.answerIndex
+            });
+        }
     }
 
     render() {

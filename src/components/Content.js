@@ -6,9 +6,19 @@ import QuestionItem from "./QuestionItem";
 import VoteItem from "./VoteItem";
 import GenericItem from "./GenericItem";
 import AnswersItem from "./AnswersItem";
+import NewsList from "./NewsList";
+import ArgumentsList from "./ArgumentsList";
+import NewsView from "./NewsView";
+import ElectionSchedule from "./ElectionSchedule";
+import {updatePage} from "../redux/actions";
+import SignUpForm from "./SignUpForm";
 
 
 class Content extends Component {
+
+    componentDidMount() {
+        this.props.updatePage("/");
+    }
 
     render() {
         let i = 0;
@@ -49,38 +59,48 @@ class Content extends Component {
             );
         })
         let questionsIndex = 0;
+
+        let showNewsItem = this.props.newsReducer.showNewsItem;
+        if (showNewsItem) {
+            return (
+                <div id={"content"}>
+                    <ElectionSchedule />
+                    <NewsList />
+                    <NewsView />
+                </div>
+            );
+        }
         return (
             <div id="content">
-                <div id="main-col">
+                <NewsList />
+                <ElectionSchedule />
+                <NewsView />
+                <GenericItem
+                    id={"theme-content"}
+                    className={"mt-0 main-content"}
+                    heading={this.props.contentReducer.theme.header}
+                    headingLevel={1}
+                    subheading={this.props.contentReducer.translation.humSubheading}
+                    content={ this.props.contentReducer.theme.content }
+                    image={ this.props.contentReducer.theme.symbol }
+                />
+                {questions[questionsIndex] ? questions[questionsIndex++] : ""}
+                <VoteItem />
+                <ArgumentsList />
+                {questions[questionsIndex] ? questions[questionsIndex++] : ""}
+                {questions[questionsIndex] ? questions[questionsIndex++] : ""}
+                <GenericItem
+                    id={"institution-content"}
+                    className={"main-content"}
+                    heading={this.props.contentReducer.institution.header}
+                    subheading={this.props.contentReducer.translation.institutionSubheading}
+                    content={ this.props.contentReducer.institution.content }
+                />
+                {questions[questionsIndex] ? questions[questionsIndex++] : ""}
+                {questions[questionsIndex] ? questions[questionsIndex++] : ""}
 
-                    <GenericItem
-                        id={"theme-content"}
-                        className={"mt-0"}
-                        heading={this.props.contentReducer.theme.header}
-                        headingLevel={1}
-                        subheading={this.props.contentReducer.translation.humSubheading}
-                        content={ this.props.contentReducer.theme.content }
-                        image={ this.props.contentReducer.theme.symbol }
-                    />
-                    {questions[questionsIndex] ? questions[questionsIndex++] : ""}
-                    <VoteItem />
-                    {questions[questionsIndex] ? questions[questionsIndex++] : ""}
-                    <GenericItem
-                        id={"institution-content"}
-                        heading={this.props.contentReducer.institution.header}
-                        subheading={this.props.contentReducer.translation.institutionSubheading}
-                        content={ this.props.contentReducer.institution.content }
-                    />
-                    {questions[questionsIndex] ? questions[questionsIndex++] : ""}
-                    {questions[questionsIndex] ? questions[questionsIndex++] : ""}
-                    {questions[questionsIndex] ? questions[questionsIndex++] : ""}
-
-                    {this.props.contentReducer.numOfAnswers > 0 ? <AnswersItem /> : ""}
-                </div>
-
-                <div id="secondary-col">
-                    <h2>Side content</h2>
-                </div>
+                {this.props.contentReducer.numOfAnswers > 0 ? <AnswersItem /> : ""}
+                <SignUpForm />
             </div>
         );
     }
@@ -90,4 +110,8 @@ const mapStateToProps = state => ({
     ...state
 });
 
-export default connect(mapStateToProps)(Content);
+const mapDispatchToProps = dispatch => ({
+    updatePage: page => dispatch(updatePage(page))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Content);

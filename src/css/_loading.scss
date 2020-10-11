@@ -1,4 +1,16 @@
 $bright-blue: #BAE6FF;
+$standardYellow: #fffb88;
+
+
+.loading-indicator.small {
+    margin: 0rem;
+}
+
+.loading-indicator.yellow {
+    .loading-inner {
+        background-color: $standardYellow;
+    }
+}
 
 .loading-indicator {
     margin: 12rem auto;
