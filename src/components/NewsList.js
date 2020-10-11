@@ -19,10 +19,11 @@ class NewsList extends Component {
     }
 
     render() {
+        let rowClass = this.props.newsReducer.showNewsItem ? "upper" : "";
         let newsItems = this.props.newsReducer.news;
         let newsItemsElements = newsItems.map((element, index=0) => <TextListItem key={index++} news={element} title={element.title} summary={element.text.substr(0, 100)}/>)
         return (
-            <div id={"news-list-container"} className={"side-content"}>
+            <div id={"news-list-container"} className={"side-content " + rowClass}>
                 <h2>{this.props.contentReducer.translation.news.header}</h2>
                 <div className={"news-list"}>
                     {newsItemsElements}

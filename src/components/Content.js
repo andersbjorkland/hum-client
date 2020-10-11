@@ -63,6 +63,7 @@ class Content extends Component {
         if (showNewsItem) {
             return (
                 <div id={"content"}>
+                    <ElectionSchedule />
                     <NewsList />
                     <NewsView />
                 </div>
