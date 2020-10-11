@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 
 import {postMessage} from "../redux/actions";
+import LoadingIndicator from "./utility/LoadingIndicator";
 
 class ContactForm extends Component {
 
@@ -40,7 +41,38 @@ class ContactForm extends Component {
     }
 
     render() {
-       return (
+        if (this.props.asyncReducer.isPostingMessage) {
+            return (
+                <div className="contact shadow">
+                    <h2>{this.props.contentReducer.translation.contact.heading}</h2>
+                    <div className="flex-row">
+                        <LoadingIndicator color={'yellow'} size={'small'} />
+                        <p>{this.props.contentReducer.translation.contact.posting.sending}</p>
+                    </div>
+                </div>
+            );
+        }
+        if (this.props.asyncReducer.postingMessageResolved) {
+            return (
+                <div className="contact shadow success">
+                    <h2>{this.props.contentReducer.translation.contact.heading}</h2>
+                    <p>
+                        {this.props.contentReducer.translation.contact.posting.success}
+                    </p>
+                </div>
+            );
+        }
+        if (this.props.asyncReducer.postingMessageFailed) {
+            return (
+                <div className="contact shadow">
+                    <h2>{this.props.contentReducer.translation.contact.heading}</h2>
+                    <p>
+                        {this.props.contentReducer.translation.contact.posting.fail}
+                    </p>
+                </div>
+            );
+        }
+        return (
             <form className="contact shadow" onSubmit={this.handleSubmit}>
                 <h2>{this.props.contentReducer.translation.contact.heading}</h2>
                 <p>

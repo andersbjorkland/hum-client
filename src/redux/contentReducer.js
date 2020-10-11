@@ -52,6 +52,11 @@ const translationSwedish = {
             message: "Meddelande",
             email: "Epost",
             submit: "Skicka"
+        },
+        posting: {
+            success: "Meddelande har skickats!",
+            fail: "Meddelandet kunde inte skickas. Försök igen senare.",
+            sending: "Skickar..."
         }
     }
 
@@ -109,6 +114,11 @@ const translationEnglish = {
             message: "Message",
             email: "Email",
             submit: "Submit"
+        },
+        posting: {
+            success: "Message successfully sent!",
+            fail: "Message could not be sent. Try again later.",
+            sending: "Sending..."
         }
     }
 
