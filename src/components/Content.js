@@ -11,6 +11,7 @@ import ArgumentsList from "./ArgumentsList";
 import NewsView from "./NewsView";
 import ElectionSchedule from "./ElectionSchedule";
 import {updatePage} from "../redux/actions";
+import SignUpForm from "./SignUpForm";
 
 
 class Content extends Component {
@@ -99,6 +100,7 @@ class Content extends Component {
                 {questions[questionsIndex] ? questions[questionsIndex++] : ""}
 
                 {this.props.contentReducer.numOfAnswers > 0 ? <AnswersItem /> : ""}
+                <SignUpForm />
             </div>
         );
     }

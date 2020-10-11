@@ -240,6 +240,75 @@ $invalidTextBackground: $lightRed;
   }
 }
 
+.signup {
+  margin: 4rem 0 8rem 0;
+  padding-bottom: 2.5rem;
+  font-size: 1.2rem;
+  min-height: 18rem;
+  display: flex;
+  flex-direction: column;
+
+  >.form-header {
+    padding: 2rem;
+    background-color: $dark-black;
+    color: $standardYellow;
+  }
+
+  .flex-row.posting {
+    margin-top: 3rem;
+    align-self: center;
+  }
+
+  .bg-yellow {
+    padding: 0.1rem 0.2rem 0.1rem 1rem;
+    background: $standardYellow;
+    color: $dark-black;
+    margin-right: 0.2rem;
+  }
+
+  h2 {
+    margin: 0;
+    font-family: "Raleway-Black", sans-serif;
+    font-size: 2.3rem;
+  }
+
+  p, label {
+    margin: 2rem;
+  }
+
+  p {
+    line-height: 1.8rem;
+  }
+
+  p.success {
+    align-self: center;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  label {
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+
+  button {
+    font-size: 1.2rem;
+  }
+  .flex-row {
+    margin: 0 2rem 2rem 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+
+    input, button {
+      height: 2.5rem;
+    }
+    input {
+      width: 80%;
+      min-width: 15rem;
+    }
+  }
+}
+
 #content {
     display: grid;
     grid-template-columns: minmax(12rem, 62rem) minmax(8rem, 20rem);
@@ -660,7 +729,7 @@ button.deselect {
 
 button {
     font-family: Raleway, sans-serif;
-    width: 10rem;
+    min-width: 10rem;
     height: 2rem;
     background-color: $yellow;
     color: $dark-black;
@@ -711,7 +780,7 @@ img {
 
 footer {
   padding-left: 27px;
-  min-height: 8rem;
+  min-height: 6rem;
   display: flex;
   background-color: $nav-bottom-bg;
   flex-direction: column;
@@ -720,7 +789,7 @@ footer {
   margin-top: auto;
 
   font-family: 'Raleway-Light', sans-serif;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 
   a {
     font-family: "MarckScript", "Calibri Light", serif;

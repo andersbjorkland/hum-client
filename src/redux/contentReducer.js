@@ -58,6 +58,23 @@ const translationSwedish = {
             fail: "Meddelandet kunde inte skickas. Försök igen senare.",
             sending: "Skickar..."
         }
+    },
+    signup: {
+        heading1: "Bli",
+        heading2: "uppdaterad",
+        text: {
+            part1: "Detta var allt Hum för denna gången. Du kanske vill få reda på när det kommer nya Hum? " +
+                "Registrera dig för vårat ",
+            part2: "nyhetsbrev ",
+            part3: "och håll dig uppdaterad!"
+        },
+        email: "Epost",
+        submit: "Uppdatera mig!",
+        posting: {
+            success: "Du har registrerarat dig för nyhetsbrevet!",
+            fail: "Något gick fel. Försök igen senare.",
+            sending: "Registrerar..."
+        }
     }
 
 };
@@ -119,6 +136,22 @@ const translationEnglish = {
             success: "Message successfully sent!",
             fail: "Message could not be sent. Try again later.",
             sending: "Sending..."
+        }
+    },
+    signup: {
+        heading1: "Get",
+        heading2: "updated",
+        text: {
+            part1: "This was all of the Hums for now. Maybe you'd like to get updates whenever there's a new Hum flying? Sign up to our ",
+            part2: "newsletter ",
+            part3: "and stay in the loop!"
+        },
+        email: "Email",
+        submit: "Get news",
+        posting: {
+            success: "You have successfully signed up for the newsletter!",
+            fail: "Something went wrong with signing up, try  again later.",
+            sending: "Signing up..."
         }
     }
 
