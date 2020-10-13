@@ -36,7 +36,7 @@ class SignUpForm extends Component {
     render() {
         if (this.props.asyncReducer.isPostingMessage) {
             return (
-                <div className="signup shadow">
+                <div className="signup shadow main-content">
                     <div className="form-header">
                         <h2>
                             <span className="bg-yellow">{this.props.contentReducer.translation.signup.heading1}</span>
@@ -53,7 +53,7 @@ class SignUpForm extends Component {
         }
         if (this.props.asyncReducer.postingMessageResolved) {
             return (
-                <div className="signup shadow success">
+                <div className="signup shadow success main-content">
                     <div className="form-header">
                         <h2>
                             <span className="bg-yellow">{this.props.contentReducer.translation.signup.heading1}</span>
@@ -69,7 +69,7 @@ class SignUpForm extends Component {
         }
         if (this.props.asyncReducer.postingMessageFailed) {
             return (
-                <div className="signup shadow">
+                <div className="signup shadow main-content">
                     <div className="form-header">
                         <h2>
                             <span className="bg-yellow">{this.props.contentReducer.translation.signup.heading1}</span>
