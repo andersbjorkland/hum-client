@@ -13,6 +13,8 @@ class NewsView extends Component {
         let newsItem = this.props.newsReducer.newsItem;
         let sanitized = newsItem.text;
         let blogImages = newsItem.blogImages;
+        let hasImages = true;
+
         if (undefined !== blogImages && null !== blogImages) {
             blogImages.sort((a, b) => {
                 if (a.ordering < b.ordering) {
@@ -23,38 +25,67 @@ class NewsView extends Component {
                 }
                 return 0;
             });
+        } else {
+            hasImages = false;
         }
 
         let search = /(\|\d+\|)/;
-        let searchGlobal = /(\|\d+\|)/g;
+        let newLine = /[\n]+/;
 
         let index = 0;
         let i;
+        let p;
         let newsContent = [];
         let key = 0;
-        while (true) {
+        let hasNewLine = true;
+        let pText;
+        let loopCount = 0;
+        while (loopCount++ < 50) {
+            // Check what comes first: image or newline
             i = search.exec(sanitized);
-            if (null === i || blogImages.length === 0) {
-                break;
+            p = newLine.exec(sanitized);
+
+            if (null === i) {
+                hasImages = false;
             }
-            if (i.index > 0) {
-                newsContent.push(<p key={key++}>{sanitized.substring(0, i.index)}</p>);
+
+            if (null === p) {
+                hasNewLine = false;
             }
 
+            if (hasImages && hasNewLine) {
 
-            newsContent.push(<img key={key++} src={process.env.REACT_APP_IMAGE_TARGET + blogImages[index].image.fileName} alt={blogImages[index].image.alt} />)
+                if (i.index < p.index) {
+                    newsContent.push(<img key={key++} src={process.env.REACT_APP_IMAGE_TARGET + blogImages[index].image.fileName} alt={blogImages[index].image.alt} />)
+                    sanitized = sanitized.substring(i.index + i[0].length);
+                    index++;
 
-            sanitized = sanitized.substring(i.index + i[0].length);
+                } else {
+                    pText = sanitized.substring(0, i.index);
 
-            index++;
-            if (index >= blogImages.length) {
+                    newsContent.push(<p key={key++}>{pText}</p>);
+                    sanitized = sanitized.substring(pText.length);
+                }
+
+            } else if (hasImages) {
+                newsContent.push(<img key={key++} src={process.env.REACT_APP_IMAGE_TARGET + blogImages[index].image.fileName} alt={blogImages[index].image.alt} />)
+                sanitized = sanitized.substring(i.index + i[0].length);
+                index++;
+
+            } else if (hasNewLine) {
+                newsContent.push(<p key={key++}>{sanitized.substring(0, p.index)}</p>);
+                sanitized = sanitized.substring(p.index + p[0].length)
+            }
+
+            if (hasImages && index >= blogImages.length) {
+                hasImages = false;
+            }
+
+            if (!hasImages && !hasNewLine) {
                 break;
             }
         }
 
-        // Remove any leftover markups (|#|)
-        sanitized.replaceAll(searchGlobal, '');
-        newsContent.push(<p key={key++}>{sanitized}</p>);
         return newsContent;
     }
 
@@ -91,6 +122,11 @@ class NewsView extends Component {
     }
 
 }
+
+// check if there is a new line.
+//      Insert paragraph
+// check if there is a img ||.
+//      Insert image
 
 const mapStateToProps = state => ({
     ...state
