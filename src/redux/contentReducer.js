@@ -60,8 +60,8 @@ const translationSwedish = {
         }
     },
     signup: {
-        heading1: "Bli",
-        heading2: "uppdaterad",
+        heading1: "Få",
+        heading2: "uppdateringar",
         text: {
             part1: "Detta var allt Hum för denna gången. Du kanske vill få reda på när det kommer nya Hum? " +
                 "Registrera dig för vårat ",
@@ -69,7 +69,7 @@ const translationSwedish = {
             part3: "och håll dig uppdaterad!"
         },
         email: "Epost",
-        submit: "Uppdatera mig!",
+        submit: "Registrera",
         posting: {
             success: "Du har registrerarat dig för nyhetsbrevet!",
             fail: "Något gick fel. Försök igen senare.",
@@ -147,7 +147,7 @@ const translationEnglish = {
             part3: "and stay in the loop!"
         },
         email: "Email",
-        submit: "Get news",
+        submit: "Sign up",
         posting: {
             success: "You have successfully signed up for the newsletter!",
             fail: "Something went wrong with signing up, try  again later.",
