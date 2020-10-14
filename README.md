@@ -7,7 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Dev/Prod setup
 In .env the route to the target image folder is located. Update this with correct information once going into prod.
-
+Update package.json external-target with prod details.
 
 ## Available Scripts
 

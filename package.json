@@ -39,6 +39,6 @@
     ]
   },
   "extra": {
-    "external-target": "https://localhost:8000/"
+    "external-target": "https://localhost:3000"
   }
 }

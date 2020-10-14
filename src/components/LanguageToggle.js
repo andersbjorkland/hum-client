@@ -11,11 +11,15 @@ class LanguageToggle extends Component {
 
     toggleSwedish() {
         let isFetching = this.props.asyncReducer.isFetching || this.props.asyncReducer.isFetchingNews;
-        this.props.toggle("svenska", isFetching);
+        if (this.props.contentReducer.language !== "svenska") {
+            this.props.toggle("svenska", isFetching);
+        }
     }
     toggleEnglish() {
         let isFetching = this.props.asyncReducer.isFetching || this.props.asyncReducer.isFetchingNews;
-        this.props.toggle("english", isFetching);
+        if (this.props.contentReducer.language !== "english") {
+            this.props.toggle("english", isFetching);
+        }
     }
 
     render() {
