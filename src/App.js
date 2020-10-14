@@ -77,22 +77,23 @@ class App extends Component {
                 </div>
 
                 <Switch>
-                    <Route path="/about">
-                        <About />
-                    </Route>
-                    <Route path="/om">
-                        <Om />
-                    </Route>
-                    <Route path="/contact">
-                        <Contact lang="en"/>
-                    </Route>
-                    <Route path="/kontakt">
-                        <Contact lang="sv" />
-                    </Route>
-                    <Route path="/">
-                        {this.props.asyncReducer.isFetching ? <LoadingIndicator /> : <Content />}
-                    </Route>
-
+                    <main>
+                        <Route path="/about">
+                            <About />
+                        </Route>
+                        <Route path="/om">
+                            <Om />
+                        </Route>
+                        <Route path="/contact">
+                            <Contact lang="en"/>
+                        </Route>
+                        <Route path="/kontakt">
+                            <Contact lang="sv" />
+                        </Route>
+                        <Route path="/">
+                            {this.props.asyncReducer.isFetching ? <LoadingIndicator /> : <Content />}
+                        </Route>
+                    </main>
                 </Switch>
                 <Footer />
             </Router>

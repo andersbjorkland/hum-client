@@ -58,7 +58,7 @@ class AnswerContinuous extends Component {
                 <input
                     ref={this.rangeRef}
                     type={"number"}
-                    id={"number-" + questionObject.id}
+                    id={questionObject.id}
                     className={className}
                     min={this.props.min}
                     max={this.props.max}

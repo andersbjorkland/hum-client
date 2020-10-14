@@ -62,7 +62,7 @@ class QuestionItem extends Component {
                     { cards }
                 </div>
                 <div className="question-content">
-                    <p>{this.props.questionObject.content}</p>
+                    <label htmlFor={this.props.questionObject.id}>{this.props.questionObject.content}</label>
                     <div>
                         { answer }
                     </div>

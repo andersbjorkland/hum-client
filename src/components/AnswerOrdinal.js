@@ -26,11 +26,11 @@ class AnswerOrdinal extends Component {
         }
         return (
             <div key={"range-" + questionObject.id} className={"flex-row range-container"}>
-                <p>{this.props.min.toString()}</p>
+                <label htmlFor={"range-" + questionObject.id}>{this.props.min.toString()}</label>
                 <input
                     ref={this.rangeRef}
                     type={"range"}
-                    id={"range-" + questionObject.id}
+                    id={questionObject.id}
                     className={className}
                     onClick={this.answering}
                     onTouchEnd={this.answering}
