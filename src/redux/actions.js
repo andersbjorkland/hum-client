@@ -115,7 +115,7 @@ export const postAnswer = (answer, humId) => {
                 url: process.env.REACT_APP_TARGET + '/api/client_answers',
                 data: {
                     hum: humId.toString(),
-                    idHash: "test",
+                    idHash: new Date(Date.now()).toDateString(),
                     question: Object.keys(element)[0],
                     answer: answer
                 }
