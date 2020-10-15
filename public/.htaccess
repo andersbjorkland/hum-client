@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+    Options +FollowSymlinks
+    RewriteEngine On
+
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Explicitly disable rewriting for front controllers
+    # RewriteRule ^index_dev.php - [L]
+    # RewriteRule ^index.php - [L]
+
+    # RewriteCond %{REQUEST_FILENAME} !-f
+
+    # Change below before deploying to production
+    # RewriteRule ^(.*)$ /index.php [QSA,L]
+</IfModule>
