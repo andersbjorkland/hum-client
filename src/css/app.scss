@@ -43,27 +43,23 @@ $invalidTextBackground: $lightRed;
 
 @font-face {
     font-family: "Raleway-Regular";
-    src: url("../fonts/Raleway-Regular.ttf");
+    src: url("../fonts/Raleway-Regular.woff");
 }
 @font-face {
     font-family: Raleway;
-    src: url("../fonts/Raleway-ExtraBold.ttf");
+    src: url("../fonts/Raleway-ExtraBold.woff");
 }
 @font-face {
     font-family: "Raleway-Light";
-    src: url("../fonts/Raleway-Light.ttf");
+    src: url("../fonts/Raleway-Light.woff");
 }
 @font-face {
     font-family: "Raleway-Black";
-    src: url("../fonts/Raleway-Black.ttf");
+    src: url("../fonts/Raleway-Black.woff");
 }
 @font-face {
     font-family: Sniglet;
-    src: url("../fonts/Sniglet-Regular.ttf");
-}
-@font-face {
-  font-family: "MarckScript";
-  src: url("../fonts/MarckScript-Regular.ttf");
+    src: url("../fonts/Sniglet-Regular.woff");
 }
 
 html {
@@ -249,7 +245,7 @@ html {
 }
 
 .signup {
-  margin: 4rem 0 8rem 0;
+  margin: 4rem 0 3rem 0;
   padding-bottom: 2.5rem;
   font-size: 1.2rem;
   min-height: 18rem;
@@ -285,6 +281,7 @@ html {
   }
 
   p {
+    margin-bottom: 0;
     line-height: 1.8rem;
   }
 
@@ -296,11 +293,12 @@ html {
 
   label {
     font-weight: bold;
-    margin-bottom: 0;
+    margin-bottom: 0.25rem;
   }
 
   button {
     font-size: 1.2rem;
+    margin-top: 0.5rem;
   }
   .flex-row {
     margin: 0 2rem 2rem 2rem;
@@ -331,6 +329,7 @@ html {
     margin-top: 0;
 }
 .content-item {
+    margin-top: 4rem;
     max-width: $maxWidth;
 
     .item-header {
@@ -472,6 +471,9 @@ form.center-align {
         color: #636363;
     }
 }
+button {
+  margin-top: 1rem;
+}
 .question-item {
     position: relative;
     margin-top: 5rem;
@@ -480,7 +482,7 @@ form.center-align {
     box-shadow: 0 3px 8px #cecece;
     max-width: $maxWidth - 2rem;
     padding: 1rem;
-    font-size: 1.3rem;
+    font-size: 1rem;
 
     .question-content {
         display: flex;
@@ -515,7 +517,7 @@ form.center-align {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3.5rem;
+    font-size: 3rem;
 
 
     .card {
@@ -553,7 +555,7 @@ form.center-align {
 input[type="number"] {
     background-color: $softerYellow;
     width: 100%;
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-align: center;
     height: 1rem;
     padding: 0.5rem;
@@ -583,7 +585,7 @@ input[type="number"].invalid {
     justify-content: center;
 
     .vote-sign-container {
-        font-size: 10rem;
+        font-size: 8rem;
         font-weight: bold;
     }
 
@@ -635,7 +637,7 @@ input[type="number"].invalid {
 }
 
 .language-container.small {
-    top: -3.2rem;
+    top: -4rem;
     background-color: rgba($color: #bbe7fe, $alpha: 0);
 
     button.btn {
@@ -702,12 +704,12 @@ input[type="number"].invalid {
       background-color: $softerYellow;
     }
     h3 {
-      font-size: 0.8rem;
+      font-size: 1rem;
       margin-top: 0;
       margin-bottom: 0;
     }
     p {
-      font-size: 0.7rem;
+      font-size: 0.95rem;
       margin: 0;
     }
   }
@@ -746,7 +748,7 @@ button {
 }
 
 .contact {
-  margin: 2rem auto;
+  margin: 1.5rem auto;
   display: flex;
   flex-direction: column;
   padding: 1rem 2rem 2rem 2rem;
@@ -754,19 +756,20 @@ button {
   width: 80%;
 
   h2 {
+    margin-top: 0;
     margin-bottom: 0;
   }
   p {
     margin-top: 0.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   label {
     width: 12rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
   }
   input, textarea {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
   }
 
   textarea {
@@ -800,8 +803,8 @@ footer {
   padding-bottom: 2rem;
 
   a {
-    font-family: "MarckScript", "Calibri Light", serif;
-    font-size: 1.3rem;
+    font-family: "Raleway-Light", "Calibri Light", serif;
+    font-size: 1.1rem;
     color: $deep-blue;
   }
 }
@@ -948,6 +951,10 @@ h3.thin {
     align-items: center;
 }
 
+#contact {
+  margin-top: 0;
+}
+
 #theme-content {
   grid-row: 1;
 }
@@ -996,13 +1003,17 @@ h3.thin {
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1400px) {
   html {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
 @media screen and (max-width: 1000px) {
+  main {
+    position: relative;
+    top: -4rem;
+  }
   #content {
     grid-template-columns: auto;
 
@@ -1034,7 +1045,12 @@ h3.thin {
       grid-column: 1;
     }
     .argument-list {
+      margin: 2rem auto;
       grid-row: auto;
+    }
+    .question-item {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
     }
   }
   header {
@@ -1058,7 +1074,7 @@ h3.thin {
   }
 
     .language-container {
-    top: -3.2rem;
+    top: -4rem;
     background-color: rgba(187, 231, 254, 0);
 
     button.btn {
@@ -1090,9 +1106,6 @@ h3.thin {
 }
 
 @media screen and (max-width: 800px) {
-  html {
-    font-size: 13px;
-  }
 
   header {
 
@@ -1118,25 +1131,22 @@ h3.thin {
 }
 
 @media screen and (max-width: 600px) {
-  html {
-    font-size: 12px;
-  }
-
   header, header.small {
     flex-direction: column;
-    min-height: 8rem;
+    min-height: 7rem;
 
     #logo {
       margin: 0 0 0 1rem;
-
+      width: 3rem;
     }
 
     nav {
-      margin: -1rem 1rem 0 1rem;
+      margin: 0 1rem 0 1rem;
 
       justify-content: flex-end;
 
       #main-nav {
+        font-size: 1.6rem;
         div {
           margin-left: 0;
         }
@@ -1144,10 +1154,18 @@ h3.thin {
     }
   }
 
+  h2, .content-item .item-header h2 {
+    font-size: 1.75rem;
+  }
+
   .content {
-    margin-top: -3rem;
+    margin-top: 0;
     margin-left: 1rem;
     margin-right: 1rem;
+
+    h1 {
+      margin-bottom: 0;
+    }
   }
 
   #content {
@@ -1165,12 +1183,17 @@ h3.thin {
       }
     }
 
+    #news-view {
+      top: -6rem;
+    }
+
     #news-list-container {
       grid-row: 2;
       width: 95%;
-      place-self: center;
 
       .news-list {
+        height: auto;
+        max-height: 15rem;
         .news-item {
           h3 {
             font-size: 1rem;
@@ -1205,10 +1228,20 @@ h3.thin {
     }
 
     .diagram-container {
+      margin-top: 1rem;
       width: 16rem;
       .center-artefact {
         font-size: 2rem;
       }
+    }
+  }
+
+  .signup {
+    h2 {
+      font-size: 1.75rem;
+    }
+    p {
+      font-size: 1rem;
     }
   }
 
@@ -1224,7 +1257,17 @@ h3.thin {
     .question-content {
       margin: 1.6rem 0.5rem;
     }
+    .question-bee {
+      width: 1.5rem;
+      height: 1.5rem;
 
+      &.left {
+        left: 1rem;
+      }
+      &.right {
+        right: 1rem;
+      }
+    }
   }
 
   .answer-option {
@@ -1236,7 +1279,7 @@ h3.thin {
   }
   .language-container, .language-container.small  {
     padding: 0.5rem 1rem 0.5rem 8rem;
-    top: -7rem;
+    top: -8rem;
   }
 
   .vote-sign {

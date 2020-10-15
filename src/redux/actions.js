@@ -57,7 +57,7 @@ export const answerUninvalid = (componentId) => ({
     }
 });
 
-export const postMessage = (message) => {
+export const postMessage = (message, isSigningUp) => {
 
     return function (dispatch) {
         dispatch(postRequestMessage());
@@ -72,8 +72,7 @@ export const postMessage = (message) => {
             }
         })
             .then(response => {
-                console.log(response);
-                dispatch(postMessageResolved());
+                dispatch(postMessageResolved(isSigningUp));
             })
             .catch(error => {
                 console.error(error);
@@ -87,9 +86,11 @@ export const postRequestMessage = () => {
         type: POST_MESSAGE
     }
 }
-export const postMessageResolved = () => {
+export const postMessageResolved = (isSigningUp) => {
+
     return {
-        type: POST_MESSAGE_RESOLVED
+        type: POST_MESSAGE_RESOLVED,
+        isSigningUp: isSigningUp
     }
 }
 
@@ -162,7 +163,7 @@ export const getNews = () => {
             .catch(function (error) {
                 dispatch(failedNewsRequest());
                 console.log(error);
-            });
+            })
 
     }
 }

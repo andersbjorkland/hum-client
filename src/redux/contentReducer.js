@@ -1,4 +1,11 @@
-import {ANSWERING, INVALID, SWITCH_LANGUAGE, UNINVALIDATE, UPDATE_CONTENT, UPDATE_PAGE} from "./actions";
+import {
+    ANSWERING,
+    INVALID,
+    SWITCH_LANGUAGE,
+    UNINVALIDATE,
+    UPDATE_CONTENT,
+    UPDATE_PAGE
+} from "./actions";
 
 const translationSwedish = {
     home: 'Hem',
@@ -160,8 +167,8 @@ const translationEnglish = {
 const initialState = {
     page: "/",
     imageFolder: "/uploads/images/",
-    language: "english",
-    translation: {...translationEnglish},
+    language: process.env.REACT_APP_INITIAL_LANGUAGE,
+    translation: {...translationSwedish},
     humId: '',
     questions: [],
     invalidInput: [],
@@ -239,16 +246,26 @@ function contentReducer(state = initialState, action) {
         case UPDATE_CONTENT:
             let updateData = {...action.payload.data};
             let humData = updateData['hydra:member'][0];
-            console.log(humData);
-            let entities = flattenArguments([], humData.policy.argument);
+            let policyRaw = humData.policy;
+            if (state.language === 'svenska') {
+                if (policyRaw.policies.length > 0) {
+                    for (const child of policyRaw.policies) {
+                        if (child.language.name.toLowerCase() === 'svenska') {
+                            policyRaw = child;
+                            break;
+                        }
+                    }
+                }
+            }
+            let entities = flattenArguments([], policyRaw.argument, state.language);
 
             return Object.assign({}, state, {
                 humId: humData['@id'],
                 questions: transformQuestions(state.language, humData.questions),
-                policy: transformPolicy(humData.policy),
+                policy: transformPolicy(humData.policy, state.language),
                 vote: transformVote(humData.policy.vote),
-                institution: transformInstitution(humData.institution),
-                theme: transformTheme(humData.policy.policyTheme),
+                institution: transformInstitution(humData.institution, state.language),
+                theme: transformTheme(humData.policy.policyTheme, state.language),
                 arguments: entities,
                 raw: humData
             });
@@ -331,7 +348,17 @@ function transformQuestions(language, questionsArray){
     return questionsData.map(question => transformQuestion(question));
 }
 
-function transformTheme(theme) {
+function transformTheme(theme, language) {
+    if (language === 'svenska') {
+        if (theme.translations.length > 0) {
+            for (const child of theme.translations) {
+                if (child.language.name.toLowerCase() === 'svenska') {
+                    theme = child;
+                    break;
+                }
+            }
+        }
+    }
     return {
         header: theme.title,
         content: theme.text,
@@ -378,14 +405,35 @@ function togglePolicyByLanguage(language, state) {
     return null === policyRaw ? state.policy : transformPolicy(policyRaw);
 }
 
-function transformInstitution(institution) {
+function transformInstitution(institution, language) {
+    if (language === 'svenska') {
+        if (institution.translations.length > 0) {
+            for (const child of institution.translations) {
+                if (child.language.name.toLowerCase() === 'svenska') {
+                    institution = child;
+                    break;
+                }
+            }
+        }
+    }
     return {
         header: institution.name,
         content: institution.text
     }
 }
 
-function transformPolicy(policy) {
+function transformPolicy(policy, language) {
+    if (language === 'svenska') {
+        if (policy.policies.length > 0) {
+            for (const child of policy.policies) {
+                if (child.language.name.toLowerCase() === 'svenska') {
+                    policy = child;
+                    break;
+                }
+            }
+        }
+    }
+
     return {
         title: policy.title,
         content: policy.text,

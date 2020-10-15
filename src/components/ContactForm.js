@@ -32,11 +32,10 @@ class ContactForm extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        console.log(this.state);
         this.props.send({
             email: this.state.email,
             name: this.state.name,
-            text: this.state.message
+            text: this.state.message,
         });
     }
 

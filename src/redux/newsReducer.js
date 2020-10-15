@@ -2,7 +2,7 @@ import {CLOSE_NEWS, OPEN_NEWS, SWITCH_LANGUAGE, UPDATE_NEWS} from "./actions";
 
 
 const initialState = {
-    language: "english",
+    language: process.env.REACT_APP_INITIAL_LANGUAGE,
     imageFolder: "/uploads/images/",
     showNewsItem: false,
     newsItem: {},

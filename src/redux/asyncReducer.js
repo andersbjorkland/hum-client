@@ -19,6 +19,7 @@ function asyncReducer(state = {
     isPostingMessage: false,
     postingMessageFailed: false,
     postingMessageResolved: false,
+    hasSignedUp: false
 }, action) {
 
     switch (action.type) {
@@ -77,9 +78,12 @@ function asyncReducer(state = {
             });
         case POST_MESSAGE_RESOLVED:
             console.log("Posting message finished successfully.");
+            let signingUp = undefined !== action.isSigningUp;
+            console.log(signingUp);
             return Object.assign({}, state, {
                 isPostingMessage: false,
-                postingMessageResolved: true
+                postingMessageResolved: !signingUp,
+                hasSignedUp: signingUp
             });
         case POST_MESSAGE_FAILED:
             console.log("Posting message failed. Try again later.");

@@ -23,14 +23,13 @@ class SignUpForm extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        console.log(this.state);
         let text = this.props.contentReducer.language === "english" ?
             "Signing up for newsletter." : "Registrerar sig för nyhetsbrev."
         this.props.send({
             email: this.state.email,
             name: this.state.email,
-            text: text
-        });
+            text: text,
+        }, true);
     }
 
     render() {
@@ -51,7 +50,7 @@ class SignUpForm extends Component {
                 </div>
             );
         }
-        if (this.props.asyncReducer.postingMessageResolved) {
+        if (this.props.asyncReducer.hasSignedUp) {
             return (
                 <div className="signup shadow success main-content">
                     <div className="form-header">
@@ -115,6 +114,6 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    send: (message) => dispatch(postMessage(message))
+    send: (message, isSigningUp) => dispatch(postMessage(message, isSigningUp))
 })
 export default connect(mapStateToProps, mapDispatchToProps)(SignUpForm);
