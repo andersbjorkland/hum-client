@@ -51,7 +51,7 @@ class App extends Component {
         return (
         <div>
             <Router>
-                <div className="header-container">
+                <div className={"header-container " + this.state.headerClass}>
                     <header className={this.props.contentReducer.page === "/" ? this.state.headerClass : "small"} ref={this.headerRef}>
                         <div id="header-image-bg"></div>
                         <Logo />

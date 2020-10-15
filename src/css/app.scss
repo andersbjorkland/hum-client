@@ -95,6 +95,10 @@ html {
       position: sticky;
       top: 0;
       z-index: 25;
+
+      &.small {
+        height: 10rem;
+      }
   }
 
   header.small {
@@ -1010,9 +1014,12 @@ h3.thin {
 }
 
 @media screen and (max-width: 1000px) {
+  .header-container {
+    height: 10rem;
+  }
   main {
     position: relative;
-    top: -4rem;
+    top: 0;
   }
   #content {
     grid-template-columns: auto;
@@ -1131,6 +1138,9 @@ h3.thin {
 }
 
 @media screen and (max-width: 600px) {
+  .header-container {
+    height: 7rem;
+  }
   header, header.small {
     flex-direction: column;
     min-height: 7rem;
