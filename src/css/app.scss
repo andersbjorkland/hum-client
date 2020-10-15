@@ -480,13 +480,15 @@ button {
 }
 .question-item {
     position: relative;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     display: flex;
     box-shadow: 0 3px 8px #cecece;
     max-width: $maxWidth - 2rem;
     padding: 1rem;
     font-size: 1rem;
+    height: max-content;
+    align-self: center;
 
     .question-content {
         display: flex;
